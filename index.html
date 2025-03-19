@@ -1,0 +1,1813 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Halaman Utama - JGITeC2025</title>
+  <meta name="description" content="The 1st Joint Global Innovation and Technology Conference 2025 (JGITeC2025) is an international platform dedicated to interdisciplinary collaboration among pharmaceutical sciences, business strategies, and engineering advancements.">
+  <meta name="keywords" content="conference aims to explore cutting-edge innovations and sustainable solutions that drive technological progress and global impact.">
+
+  <!-- Favicons -->
+  <link href="assets/img/ikon-jgu.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <style>
+    /* Custom Card Styling */
+    .service-item {
+      display: flex;
+      flex-direction: column;
+      background-color: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+      width: 100%;
+      border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+    
+    .service-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Card Header */
+    .card-header-custom {
+      padding: 20px;
+      position: relative;
+      text-align: center;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .topic-icon {
+      width: 70px;
+      height: 70px;
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .topic-icon i {
+      font-size: 32px;
+    }
+    
+    /* Card Body */
+    .card-body-custom {
+      padding: 25px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      background-color: #fff;
+      position: relative;
+      margin-top: -40px;
+      border-radius: 12px 12px 0 0;
+      z-index: 2;
+    }
+    
+    .card-body-custom h4 {
+      margin-top: 15px;
+      font-size: 1.25rem;
+      color: #333;
+    }
+    
+    /* Subtopics */
+    .subtopics-container {
+      margin-top: 15px;
+      flex: 1;
+    }
+    
+    .subtopic-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 10px;
+      font-size: 0.9rem;
+    }
+    
+    .subtopic-item i {
+      margin-top: 3px;
+      flex-shrink: 0;
+    }
+    
+    /* Card Footer */
+    .card-footer-custom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+      padding-top: 15px;
+      border-top: 1px solid rgba(0, 0, 0, 0.05);
+    }
+    
+    .topic-count {
+      font-size: 0.85rem;
+      color: #666;
+      font-weight: 500;
+    }
+    
+    /* Section Title */
+    .divider-custom {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 20px 0;
+    }
+    
+    .divider-custom-line {
+      width: 100%;
+      max-width: 7rem;
+      height: 0.25rem;
+      background-color: #00ffff;
+      border-radius: 1rem;
+    }
+    
+    .divider-custom-icon {
+      color: var(--bs-danger);
+      font-size: 1.5rem;
+      margin: 0 1rem;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .card-header-custom {
+        height: 100px;
+      }
+      
+      .topic-icon {
+        width: 60px;
+        height: 60px;
+      }
+      
+      .topic-icon i {
+        font-size: 28px;
+      }
+      
+      .card-body-custom {
+        padding: 20px;
+      }
+    }
+  </style>
+  <!-- =======================================================
+  * Template Name: Arsha
+  * Template URL: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-l position-relative d-flex align-items-center">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <img src="assets/img/logo-jgu-background.png" alt="">
+        <h4 class="sitename">JGITeC2025</h4>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li class="dropdown"><a href="#"><span>Profile</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#about">About</a></li>
+              <li class="dropdown" id="dropdown-menu"><a href="#editorial-board"><span>Editorial Team</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#chief-editors" class="main">Chief Editors</a></li>
+                  <li><a href="#associate-editors" class="main">Associate Editors</a></li>
+                  <li><a href="#editorial" class="main">Editorial Board</a></li>
+                  <!-- <li><a href="#">Deep Dropdown 4</a></li>
+                  <li><a href="#">Deep Dropdown 5</a></li> -->
+                </ul>
+              </li>
+              <li><a href="#">Dropdown 2</a></li>
+              <li><a href="#">Dropdown 3</a></li>
+              <li><a href="#">Dropdown 4</a></li>
+            </ul>
+          </li>
+          <!-- <li><a href="#about">About</a></li> -->
+          <li><a href="#services">Topic</a></li>
+          <!-- <li><a href="#portfolio">Portfolio</a></li> -->
+          <li><a href="#team">Speakers</a></li>
+          <!-- <li><a href="#pricing">Pricing</a></li> -->
+          <!-- <li><a href="#editorial-board">Editorial Team</a></li> -->
+          <!-- <li class="dropdown"><a href="#"><span>Profile</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#about">About</a></li>
+              <li class="dropdown" id="dropdown-menu"><a href="#editorial-board"><span>Editorial Team</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#chief-editors" class="main">Chief Editors</a></li>
+                  <li><a href="#associate-editors" class="main">Associate Editors</a></li>
+                  <li><a href="#editorial" class="main">Editorial Board</a></li>
+                  <li><a href="#">Deep Dropdown 4</a></li>
+                  <li><a href="#">Deep Dropdown 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Dropdown 2</a></li>
+              <li><a href="#">Dropdown 3</a></li>
+              <li><a href="#">Dropdown 4</a></li>
+            </ul>
+          </li> -->
+          <li><a href="#contact">Contact</a></li>
+          <a href="#" class="text-white btn btn-getstarted">Registration</a>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <!-- <a class="btn-getstarted" href="#about">Get Started</a> -->
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="zoom-out">
+            <h1>1st Joint Global Innovation and Technology Conference 2025 (JGITeC2025) </h1>
+            <p>Bridging engineering, business, and pharmaceutical expertise to advance technological innovation for global impact</p>
+            <!-- <div class="d-flex">
+              <a href="#about" class="btn-get-started">Get Started</a>
+              <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
+            </div> -->
+          </div>
+          <div class="col-lg-5 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="200">
+            <img src="assets/img/image (3).png" class="img-fluid animated" alt="">
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- Clients Section -->
+    <!-- <section id="clients" class="clients section light-background">
+
+      <div class="container" data-aos="zoom-in">
+
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 2,
+                  "spaceBetween": 40
+                },
+                "480": {
+                  "slidesPerView": 3,
+                  "spaceBetween": 60
+                },
+                "640": {
+                  "slidesPerView": 4,
+                  "spaceBetween": 80
+                },
+                "992": {
+                  "slidesPerView": 5,
+                  "spaceBetween": 120
+                },
+                "1200": {
+                  "slidesPerView": 6,
+                  "spaceBetween": 120
+                }
+              }
+            }
+          </script>
+          <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide"><img src="assets/img/clients/client-1.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-2.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-3.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-4.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-5.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-6.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-7.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-8.png" class="img-fluid" alt=""></div>
+          </div>
+        </div>
+
+      </div>
+
+    </section> -->
+    <!-- /Clients Section -->
+
+    <!-- About Section -->
+<section id="about" class="about section py-5 bg-light">
+  <!-- Section Title with decorative elements -->
+  <div class="container section-title text-center mb-5" data-aos="fade-up">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <span class="badge bg-danger px-3 py-2 mb-3">JGITeC2025</span>
+        <h2 class="display-5 fw-bold mb-3">About the conference</h2>
+        <div class="divider-custom my-4">
+          <div class="divider-custom-line"></div>
+          <div class="divider-custom-icon"><i class="bi bi-stars"></i></div>
+          <div class="divider-custom-line"></div>
+        </div>
+      </div>
+    </div>
+  </div><!-- End Section Title -->
+
+  <div class="container">
+    <div class="row gy-4 align-items-center">
+      <!-- Left content with enhanced styling -->
+      <div class="col-lg-6 content about-jgu" data-aos="fade-up" data-aos-delay="100">
+        <div class="card border-0 shadow-sm p-4 h-100 bg-white">
+          <div class="card-body">
+            <h3 class="card-title mb-4 text-danger"><i class="bi bi-info-circle-fill me-2"></i>Conference Overview</h3>
+            <p class="text-dark">
+              The 1st Joint Global Innovation and Technology Conference 2025 (JGITeC2025) is an international platform dedicated to interdisciplinary collaboration among pharmaceutical sciences, business strategies, and engineering advancements.
+            </p>
+            <p class="text-dark">
+              This conference aims to explore cutting-edge innovations and sustainable solutions that drive technological progress and global impact.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right content with map and venue info -->
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="card border-0 shadow-sm overflow-hidden h-100">
+          <div class="card-header bg-danger text-white p-3">
+            <h3 class="h5 mb-0"><i class="bi bi-geo-alt-fill me-2"></i>Conference Venue</h3>
+          </div>
+          <div class="card-body p-0">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.8050030730496!2d106.82540607499205!3d-6.419095993571829!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69eb97981e953d%3A0x7040f2673277d58f!2sKampus%20Jakarta%20Global%20University!5e0!3m2!1sen!2sid!4v1739171281222!5m2!1sen!2sid" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div class="card-footer bg-white border-0 p-3">
+            <div class="d-flex align-items-center mb-3">
+              <i class="bi bi-building text-danger fs-4 me-3"></i>
+              <div>
+                <h5 class="h6 mb-0">Jakarta Global University</h5>
+                <p class="small text-muted mb-0">Kampus Jakarta, Indonesia</p>
+              </div>
+            </div>
+            <div class="d-flex align-items-center mb-3">
+              <i class="bi bi-calendar-event text-danger fs-4 me-3"></i>
+              <div>
+                <h5 class="h6 mb-0">Conference Dates</h5>
+                <p class="small text-muted mb-0">October 25, 2025</p>
+              </div>
+            </div>
+            <a href="#contact" class="btn btn-danger w-100 mt-2">
+              <i class="bi bi-send me-2"></i>Contact for More Information
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /About Section -->
+
+
+
+    <!-- Why Us Section -->
+    <!-- <section id="why-us" class="section why-us light-background" data-builder="section">
+
+      <div class="container-fluid">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-7 d-flex flex-column justify-content-center order-2 order-lg-1">
+
+            <div class="content px-xl-5" data-aos="fade-up" data-aos-delay="100">
+              <h3><span>Eum ipsam laborum deleniti </span><strong>velit pariatur architecto aut nihil</strong></h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
+              </p>
+            </div>
+
+            <div class="faq-container px-xl-5" data-aos="fade-up" data-aos-delay="200">
+
+              <div class="faq-item faq-active">
+
+                <h3><span>01</span> Non consectetur a erat nam at lectus urna duis?</h3>
+                <div class="faq-content">
+                  <p>Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+
+              <div class="faq-item">
+                <h3><span>02</span> Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?</h3>
+                <div class="faq-content">
+                  <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+
+              <div class="faq-item">
+                <h3><span>03</span> Dolor sit amet consectetur adipiscing elit pellentesque?</h3>
+                <div class="faq-content">
+                  <p>Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-5 order-1 order-lg-2 why-us-img">
+            <img src="assets/img/why-us.png" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="100">
+          </div>
+        </div>
+
+      </div>
+
+    </section> -->
+    <!-- /Why Us Section -->
+
+    <!-- Skills Section -->
+    <!-- <section id="skills" class="skills section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row">
+
+          <div class="col-lg-6 d-flex align-items-center">
+            <img src="assets/img/skills.png" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-6 pt-4 pt-lg-0 content">
+
+            <h3>Voluptatem dignissimos provident quasi corporis voluptas</h3>
+            <p class="fst-italic">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+
+            <div class="skills-content skills-animation">
+
+              <div class="progress">
+                <span class="skill"><span>HTML</span> <i class="val">100%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+
+              <div class="progress">
+                <span class="skill"><span>CSS</span> <i class="val">90%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+
+              <div class="progress">
+                <span class="skill"><span>JavaScript</span> <i class="val">75%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+
+              <div class="progress">
+                <span class="skill"><span>Photoshop</span> <i class="val">55%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </section> --> 
+    <!-- /Skills Section -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section light-background bg-white py-5">
+      <!-- Section Title with enhanced styling -->
+      <div class="container section-title text-center mb-5" data-aos="fade-up">
+        <!-- <div class="badge bg-primary px-3 py-2 mb-3">Conference Topics</div> -->
+        <h2 class="display-5 fw-bold mb-3">TOPIC AS RELEVANT</h2>
+        <p class="lead text-muted mx-auto" style="max-width: 700px;">Here is our conference topic and sub-topic</p>
+        <div class="divider-custom my-4">
+          <div class="divider-custom-line"></div>
+          <div class="divider-custom-icon"><i class="bi bi-book"></i></div>
+          <div class="divider-custom-line"></div>
+        </div>
+      </div><!-- End Section Title -->
+    
+      <div class="container">
+        <div class="row gy-4">
+          <!-- Informatic Engineering -->
+          <div class="col-xl-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item position-relative h-100">
+              <div class="card-header-custom bg-primary">
+                <div class="topic-icon">
+                  <i class="bi bi-cpu text-white"></i>
+                </div>
+              </div>
+              <div class="card-body-custom">
+                <h4 class="mb-3 fw-bold">Informatic Engineering</h4>
+                <div class="subtopics-container">
+                  <div class="subtopic-item">
+                    <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                    <span>Mobile Applications</span>
+                  </div>
+                  <div class="subtopic-item">
+                    <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                    <span>Biomedical Informatics</span>
+                  </div>
+                  <div class="subtopic-item">
+                    <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                    <span>Security Systems</span>
+                  </div>
+                  <div class="subtopic-item">
+                    <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                    <span>Database and Data Mining</span>
+                  </div>
+                  <div class="subtopic-item">
+                    <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                    <span>Artificial Intelligence</span>
+                  </div>
+                  <div class="subtopic-item">
+                    <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                    <span>Computer Network</span>
+                  </div>
+                </div>
+                <div class="card-footer-custom">
+                  <span class="badge bg-primary text-white topic-count">6 subtopics</span>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Topic -->
+    
+          <!-- Industrial Engineering -->
+          <div class="col-xl-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item position-relative h-100">
+              <div class="card-header-custom bg-success">
+                <div class="topic-icon">
+                  <i class="bi bi-gear text-white"></i>
+                </div>
+              </div>
+              <div class="card-body-custom">
+                <h4 class="mb-3 fw-bold">Industrial Engineering</h4>
+                <div class="subtopics-container">
+                  <div class="subtopic-item">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    <span>Smart and Lean Manufacturing System</span>
+                  </div>
+                  <div class="subtopic-item">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    <span>Product Design and Development</span>
+                  </div>
+                  <div class="subtopic-item">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    <span>Digitalization Supply Chain</span>
+                  </div>
+                  <div class="subtopic-item">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    <span>Green Manufacturing</span>
+                  </div>
+                  <div class="subtopic-item">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    <span>Quality Management System</span>
+                  </div>
+                </div>
+                <div class="card-footer-custom">
+                  <span class="badge bg-success text-white topic-count">5 subtopics</span>
+                  
+                </div>
+              </div>
+            </div>
+          </div><!-- End Topic -->
+    
+          <!-- Civil Engineering -->
+          <div class="col-xl-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item position-relative h-100">
+              <div class="card-header-custom bg-danger">
+                <div class="topic-icon">
+                  <i class="bi bi-building text-white"></i>
+                </div>
+              </div>
+              <div class="card-body-custom">
+                <h4 class="mb-3 fw-bold">Civil Engineering</h4>
+                <div class="subtopics-container">
+                  <div class="subtopic-item">
+                    <i class="bi bi-check-circle-fill text-danger me-2"></i>
+                    <span>Structure Engineering</span>
+                  </div>
+                  <div class="subtopic-item">
+                    <i class="bi bi-check-circle-fill text-danger me-2"></i>
+                    <span>Road and Bridge Engineering</span>
+                  </div>
+                  <div class="subtopic-item">
+                    <i class="bi bi-check-circle-fill text-danger me-2"></i>
+                    <span>Geotech Engineering</span>
+                  </div>
+                  <div class="subtopic-item">
+                    <i class="bi bi-check-circle-fill text-danger me-2"></i>
+                    <span>Water Resources Management</span>
+                  </div>
+                  <div class="subtopic-item">
+                    <i class="bi bi-check-circle-fill text-danger me-2"></i>
+                    <span>Transportation Engineering</span>
+                  </div>
+                  <div class="subtopic-item">
+                    <i class="bi bi-check-circle-fill text-danger me-2"></i>
+                    <span>Disaster Mitigation</span>
+                  </div>
+                  <div class="subtopic-item">
+                    <i class="bi bi-check-circle-fill text-danger me-2"></i>
+                    <span>Construction Management</span>
+                  </div>
+                  <div class="subtopic-item">
+                    <i class="bi bi-check-circle-fill text-danger me-2"></i>
+                    <span>Earthquake Engineering</span>
+                  </div>
+                </div>
+                <div class="card-footer-custom">
+                  <span class="badge bg-danger text-white topic-count">8 subtopics</span>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Topic -->
+    
+          <!-- Electrical Engineering -->
+          <div class="col-xl-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item position-relative h-100">
+              <div class="card-header-custom bg-warning">
+                <div class="topic-icon">
+                  <i class="bi bi-lightning-charge text-white"></i>
+                </div>
+              </div>
+              <div class="card-body-custom">
+                <h4 class="mb-3 fw-bold">Electrical Engineering</h4>
+                <div class="subtopics-container">
+                  <div class="subtopic-item">
+                    <i class="bi bi-check-circle-fill text-warning me-2"></i>
+                    <span>Power Transmission and Distribution</span>
+                  </div>
+                  <div class="subtopic-item">
+                    <i class="bi bi-check-circle-fill text-warning me-2"></i>
+                    <span>High Voltage Engineering</span>
+                  </div>
+                  <div class="subtopic-item">
+                    <i class="bi bi-check-circle-fill text-warning me-2"></i>
+                    <span>Renewable Energy</span>
+                  </div>
+                  <div class="subtopic-item">
+                    <i class="bi bi-check-circle-fill text-warning me-2"></i>
+                    <span>Smart Grid Technology</span>
+                  </div>
+                  <div class="subtopic-item">
+                    <i class="bi bi-check-circle-fill text-warning me-2"></i>
+                    <span>Robotics</span>
+                  </div>
+                  <div class="subtopic-item">
+                    <i class="bi bi-check-circle-fill text-warning me-2"></i>
+                    <span>Power Electronics</span>
+                  </div>
+                  <div class="subtopic-item">
+                    <i class="bi bi-check-circle-fill text-warning me-2"></i>
+                    <span>Signal and Image Processing</span>
+                  </div>
+                  <div class="subtopic-item">
+                    <i class="bi bi-check-circle-fill text-warning me-2"></i>
+                    <span>Embedded Systems</span>
+                  </div>
+                  <div class="subtopic-item">
+                    <i class="bi bi-check-circle-fill text-warning me-2"></i>
+                    <span>VLSI</span>
+                  </div>
+                  <div class="subtopic-item">
+                    <i class="bi bi-check-circle-fill text-warning me-2"></i>
+                    <span>Wireless and Mobile Communication</span>
+                  </div>
+                </div>
+                <div class="card-footer-custom">
+                  <span class="badge bg-warning text-white topic-count">10 subtopics</span>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Topic -->
+    
+          <!-- Mechanical Engineering -->
+          <div class="col-xl-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-item position-relative h-100">
+              <div class="card-header-custom bg-info">
+                <div class="topic-icon">
+                  <i class="bi bi-tools text-white"></i>
+                </div>
+              </div>
+              <div class="card-body-custom">
+                <h4 class="mb-3 fw-bold">Mechanical Engineering</h4>
+                <div class="subtopics-container">
+                  <div class="subtopic-item">
+                    <i class="bi bi-check-circle-fill text-info me-2"></i>
+                    <span>Mechatronics & Robotics</span>
+                  </div>
+                  <div class="subtopic-item">
+                    <i class="bi bi-check-circle-fill text-info me-2"></i>
+                    <span>Applied Mechanics</span>
+                  </div>
+                  <div class="subtopic-item">
+                    <i class="bi bi-check-circle-fill text-info me-2"></i>
+                    <span>Biomedical Engineering</span>
+                  </div>
+                  <div class="subtopic-item">
+                    <i class="bi bi-check-circle-fill text-info me-2"></i>
+                    <span>Composite & Materials Engineering</span>
+                  </div>
+                  <div class="subtopic-item">
+                    <i class="bi bi-check-circle-fill text-info me-2"></i>
+                    <span>Computational Mechanics</span>
+                  </div>
+                  <div class="subtopic-item">
+                    <i class="bi bi-check-circle-fill text-info me-2"></i>
+                    <span>Design Engineering</span>
+                  </div>
+                  <div class="subtopic-item">
+                    <i class="bi bi-check-circle-fill text-info me-2"></i>
+                    <span>Thermal & Fluid Science</span>
+                  </div>
+                  <div class="subtopic-item">
+                    <i class="bi bi-check-circle-fill text-info me-2"></i>
+                    <span>Automotive Engineering</span>
+                  </div>
+                </div>
+                <div class="card-footer-custom">
+                  <span class="badge bg-info text-white topic-count">8 subtopics</span>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Topic -->
+    
+          <!-- Business and Pharmaceutical Science -->
+          <div class="col-xl-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-item position-relative h-100">
+              <div class="card-header-custom bg-secondary">
+                <div class="topic-icon">
+                  <i class="bi bi-briefcase text-white"></i>
+                </div>
+              </div>
+              <div class="card-body-custom">
+                <h4 class="mb-3 fw-bold">Business and Pharmaceutical Science</h4>
+                <div class="subtopics-container">
+                  <div class="subtopic-item">
+                    <i class="bi bi-check-circle-fill text-secondary me-2"></i>
+                    <span>Business and Entrepreneurship in the Tech Era</span>
+                  </div>
+                  <div class="subtopic-item">
+                    <i class="bi bi-check-circle-fill text-secondary me-2"></i>
+                    <span>Tech-Driven Business Strategies</span>
+                  </div>
+                  <div class="subtopic-item">
+                    <i class="bi bi-check-circle-fill text-secondary me-2"></i>
+                    <span>Financial Technology (FinTech)</span>
+                  </div>
+                  <div class="subtopic-item">
+                    <i class="bi bi-check-circle-fill text-secondary me-2"></i>
+                    <span>Digital Transformation & Smart Technologies</span>
+                  </div>
+                  <div class="subtopic-item">
+                    <i class="bi bi-check-circle-fill text-secondary me-2"></i>
+                    <span>Sustainability and ESG</span>
+                  </div>
+                  <div class="subtopic-item">
+                    <i class="bi bi-check-circle-fill text-secondary me-2"></i>
+                    <span>Marketing in the Digital Age</span>
+                  </div>
+                  <div class="subtopic-item">
+                    <i class="bi bi-check-circle-fill text-secondary me-2"></i>
+                    <span>Leadership and Innovation Management</span>
+                  </div>
+                </div>
+                <div class="card-footer-custom">
+                  <span class="badge bg-secondary text-white topic-count">7 subtopics</span>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Topic -->
+        </div>
+      </div>
+    </section>
+    <!-- /Services Section -->
+
+    <!-- Call To Action Section -->
+    <!-- <section id="call-to-action" class="call-to-action section dark-background">
+
+      <img src="assets/img/cta-bg.jpg" alt="">
+
+      <div class="container">
+
+        <div class="row" data-aos="zoom-in" data-aos-delay="100">
+          <div class="col-xl-9 text-center text-xl-start">
+            <h3>Call To Action</h3>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+          <div class="col-xl-3 cta-btn-container text-center">
+            <a class="cta-btn align-middle" href="#">Call To Action</a>
+          </div>
+        </div>
+
+      </div>
+
+    </section> -->
+    
+    <!-- /Call To Action Section -->
+
+    <!-- Portfolio Section -->
+    <!-- <section id="portfolio" class="portfolio section">
+
+     
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Portfolio</h2>
+        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      </div>
+
+      <div class="container">
+
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-app">App</li>
+            <li data-filter=".filter-product">Card</li>
+            <li data-filter=".filter-branding">Web</li>
+          </ul>
+
+          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <img src="assets/img/masonry-portfolio/masonry-portfolio-1.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>App 1</h4>
+                <p>Lorem ipsum, dolor sit</p>
+                <a href="assets/img/masonry-portfolio/masonry-portfolio-1.jpg" title="App 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <img src="assets/img/masonry-portfolio/masonry-portfolio-2.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Product 1</h4>
+                <p>Lorem ipsum, dolor sit</p>
+                <a href="assets/img/masonry-portfolio/masonry-portfolio-2.jpg" title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <img src="assets/img/masonry-portfolio/masonry-portfolio-3.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Branding 1</h4>
+                <p>Lorem ipsum, dolor sit</p>
+                <a href="assets/img/masonry-portfolio/masonry-portfolio-3.jpg" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <img src="assets/img/masonry-portfolio/masonry-portfolio-4.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>App 2</h4>
+                <p>Lorem ipsum, dolor sit</p>
+                <a href="assets/img/masonry-portfolio/masonry-portfolio-4.jpg" title="App 2" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <img src="assets/img/masonry-portfolio/masonry-portfolio-5.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Product 2</h4>
+                <p>Lorem ipsum, dolor sit</p>
+                <a href="assets/img/masonry-portfolio/masonry-portfolio-5.jpg" title="Product 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <img src="assets/img/masonry-portfolio/masonry-portfolio-6.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Branding 2</h4>
+                <p>Lorem ipsum, dolor sit</p>
+                <a href="assets/img/masonry-portfolio/masonry-portfolio-6.jpg" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <img src="assets/img/masonry-portfolio/masonry-portfolio-7.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>App 3</h4>
+                <p>Lorem ipsum, dolor sit</p>
+                <a href="assets/img/masonry-portfolio/masonry-portfolio-7.jpg" title="App 3" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <img src="assets/img/masonry-portfolio/masonry-portfolio-8.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Product 3</h4>
+                <p>Lorem ipsum, dolor sit</p>
+                <a href="assets/img/masonry-portfolio/masonry-portfolio-8.jpg" title="Product 3" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <img src="assets/img/masonry-portfolio/masonry-portfolio-9.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Branding 3</h4>
+                <p>Lorem ipsum, dolor sit</p>
+                <a href="assets/img/masonry-portfolio/masonry-portfolio-9.jpg" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section> -->
+    <!-- /Portfolio Section -->
+
+    <!-- Team Section -->
+    <section id="team" class="team section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>KEYNOTE SPEAKER</h2>
+        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="team-member d-flex align-items-start bg-light">
+              <div class="pic"><img src="assets/img/team/team-1.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Walter White</h4>
+                <span>Chief Executive Officer</span>
+                <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""> <i class="bi bi-linkedin"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="team-member d-flex align-items-start bg-light">
+              <div class="pic"><img src="assets/img/team/team-2.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Sarah Jhonson</h4>
+                <span>Product Manager</span>
+                <p>Aut maiores voluptates amet et quis praesentium qui senda para</p>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""> <i class="bi bi-linkedin"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="team-member d-flex align-items-start bg-light">
+              <div class="pic"><img src="assets/img/team/team-3.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>William Anderson</h4>
+                <span>CTO</span>
+                <p>Quisquam facilis cum velit laborum corrupti fuga rerum quia</p>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""> <i class="bi bi-linkedin"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="team-member d-flex align-items-start bg-light">
+              <div class="pic"><img src="assets/img/team/team-4.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Amanda Jepson</h4>
+                <span>Accountant</span>
+                <p>Dolorum tempora officiis odit laborum officiis et et accusamus</p>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""> <i class="bi bi-linkedin"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Team Section -->
+
+    <!-- Pricing Section -->
+    <!-- <section id="pricing" class="pricing section light-background">
+
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Pricing</h2>
+        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      </div>
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="pricing-item">
+              <h3>Free Plan</h3>
+              <h4><sup>$</sup>0<span> / month</span></h4>
+              <ul>
+                <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
+                <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
+                <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
+                <li class="na"><i class="bi bi-x"></i> <span>Pharetra massa massa ultricies</span></li>
+                <li class="na"><i class="bi bi-x"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+              </ul>
+              <a href="#" class="buy-btn">Buy Now</a>
+            </div>
+          </div>
+
+          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+            <div class="pricing-item featured">
+              <h3>Business Plan</h3>
+              <h4><sup>$</sup>29<span> / month</span></h4>
+              <ul>
+                <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
+                <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
+                <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
+                <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
+                <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+              </ul>
+              <a href="#" class="buy-btn">Buy Now</a>
+            </div>
+          </div>
+
+          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="300">
+            <div class="pricing-item">
+              <h3>Developer Plan</h3>
+              <h4><sup>$</sup>49<span> / month</span></h4>
+              <ul>
+                <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
+                <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
+                <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
+                <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
+                <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+              </ul>
+              <a href="#" class="buy-btn">Buy Now</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section> -->
+    <!-- /Pricing Section -->
+
+ <!-- Editorial Board Section -->
+<section id="editorial-board" class="editorial-board section py-5">
+  <!-- Section Title -->
+  <div class="container section-title text-center mb-5" data-aos="fade-up">
+    <!-- <span class="section-subtitle">Academic Excellence</span> -->
+    <h2 class="display-5 fw-bold mb-3">Editorial Team</h2>
+    <p class="lead text-muted mx-auto" style="max-width: 700px;">Our distinguished editorial board members ensure the highest standards of academic excellence and research integrity.</p>
+  </div><!-- End Section Title -->
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <!-- Chief Editors Section -->
+    <div class="row mb-5 chief-editors section" id="chief-editors">
+      <div class="col-12">
+        <div class="board-category-title" data-aos="fade-up">
+          <h3 class="h4 fw-bold">Chief Editors</h3>
+          <div class="board-category-line"></div>
+        </div>
+      </div>
+      
+      <!-- Chief Editor Cards -->
+      <div class="col-lg-4 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="editor-card chief-editor-card">
+          <div class="editor-card-header">
+            <div class="editor-role">Chief Editor</div>
+          </div>
+          <div class="editor-card-body">
+            <h4 class="editor-name">Prof. Dr. John Smith</h4>
+            <p class="editor-title">Professor of Computer Science</p>
+            <p class="editor-affiliation">Massachusetts Institute of Technology, USA</p>
+            <div class="editor-expertise">
+              <span class="badge bg-light text-dark">Artificial Intelligence</span>
+              <span class="badge bg-light text-dark">Machine Learning</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="editor-card chief-editor-card">
+          <div class="editor-card-header">
+            <div class="editor-role">Chief Editor</div>
+          </div>
+          <div class="editor-card-body">
+            <h4 class="editor-name">Prof. Dr. Maria Rodriguez</h4>
+            <p class="editor-title">Professor of Engineering</p>
+            <p class="editor-affiliation">Stanford University, USA</p>
+            <div class="editor-expertise">
+              <span class="badge bg-light text-dark">Mechanical Engineering</span>
+              <span class="badge bg-light text-dark">Robotics</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="400">
+        <div class="editor-card chief-editor-card">
+          <div class="editor-card-header">
+            <div class="editor-role">Chief Editor</div>
+          </div>
+          <div class="editor-card-body">
+            <h4 class="editor-name">Prof. Dr. Hiroshi Tanaka</h4>
+            <p class="editor-title">Professor of Business Administration</p>
+            <p class="editor-affiliation">University of Tokyo, Japan</p>
+            <div class="editor-expertise">
+              <span class="badge bg-light text-dark">Business Strategy</span>
+              <span class="badge bg-light text-dark">Innovation Management</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Associate Editors Section -->
+    <div class="row mb-5 associate-editors section" id="associate-editors">
+      <div class="col-12">
+        <div class="board-category-title" data-aos="fade-up">
+          <h3 class="h4 fw-bold">Associate Editors</h3>
+          <div class="board-category-line"></div>
+        </div>
+      </div>
+      
+      <!-- Associate Editor Cards - Row 1 -->
+      <div class="col-lg-3 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="editor-card associate-editor-card">
+          <div class="editor-card-body">
+            <h5 class="editor-name">Dr. Sarah Johnson</h5>
+            <div class="editor-divider"></div>
+            <p class="editor-title">Associate Professor</p>
+            <p class="editor-affiliation">University of California, USA</p>
+            <div class="editor-expertise">
+              <span class="badge bg-light text-dark">Civil Engineering</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-3 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="editor-card associate-editor-card">
+          <div class="editor-card-body">
+            <h5 class="editor-name">Dr. Ahmed Hassan</h5>
+            <div class="editor-divider"></div>
+            <p class="editor-title">Associate Professor</p>
+            <p class="editor-affiliation">Cairo University, Egypt</p>
+            <div class="editor-expertise">
+              <span class="badge bg-light text-dark">Electrical Engineering</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-3 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="editor-card associate-editor-card">
+          <div class="editor-card-body">
+            <h5 class="editor-name">Dr. Li Wei</h5>
+            <div class="editor-divider"></div>
+            <p class="editor-title">Associate Professor</p>
+            <p class="editor-affiliation">Tsinghua University, China</p>
+            <div class="editor-expertise">
+              <span class="badge bg-light text-dark">Industrial Engineering</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-3 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="400">
+        <div class="editor-card associate-editor-card">
+          <div class="editor-card-body">
+            <h5 class="editor-name">Dr. Anna Kowalski</h5>
+            <div class="editor-divider"></div>
+            <p class="editor-title">Associate Professor</p>
+            <p class="editor-affiliation">Warsaw University, Poland</p>
+            <div class="editor-expertise">
+              <span class="badge bg-light text-dark">Computer Science</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Associate Editor Cards - Row 2 -->
+      <div class="col-lg-3 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="editor-card associate-editor-card">
+          <div class="editor-card-body">
+            <h5 class="editor-name">Dr. Carlos Mendez</h5>
+            <div class="editor-divider"></div>
+            <p class="editor-title">Associate Professor</p>
+            <p class="editor-affiliation">University of São Paulo, Brazil</p>
+            <div class="editor-expertise">
+              <span class="badge bg-light text-dark">Mechanical Engineering</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-3 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="editor-card associate-editor-card">
+          <div class="editor-card-body">
+            <h5 class="editor-name">Dr. Priya Sharma</h5>
+            <div class="editor-divider"></div>
+            <p class="editor-title">Associate Professor</p>
+            <p class="editor-affiliation">Indian Institute of Technology, India</p>
+            <div class="editor-expertise">
+              <span class="badge bg-light text-dark">Pharmaceutical Sciences</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-3 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="editor-card associate-editor-card">
+          <div class="editor-card-body">
+            <h5 class="editor-name">Dr. James Wilson</h5>
+            <div class="editor-divider"></div>
+            <p class="editor-title">Associate Professor</p>
+            <p class="editor-affiliation">University of Melbourne, Australia</p>
+            <div class="editor-expertise">
+              <span class="badge bg-light text-dark">Business Administration</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-3 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="400">
+        <div class="editor-card associate-editor-card">
+          <div class="editor-card-body">
+            <h5 class="editor-name">Dr. Sofia Gonzalez</h5>
+            <div class="editor-divider"></div>
+            <p class="editor-title">Associate Professor</p>
+            <p class="editor-affiliation">Technical University of Madrid, Spain</p>
+            <div class="editor-expertise">
+              <span class="badge bg-light text-dark">Information Technology</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Editorial Board Members Section -->
+    <div class="row editorial section" id="editorial">
+      <div class="col-12">
+        <div class="board-category-title" data-aos="fade-up">
+          <h3 class="h4 fw-bold">Editorial Board Members</h3>
+          <div class="board-category-line"></div>
+        </div>
+      </div>
+      
+      <!-- Table for Editorial Board Members -->
+      <div class="col-12 mt-4" data-aos="fade-up">
+        <div class="table-responsive">
+          <table class="table table-hover board-members-table">
+            <thead>
+              <tr>
+                <th scope="col" width="30%">Name</th>
+                <th scope="col" width="30%">Affiliation</th>
+                <th scope="col" width="20%">Country</th>
+                <th scope="col" width="20%">Expertise</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Dr. Robert Chen</td>
+                <td>National Taiwan University</td>
+                <td>Taiwan</td>
+                <td><span class="badge bg-light text-dark">Civil Engineering</span></td>
+              </tr>
+              <tr>
+                <td>Dr. Elena Petrova</td>
+                <td>Moscow State University</td>
+                <td>Russia</td>
+                <td><span class="badge bg-light text-dark">Computer Science</span></td>
+              </tr>
+              <tr>
+                <td>Dr. Michael Brown</td>
+                <td>University of Toronto</td>
+                <td>Canada</td>
+                <td><span class="badge bg-light text-dark">Mechanical Engineering</span></td>
+              </tr>
+              <tr>
+                <td>Dr. Fatima Al-Zahra</td>
+                <td>King Abdullah University</td>
+                <td>Saudi Arabia</td>
+                <td><span class="badge bg-light text-dark">Electrical Engineering</span></td>
+              </tr>
+              <tr>
+                <td>Dr. Kwame Nkrumah</td>
+                <td>University of Ghana</td>
+                <td>Ghana</td>
+                <td><span class="badge bg-light text-dark">Business Administration</span></td>
+              </tr>
+              <tr>
+                <td>Dr. Isabella Romano</td>
+                <td>University of Milan</td>
+                <td>Italy</td>
+                <td><span class="badge bg-light text-dark">Pharmaceutical Sciences</span></td>
+              </tr>
+              <tr>
+                <td>Dr. Siti Nurhayati</td>
+                <td>University of Indonesia</td>
+                <td>Indonesia</td>
+                <td><span class="badge bg-light text-dark">Industrial Engineering</span></td>
+              </tr>
+              <tr>
+                <td>Dr. Hans Mueller</td>
+                <td>Technical University of Munich</td>
+                <td>Germany</td>
+                <td><span class="badge bg-light text-dark">Information Technology</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+</section>
+<!-- /Editorial Board Section -->
+
+
+    <!-- Testimonials Section -->
+    <!-- <section id="testimonials" class="testimonials section">
+
+     
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Testimonials</h2>
+        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              }
+            }
+          </script>
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                <h3>Saul Goodman</h3>
+                <h4>Ceo &amp; Founder</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                <h3>Sara Wilsson</h3>
+                <h4>Designer</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                <h3>Jena Karlis</h3>
+                <h4>Store Owner</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                <h3>Matt Brandon</h3>
+                <h4>Freelancer</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+                <h3>John Larson</h3>
+                <h4>Entrepreneur</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div>
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+    </section> -->
+    <!-- /Testimonials Section -->
+
+    <!-- Faq 2 Section -->
+    <!-- <section id="faq-2" class="faq-2 section light-background">
+
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Frequently Asked Questions</h2>
+        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+      </div>
+
+      <div class="container">
+
+        <div class="row justify-content-center">
+
+          <div class="col-lg-10">
+
+            <div class="faq-container">
+
+              <div class="faq-item faq-active" data-aos="fade-up" data-aos-delay="200">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>Non consectetur a erat nam at lectus urna duis?</h3>
+                <div class="faq-content">
+                  <p>Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+
+              <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?</h3>
+                <div class="faq-content">
+                  <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+
+              <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>Dolor sit amet consectetur adipiscing elit pellentesque?</h3>
+                <div class="faq-content">
+                  <p>Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+
+              <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?</h3>
+                <div class="faq-content">
+                  <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+
+              <div class="faq-item" data-aos="fade-up" data-aos-delay="600">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>Tempus quam pellentesque nec nam aliquam sem et tortor consequat?</h3>
+                <div class="faq-content">
+                  <p>Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section> -->
+
+    <!-- /Faq 2 Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section py-5 bg-white">
+      <!-- Section Title -->
+      <div class="container section-title text-center mb-5" data-aos="fade-up">
+        <!-- <div class="badge bg-danger px-3 py-2 mb-3">Get In Touch</div> -->
+        <h2 class="display-5 fw-bold mb-3">Contact Us</h2>
+        <p class="lead text-muted mx-auto" style="max-width: 700px;">Have questions about the conference? Reach out to our team for more information.</p>
+        <div class="divider-custom my-4">
+          <div class="divider-custom-line"></div>
+          <div class="divider-custom-icon"><i class="bi bi-chat-dots"></i></div>
+          <div class="divider-custom-line"></div>
+        </div>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row g-5 align-items-stretch">
+          
+          <!-- Contact Information Card -->
+          <div class="col-lg-6">
+            <div class="card contact-info-card h-100 border-0 shadow-sm">
+              <div class="card-body p-4 p-xl-5">
+                <h3 class="card-title fw-bold mb-4 text-danger">Conference Information</h3>
+                
+                <!-- Contact Info Items -->
+                <div class="contact-info-items">
+                  <!-- Address -->
+                  <div class="contact-info-item d-flex mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="contact-icon bg-danger text-white">
+                      <i class="bi bi-geo-alt"></i>
+                    </div>
+                    <div class="ms-3">
+                      <h5 class="fw-bold text-black">Conference Venue</h5>
+                      <p class="text-muted mb-0">Jakarta Global University Ballroom<br>Depok, Indonesia</p>
+                    </div>
+                  </div>
+                  
+                  <!-- Phone -->
+                  <div class="contact-info-item d-flex mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="contact-icon bg-danger text-white">
+                      <i class="bi bi-telephone"></i>
+                    </div>
+                    <div class="ms-3">
+                      <h5 class="fw-bold text-black">Conference Hotline</h5>
+                      <p class="text-muted mb-0">+62 123 4567 890</p>
+                    </div>
+                  </div>
+                  
+                  <!-- Email -->
+                  <div class="contact-info-item d-flex mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="contact-icon bg-danger text-white">
+                      <i class="bi bi-envelope"></i>
+                    </div>
+                    <div class="ms-3">
+                      <h5 class="fw-bold text-black">Email Support</h5>
+                      <a href="mailto:enquiry@jgu.ac.id" class="mb-0 text-primary">enquiry@jgu.ac.id</a>
+                    </div>
+                  </div>
+                  
+                  <!-- Social Media -->
+                  <div class="contact-info-item d-flex mb-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="contact-icon bg-danger text-white">
+                      <i class="bi bi-share"></i>
+                    </div>
+                    <div class="ms-3">
+                      <h5 class="fw-bold text-black">Follow Us</h5>
+                      <div class="social-links mt-2">
+                        <a href="https://x.com/JGU_University?mx=2" target="_blank" class="me-2 btn btn-sm btn-outline-primary rounded-circle">
+                          <i class="bi bi-twitter-x"></i>
+                        </a>
+                        <a href="https://www.facebook.com/jakartaglobaluniversity?_rdc=2&_rdr" target="_blank" class="me-2 btn btn-sm btn-outline-primary rounded-circle">
+                          <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="https://www.instagram.com/jg_university" target="_blank" class="me-2 btn btn-sm btn-outline-primary rounded-circle">
+                          <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/school/jakarta-global-university" target="_blank" class="me-2 btn btn-sm btn-outline-primary rounded-circle">
+                          <i class="bi bi-linkedin"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- WhatsApp Contact Button -->
+                <div class="mt-4 text-center" data-aos="fade-up" data-aos-delay="600">
+                  <a href="https://wa.me/6281234567890" target="_blank" class="btn btn-success btn-lg whatsapp-btn">
+                    <i class="bi bi-whatsapp me-2"></i> Contact via WhatsApp
+                  </a>
+                  <p class="text-muted small mt-2">Available Monday-Friday, 9AM-5PM</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Map Card -->
+          <div class="col-lg-6">
+            <div class="card map-card h-100 border-0 shadow-sm">
+              <div class="card-body p-0">
+                <div class="map-header bg-danger text-white p-4">
+                  <h3 class="fw-bold mb-0 text-white"><i class="bi bi-pin-map me-2"></i> Conference Location</h3>
+                </div>
+                <div class="ratio ratio-4x3">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.8050030730496!2d106.82540607499205!3d-6.419095993571829!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69eb97981e953d%3A0x7040f2673277d58f!2sKampus%20Jakarta%20Global%20University!5e0!3m2!1sen!2sid!4v1739171281222!5m2!1sen!2sid" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="p-4">
+                  <a href="https://maps.google.com/?q=Jakarta+Global+University" target="_blank" class="btn btn-outline-primary mt-3">
+                    <i class="bi bi-box-arrow-up-right me-2"></i>Open in Google Maps
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+    </section>
+<!-- /Contact Section -->
+
+
+
+  </main>
+
+  <footer id="footer" class="footer bg-dark">
+
+    <!-- <div class="footer-newsletter">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-6">
+            <h4>Join Our Newsletter</h4>
+            <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
+            <form action="forms/newsletter.php" method="post" class="php-email-form">
+              <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
+              <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Your subscription request has been sent. Thank you!</div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="d-flex align-items-center">
+            <span class="sitename">Arsha</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>A108 Adam Street</p>
+            <p>New York, NY 535022</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
+            <p><strong>Email:</strong> <span>info@example.com</span></p>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Web Design</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Web Development</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Product Management</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Marketing</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-12">
+          <h4>Follow Us</h4>
+          <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
+          <div class="social-links d-flex">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div> -->
+
+    <div class="container copyright text-center mt-4 text-white">
+      <p><strong class="px-1 sitename">© 2025 Jakarta Global University.</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://s.jgu.ac.id/m/itic" target="_blank">PKL ITIC</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <!-- <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script> -->
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
