@@ -250,7 +250,7 @@ h6 {
 .scrolled .navmenu .dropdown  ul {
   margin: 0;
   padding: 10px 0;
-  background-color: rgba(181, 56, 56, 0.9);
+  background-color: rgba(255, 255, 255, 0.9);
   display: block;
   position: absolute;
   visibility: hidden;
@@ -261,13 +261,13 @@ h6 {
   transition: 0.3s;
   border-radius: 4px;
   z-index: 99;
-  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
 }
 
 .scrolled .navmenu #dropdown-menu  ul {
   margin: 0;
   padding: 10px 0;
-  background-color: rgba(181, 56, 56, 0.9);
+  background-color: rgba(255, 255, 255, 0.9);
   display: block;
   position: absolute;
   visibility: hidden;
@@ -278,7 +278,7 @@ h6 {
   transition: 0.3s;
   border-radius: 4px;
   z-index: 99;
-  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
 }
 
 
@@ -286,7 +286,7 @@ h6 {
   padding: 10px 20px;
   font-size: 15px;
   text-transform: none;
-  color: white;
+  color: rgb(0, 0, 0);
   /* border: 1px solid red; */
 }
 
@@ -294,7 +294,7 @@ h6 {
   padding: 10px 20px;
   font-size: 15px;
   text-transform: none;
-  color: white;
+  color: rgb(0, 0, 0);
   /* border: 1px solid red; */
 }
 
@@ -308,7 +308,7 @@ h6 {
   .scrolled .navmenu #dropdown-menu ul a:hover,
   .navmenu #dropdown-menu ul .active:hover,
   .navmenu #dropdown-menu ul li:hover>a {
-    background-color: #2b9b9b;
+    background-color: rgba(181, 56, 56, 0.9);
     color: white;
   }
 
@@ -317,11 +317,15 @@ h6 {
   }
 
 .scrolled .navmenu .dropdown span:hover {
-  color: #2b9b9b;
+  color: #00ffff;
 }
 
 .scrolled .navmenu .dropdown .main {
   color: white;
+}
+
+.scrolled .navmenu .dropdown .editorial-team {
+  color: black;
 }
 
 /*--------------------------------------------------------------
