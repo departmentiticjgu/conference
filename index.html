@@ -866,125 +866,204 @@
     
     <!-- /Call To Action Section -->
 
-    <!-- Portfolio Section -->
-     <section id="portfolio" class="portfolio section"> 
+    <!-- Schedule Section -->
+<section id="schedule" class="schedule section py-5">
+  <!-- Section Title -->
+  <div class="container text-center mb-5">
+    <h2 class="fw-bold mb-3">Conference Schedule</h2>
+    <p class="text-muted mx-auto" style="max-width: 600px;">March 17-19, 2025 at Jakarta Global University</p>
+    <div class="simple-divider my-3"></div>
+  </div>
 
-     
-      <div class="container section-title" data-aos="fade-up">
-        <h2>SCHEDULE</h2>
-        <p>Here is our event schedule</p>
+  <div class="container">
+    <!-- Schedule Tabs -->
+    <div class="row justify-content-center mb-4">
+      <div class="col-md-8">
+        <ul class="nav nav-pills mb-4 justify-content-center" id="scheduleTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="day1-tab" data-bs-toggle="pill" data-bs-target="#day1" type="button" role="tab">Day 1</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="day2-tab" data-bs-toggle="pill" data-bs-target="#day2" type="button" role="tab">Day 2</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="day3-tab" data-bs-toggle="pill" data-bs-target="#day3" type="button" role="tab">Day 3</button>
+          </li>
+        </ul>
       </div>
-
-      <div class="container">
-
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-
-          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-app">App</li>
-            <li data-filter=".filter-product">Card</li>
-            <li data-filter=".filter-branding">Web</li>
-          </ul>
-
-          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-1.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 1</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-1.jpg" title="App 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+    </div>
+    
+    <!-- Schedule Content -->
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="tab-content" id="scheduleTabContent">
+          <!-- Day 1 Schedule -->
+          <div class="tab-pane fade show active" id="day1" role="tabpanel">
+            <h4 class="text-center mb-4">Day 1 - March 17, 2025</h4>
+            
+            <div class="schedule-list">
+              <div class="schedule-item">
+                <div class="schedule-time">08:00 - 09:00</div>
+                <div class="schedule-content">
+                  <h5>Registration & Welcome Coffee</h5>
+                  <p class="location">Main Lobby</p>
+                </div>
+              </div>
+              
+              <div class="schedule-item highlight">
+                <div class="schedule-time">09:00 - 10:00</div>
+                <div class="schedule-content">
+                  <h5>Opening Ceremony</h5>
+                  <p class="location">Grand Ballroom</p>
+                </div>
+              </div>
+              
+              <div class="schedule-item">
+                <div class="schedule-time">10:00 - 11:00</div>
+                <div class="schedule-content">
+                  <h5>Keynote: The Future of Technology Integration</h5>
+                  <p class="speaker">Prof. Dr. John Smith, MIT</p>
+                </div>
+              </div>
+              
+              <div class="schedule-item break">
+                <div class="schedule-time">11:00 - 11:30</div>
+                <div class="schedule-content">
+                  <h5>Coffee Break</h5>
+                </div>
+              </div>
+              
+              <div class="schedule-item">
+                <div class="schedule-time">11:30 - 12:30</div>
+                <div class="schedule-content">
+                  <h5>Keynote: Sustainable Engineering Practices</h5>
+                  <p class="speaker">Dr. Maria Rodriguez, Stanford University</p>
+                </div>
+              </div>
+              
+              <div class="schedule-item break">
+                <div class="schedule-time">12:30 - 14:00</div>
+                <div class="schedule-content">
+                  <h5>Lunch Break</h5>
+                </div>
+              </div>
+              
+              <div class="schedule-item">
+                <div class="schedule-time">14:00 - 15:30</div>
+                <div class="schedule-content">
+                  <h5>Parallel Sessions: Engineering Innovations</h5>
+                  <p class="location">Room A, B, C</p>
+                </div>
+              </div>
+              
+              <div class="schedule-item special">
+                <div class="schedule-time">18:00 - 20:00</div>
+                <div class="schedule-content">
+                  <h5>Welcome Reception</h5>
+                  <p class="location">Garden Terrace</p>
+                </div>
               </div>
             </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-2.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Product 1</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-2.jpg" title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-3.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Branding 1</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-3.jpg" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-4.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 2</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-4.jpg" title="App 2" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-5.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Product 2</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-5.jpg" title="Product 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-6.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Branding 2</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-6.jpg" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-7.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 3</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-7.jpg" title="App 3" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-8.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Product 3</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-8.jpg" title="Product 3" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-9.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Branding 3</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-9.jpg" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
-
           </div>
-
+          
+          <!-- Day 2 Schedule -->
+          <div class="tab-pane fade" id="day2" role="tabpanel">
+            <h4 class="text-center mb-4">Day 2 - March 18, 2025</h4>
+            
+            <div class="schedule-list">
+              <div class="schedule-item">
+                <div class="schedule-time">09:00 - 10:00</div>
+                <div class="schedule-content">
+                  <h5>Keynote: Digital Transformation in Business</h5>
+                  <p class="speaker">Dr. Hiroshi Tanaka, University of Tokyo</p>
+                </div>
+              </div>
+              
+              <div class="schedule-item">
+                <div class="schedule-time">10:00 - 12:00</div>
+                <div class="schedule-content">
+                  <h5>Parallel Sessions: Multiple Tracks</h5>
+                  <p class="location">Rooms A, B, C, D</p>
+                </div>
+              </div>
+              
+              <div class="schedule-item break">
+                <div class="schedule-time">12:00 - 13:30</div>
+                <div class="schedule-content">
+                  <h5>Lunch Break</h5>
+                </div>
+              </div>
+              
+              <div class="schedule-item highlight">
+                <div class="schedule-time">13:30 - 15:30</div>
+                <div class="schedule-content">
+                  <h5>Workshops & Interactive Sessions</h5>
+                  <p class="location">Workshop Rooms 1-4</p>
+                </div>
+              </div>
+              
+              <div class="schedule-item special">
+                <div class="schedule-time">19:00 - 22:00</div>
+                <div class="schedule-content">
+                  <h5>Conference Gala Dinner</h5>
+                  <p class="location">Grand Ballroom</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Day 3 Schedule -->
+          <div class="tab-pane fade" id="day3" role="tabpanel">
+            <h4 class="text-center mb-4">Day 3 - March 19, 2025</h4>
+            
+            <div class="schedule-list">
+              <div class="schedule-item">
+                <div class="schedule-time">09:00 - 10:00</div>
+                <div class="schedule-content">
+                  <h5>Keynote: Future Research Directions</h5>
+                  <p class="speaker">Prof. Dr. Sarah Johnson, University of California</p>
+                </div>
+              </div>
+              
+              <div class="schedule-item">
+                <div class="schedule-time">10:00 - 12:00</div>
+                <div class="schedule-content">
+                  <h5>Final Parallel Sessions</h5>
+                  <p class="location">Rooms A, B, C</p>
+                </div>
+              </div>
+              
+              <div class="schedule-item break">
+                <div class="schedule-time">12:00 - 13:30</div>
+                <div class="schedule-content">
+                  <h5>Lunch Break</h5>
+                </div>
+              </div>
+              
+              <div class="schedule-item special">
+                <div class="schedule-time">15:30 - 17:00</div>
+                <div class="schedule-content">
+                  <h5>Closing Ceremony</h5>
+                  <p class="location">Grand Ballroom</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-
       </div>
+    </div>
+    
+    <!-- Download Button -->
+    <div class="row mt-4">
+      <div class="col-12 text-center">
+        <a href="#" class="btn btn-primary">Download Schedule</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-    </section>  
+
+
     <!-- /Portfolio Section -->
 
     <!-- Team Section -->
@@ -1953,6 +2032,21 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <!-- Bootstrap JS for Tabs -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize Bootstrap tabs
+      var triggerTabList = [].slice.call(document.querySelectorAll('#scheduleTab button'))
+      triggerTabList.forEach(function (triggerEl) {
+        var tabTrigger = new bootstrap.Tab(triggerEl)
+        
+        triggerEl.addEventListener('click', function (event) {
+          event.preventDefault()
+          tabTrigger.show()
+        })
+      })
+    });
+  </script>
 
 </body>
 
