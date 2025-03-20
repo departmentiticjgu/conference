@@ -302,13 +302,15 @@ h6 {
 .scrolled .navmenu .dropdown ul a:hover,
   .navmenu .dropdown ul .active:hover,
   .navmenu .dropdown ul li:hover>a {
-    color: #00ffff;
+    background-color: cornflowerblue;
+    border-radius: 4px;
+    color: white;
   }
 
   .scrolled .navmenu #dropdown-menu ul a:hover,
   .navmenu #dropdown-menu ul .active:hover,
   .navmenu #dropdown-menu ul li:hover>a {
-    background-color: rgba(181, 56, 56, 0.9);
+    background-color: crimson;
     color: white;
   }
 
@@ -326,6 +328,10 @@ h6 {
 
 .scrolled .navmenu .dropdown .editorial-team {
   color: black;
+}
+
+.scrolled .navmenu .dropdown .editorial-team:hover {
+  color: white;
 }
 
 /*--------------------------------------------------------------
