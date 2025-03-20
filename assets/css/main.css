@@ -308,7 +308,7 @@ h6 {
   .scrolled .navmenu #dropdown-menu ul a:hover,
   .navmenu #dropdown-menu ul .active:hover,
   .navmenu #dropdown-menu ul li:hover>a {
-    background-color: #00ffff;
+    background-color: #2b9b9b;
     color: white;
   }
 
@@ -317,7 +317,7 @@ h6 {
   }
 
 .scrolled .navmenu .dropdown span:hover {
-  color: #00ffff;
+  color: #2b9b9b;
 }
 
 .scrolled .navmenu .dropdown .main {
