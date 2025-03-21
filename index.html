@@ -27,147 +27,131 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
   <style>
-    /* Custom Card Styling */
-    .service-item {
-      display: flex;
-      flex-direction: column;
-      background-color: #fff;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-      transition: all 0.3s ease;
-      width: 100%;
-      border: 1px solid rgba(0, 0, 0, 0.05);
-    }
-    
-    .service-item:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-    }
-    
-    /* Card Header */
-    .card-header-custom {
-      padding: 20px;
-      position: relative;
-      text-align: center;
-      height: 100px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    
-    .topic-icon {
-      width: 70px;
-      height: 70px;
-      background-color: rgba(255, 255, 255, 0.2);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    /* Simple Divider */
+    .simple-divider {
+      height: 3px;
+      width: 60px;
+      background-color: var(--bs-primary);
       margin: 0 auto;
-      position: relative;
-      z-index: 1;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     }
     
-    .topic-icon i {
-      font-size: 32px;
-    }
-    
-    /* Card Body */
-    .card-body-custom {
-      padding: 25px;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
+    /* Topic Card Styling */
+    .topic-card {
       background-color: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+      height: 100%;
+      transition: all 0.3s ease;
+    }
+    
+    .topic-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    }
+    
+    .topic-header {
+      padding: 15px 20px;
+      color: white;
+    }
+    
+    .topic-title {
+      margin: 0;
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+    
+    .topic-body {
+      padding: 20px;
+    }
+    
+    .topic-list {
+      list-style-type: none;
+      padding-left: 0;
+      margin-bottom: 15px;
+    }
+    
+    .topic-list li {
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
       position: relative;
-      margin-top: -40px;
-      border-radius: 12px 12px 0 0;
-      z-index: 2;
+      padding-left: 20px;
     }
     
-    .card-body-custom h4 {
-      margin-top: 15px;
-      font-size: 1.25rem;
-      color: #333;
+    .topic-list li:before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--bs-primary);
+      font-weight: bold;
     }
     
-    /* Subtopics */
-    .subtopics-container {
-      margin-top: 15px;
-      flex: 1;
+    .topic-list li:last-child {
+      border-bottom: none;
     }
     
-    .subtopic-item {
-      display: flex;
-      align-items: flex-start;
-      margin-bottom: 10px;
+    .subtopic-details {
+      background-color: #f8f9fa;
+      padding: 15px;
+      border-radius: 5px;
       font-size: 0.9rem;
     }
     
-    .subtopic-item i {
-      margin-top: 3px;
-      flex-shrink: 0;
+    .subtopic-details h5 {
+      font-size: 1rem;
+      margin-top: 15px;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: #333;
     }
     
-    /* Card Footer */
-    .card-footer-custom {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 20px;
-      padding-top: 15px;
-      border-top: 1px solid rgba(0, 0, 0, 0.05);
+    .subtopic-details h5:first-child {
+      margin-top: 0;
     }
     
-    .topic-count {
+    .detailed-list {
+      list-style-type: none;
+      padding-left: 0;
+      margin-bottom: 0;
+    }
+    
+    .detailed-list li {
+      padding: 4px 0;
+      padding-left: 15px;
+      position: relative;
       font-size: 0.85rem;
-      color: #666;
-      font-weight: 500;
+      color: #555;
     }
     
-    /* Section Title */
-    .divider-custom {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 20px 0;
+    .detailed-list li:before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: inherit;
     }
     
-    .divider-custom-line {
-      width: 100%;
-      max-width: 7rem;
-      height: 0.25rem;
-      background-color: cornflowerblue;
-      border-radius: 1rem;
+    /* Color customization for different topics */
+    .col-lg-4:nth-child(1) .topic-list li:before,
+    .col-lg-4:nth-child(1) .detailed-list li:before {
+      color: var(--bs-primary);
     }
     
-    .divider-custom-icon {
+    .col-lg-4:nth-child(2) .topic-list li:before,
+    .col-lg-4:nth-child(2) .detailed-list li:before {
+      color: var(--bs-success);
+    }
+    
+    .col-lg-4:nth-child(3) .topic-list li:before,
+    .col-lg-4:nth-child(3) .detailed-list li:before {
       color: var(--bs-danger);
-      font-size: 1.5rem;
-      margin: 0 1rem;
     }
-    
-    /* Responsive adjustments */
-    @media (max-width: 768px) {
-      .card-header-custom {
-        height: 100px;
-      }
-      
-      .topic-icon {
-        width: 60px;
-        height: 60px;
-      }
-      
-      .topic-icon i {
-        font-size: 28px;
-      }
-      
-      .card-body-custom {
-        padding: 20px;
-      }
+
+    .view-details {
+      margin-top: 55%;
+    }
+
+    .view-detail {
+      margin-top: 95%;
     }
   </style>
   <!-- =======================================================
@@ -533,314 +517,195 @@
     <!-- /Skills Section -->
 
     <!-- Services Section -->
-    <section id="services" class="services section light-background bg-white py-5">
-      <!-- Section Title with enhanced styling -->
-      <div class="container section-title text-center mb-5" data-aos="fade-up">
-        <!-- <div class="badge bg-primary px-3 py-2 mb-3">Conference Topics</div> -->
-        <h2 class="display-5 fw-bold mb-3">TOPIC AS RELEVANT</h2>
-        <p class="lead text-muted mx-auto" style="max-width: 700px;">Here is our conference topic and sub-topic</p>
-        <div class="divider-custom my-4">
-          <div class="divider-custom-line"></div>
-          <div class="divider-custom-icon"><i class="bi bi-book"></i></div>
-          <div class="divider-custom-line"></div>
-        </div>
-      </div><!-- End Section Title -->
-    
-      <div class="container">
-        <div class="row gy-4">
-          <!-- Informatic Engineering -->
-          <div class="col-xl-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item position-relative h-100">
-              <div class="card-header-custom bg-primary">
-                <div class="topic-icon">
-                  <i class="bi bi-cpu text-white"></i>
-                </div>
-              </div>
-              <div class="card-body-custom">
-                <h4 class="mb-3 fw-bold">Informatic Engineering</h4>
-                <div class="subtopics-container">
-                  <div class="subtopic-item">
-                    <i class="bi bi-check-circle-fill text-primary me-2"></i>
-                    <span>Mobile Applications</span>
-                  </div>
-                  <div class="subtopic-item">
-                    <i class="bi bi-check-circle-fill text-primary me-2"></i>
-                    <span>Biomedical Informatics</span>
-                  </div>
-                  <div class="subtopic-item">
-                    <i class="bi bi-check-circle-fill text-primary me-2"></i>
-                    <span>Security Systems</span>
-                  </div>
-                  <div class="subtopic-item">
-                    <i class="bi bi-check-circle-fill text-primary me-2"></i>
-                    <span>Database and Data Mining</span>
-                  </div>
-                  <div class="subtopic-item">
-                    <i class="bi bi-check-circle-fill text-primary me-2"></i>
-                    <span>Artificial Intelligence</span>
-                  </div>
-                  <div class="subtopic-item">
-                    <i class="bi bi-check-circle-fill text-primary me-2"></i>
-                    <span>Computer Network</span>
-                  </div>
-                </div>
-                <div class="card-footer-custom">
-                  <span class="badge bg-primary text-white topic-count">6 subtopics</span>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Topic -->
-    
-          <!-- Industrial Engineering -->
-          <div class="col-xl-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-item position-relative h-100">
-              <div class="card-header-custom bg-success">
-                <div class="topic-icon">
-                  <i class="bi bi-gear text-white"></i>
-                </div>
-              </div>
-              <div class="card-body-custom">
-                <h4 class="mb-3 fw-bold">Industrial Engineering</h4>
-                <div class="subtopics-container">
-                  <div class="subtopic-item">
-                    <i class="bi bi-check-circle-fill text-success me-2"></i>
-                    <span>Smart and Lean Manufacturing System</span>
-                  </div>
-                  <div class="subtopic-item">
-                    <i class="bi bi-check-circle-fill text-success me-2"></i>
-                    <span>Product Design and Development</span>
-                  </div>
-                  <div class="subtopic-item">
-                    <i class="bi bi-check-circle-fill text-success me-2"></i>
-                    <span>Digitalization Supply Chain</span>
-                  </div>
-                  <div class="subtopic-item">
-                    <i class="bi bi-check-circle-fill text-success me-2"></i>
-                    <span>Green Manufacturing</span>
-                  </div>
-                  <div class="subtopic-item">
-                    <i class="bi bi-check-circle-fill text-success me-2"></i>
-                    <span>Quality Management System</span>
-                  </div>
-                </div>
-                <div class="card-footer-custom">
-                  <span class="badge bg-success text-white topic-count">5 subtopics</span>
-                  
-                </div>
+   <!-- Topics Section -->
+<section id="services" class="topics section py-5 bg-light">
+  <!-- Section Title -->
+  <div class="container text-center mb-5" data-aos="fade-up">
+    <h2 class="fw-bold mb-3">CONFERENCE TOPICS</h2>
+    <p class="text-muted mx-auto" style="max-width: 600px;">Explore our conference topics and research areas</p>
+    <div class="simple-divider my-3"></div>
+  </div>
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="row g-4">
+      <!-- Engineering Topic -->
+      <div class="col-lg-4 col-md-6">
+        <div class="topic-card">
+          <div class="topic-header bg-primary">
+            <h3 class="topic-title text-white">Engineering</h3>
+          </div>
+          <div class="topic-body">
+            <ul class="topic-list">
+              <li>Electrical Engineering</li>
+              <li>Mechanical Engineering</li>
+              <li>Industrial Engineering</li>
+              <li>Civil Engineering</li>
+              <li>Informatic Engineering</li>
+            </ul>
+            <button class="btn btn-sm btn-outline-primary view-details" type="button" data-bs-toggle="collapse" data-bs-target="#engineeringDetails">
+              View Details
+            </button>
+            <div class="collapse mt-3" id="engineeringDetails">
+              <div class="subtopic-details">
+                <h5>Electrical Engineering</h5>
+                <ul class="detailed-list">
+                  <li>Power Transmission and Distribution</li>
+                  <li>High Voltage Engineering</li>
+                  <li>Renewable Energy</li>
+                  <li>Smart Grid Technology</li>
+                  <li>Power Electronics</li>
+                </ul>
+                
+                <h5>Mechanical Engineering</h5>
+                <ul class="detailed-list">
+                  <li>Mechatronics & Robotics</li>
+                  <li>Applied Mechanics</li>
+                  <li>Composite & Materials Engineering</li>
+                  <li>Thermal & Fluid Science</li>
+                  <li>Automotive Engineering</li>
+                </ul>
+                
+                <h5>Industrial Engineering</h5>
+                <ul class="detailed-list">
+                  <li>Smart and Lean Manufacturing System</li>
+                  <li>Product Design and Development</li>
+                  <li>Digitalization Supply Chain</li>
+                  <li>Green Manufacturing</li>
+                  <li>Quality Management System</li>
+                </ul>
+                
+                <h5>Civil Engineering</h5>
+                <ul class="detailed-list">
+                  <li>Structure Engineering</li>
+                  <li>Road and Bridge Engineering</li>
+                  <li>Geotech Engineering</li>
+                  <li>Water Resources Management</li>
+                  <li>Transportation Engineering</li>
+                </ul>
+                
+                <h5>Informatic Engineering</h5>
+                <ul class="detailed-list">
+                  <li>Mobile Applications</li>
+                  <li>Biomedical Informatics</li>
+                  <li>Security Systems</li>
+                  <li>Database and Data Mining</li>
+                  <li>Artificial Intelligence</li>
+                  <li>Computer Network</li>
+                </ul>
               </div>
             </div>
-          </div><!-- End Topic -->
-    
-          <!-- Civil Engineering -->
-          <div class="col-xl-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-item position-relative h-100">
-              <div class="card-header-custom bg-danger">
-                <div class="topic-icon">
-                  <i class="bi bi-building text-white"></i>
-                </div>
-              </div>
-              <div class="card-body-custom">
-                <h4 class="mb-3 fw-bold">Civil Engineering</h4>
-                <div class="subtopics-container">
-                  <div class="subtopic-item">
-                    <i class="bi bi-check-circle-fill text-danger me-2"></i>
-                    <span>Structure Engineering</span>
-                  </div>
-                  <div class="subtopic-item">
-                    <i class="bi bi-check-circle-fill text-danger me-2"></i>
-                    <span>Road and Bridge Engineering</span>
-                  </div>
-                  <div class="subtopic-item">
-                    <i class="bi bi-check-circle-fill text-danger me-2"></i>
-                    <span>Geotech Engineering</span>
-                  </div>
-                  <div class="subtopic-item">
-                    <i class="bi bi-check-circle-fill text-danger me-2"></i>
-                    <span>Water Resources Management</span>
-                  </div>
-                  <div class="subtopic-item">
-                    <i class="bi bi-check-circle-fill text-danger me-2"></i>
-                    <span>Transportation Engineering</span>
-                  </div>
-                  <div class="subtopic-item">
-                    <i class="bi bi-check-circle-fill text-danger me-2"></i>
-                    <span>Disaster Mitigation</span>
-                  </div>
-                  <div class="subtopic-item">
-                    <i class="bi bi-check-circle-fill text-danger me-2"></i>
-                    <span>Construction Management</span>
-                  </div>
-                  <div class="subtopic-item">
-                    <i class="bi bi-check-circle-fill text-danger me-2"></i>
-                    <span>Earthquake Engineering</span>
-                  </div>
-                </div>
-                <div class="card-footer-custom">
-                  <span class="badge bg-danger text-white topic-count">8 subtopics</span>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Topic -->
-    
-          <!-- Electrical Engineering -->
-          <div class="col-xl-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="400">
-            <div class="service-item position-relative h-100">
-              <div class="card-header-custom bg-warning">
-                <div class="topic-icon">
-                  <i class="bi bi-lightning-charge text-white"></i>
-                </div>
-              </div>
-              <div class="card-body-custom">
-                <h4 class="mb-3 fw-bold">Electrical Engineering</h4>
-                <div class="subtopics-container">
-                  <div class="subtopic-item">
-                    <i class="bi bi-check-circle-fill text-warning me-2"></i>
-                    <span>Power Transmission and Distribution</span>
-                  </div>
-                  <div class="subtopic-item">
-                    <i class="bi bi-check-circle-fill text-warning me-2"></i>
-                    <span>High Voltage Engineering</span>
-                  </div>
-                  <div class="subtopic-item">
-                    <i class="bi bi-check-circle-fill text-warning me-2"></i>
-                    <span>Renewable Energy</span>
-                  </div>
-                  <div class="subtopic-item">
-                    <i class="bi bi-check-circle-fill text-warning me-2"></i>
-                    <span>Smart Grid Technology</span>
-                  </div>
-                  <div class="subtopic-item">
-                    <i class="bi bi-check-circle-fill text-warning me-2"></i>
-                    <span>Robotics</span>
-                  </div>
-                  <div class="subtopic-item">
-                    <i class="bi bi-check-circle-fill text-warning me-2"></i>
-                    <span>Power Electronics</span>
-                  </div>
-                  <div class="subtopic-item">
-                    <i class="bi bi-check-circle-fill text-warning me-2"></i>
-                    <span>Signal and Image Processing</span>
-                  </div>
-                  <div class="subtopic-item">
-                    <i class="bi bi-check-circle-fill text-warning me-2"></i>
-                    <span>Embedded Systems</span>
-                  </div>
-                  <div class="subtopic-item">
-                    <i class="bi bi-check-circle-fill text-warning me-2"></i>
-                    <span>VLSI</span>
-                  </div>
-                  <div class="subtopic-item">
-                    <i class="bi bi-check-circle-fill text-warning me-2"></i>
-                    <span>Wireless and Mobile Communication</span>
-                  </div>
-                </div>
-                <div class="card-footer-custom">
-                  <span class="badge bg-warning text-white topic-count">10 subtopics</span>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Topic -->
-    
-          <!-- Mechanical Engineering -->
-          <div class="col-xl-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="500">
-            <div class="service-item position-relative h-100">
-              <div class="card-header-custom bg-info">
-                <div class="topic-icon">
-                  <i class="bi bi-tools text-white"></i>
-                </div>
-              </div>
-              <div class="card-body-custom">
-                <h4 class="mb-3 fw-bold">Mechanical Engineering</h4>
-                <div class="subtopics-container">
-                  <div class="subtopic-item">
-                    <i class="bi bi-check-circle-fill text-info me-2"></i>
-                    <span>Mechatronics & Robotics</span>
-                  </div>
-                  <div class="subtopic-item">
-                    <i class="bi bi-check-circle-fill text-info me-2"></i>
-                    <span>Applied Mechanics</span>
-                  </div>
-                  <div class="subtopic-item">
-                    <i class="bi bi-check-circle-fill text-info me-2"></i>
-                    <span>Biomedical Engineering</span>
-                  </div>
-                  <div class="subtopic-item">
-                    <i class="bi bi-check-circle-fill text-info me-2"></i>
-                    <span>Composite & Materials Engineering</span>
-                  </div>
-                  <div class="subtopic-item">
-                    <i class="bi bi-check-circle-fill text-info me-2"></i>
-                    <span>Computational Mechanics</span>
-                  </div>
-                  <div class="subtopic-item">
-                    <i class="bi bi-check-circle-fill text-info me-2"></i>
-                    <span>Design Engineering</span>
-                  </div>
-                  <div class="subtopic-item">
-                    <i class="bi bi-check-circle-fill text-info me-2"></i>
-                    <span>Thermal & Fluid Science</span>
-                  </div>
-                  <div class="subtopic-item">
-                    <i class="bi bi-check-circle-fill text-info me-2"></i>
-                    <span>Automotive Engineering</span>
-                  </div>
-                </div>
-                <div class="card-footer-custom">
-                  <span class="badge bg-info text-white topic-count">8 subtopics</span>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Topic -->
-    
-          <!-- Business and Pharmaceutical Science -->
-          <div class="col-xl-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="600">
-            <div class="service-item position-relative h-100">
-              <div class="card-header-custom bg-secondary">
-                <div class="topic-icon">
-                  <i class="bi bi-briefcase text-white"></i>
-                </div>
-              </div>
-              <div class="card-body-custom">
-                <h4 class="mb-3 fw-bold">Business and Pharmaceutical Science</h4>
-                <div class="subtopics-container">
-                  <div class="subtopic-item">
-                    <i class="bi bi-check-circle-fill text-secondary me-2"></i>
-                    <span>Business and Entrepreneurship in the Tech Era</span>
-                  </div>
-                  <div class="subtopic-item">
-                    <i class="bi bi-check-circle-fill text-secondary me-2"></i>
-                    <span>Tech-Driven Business Strategies</span>
-                  </div>
-                  <div class="subtopic-item">
-                    <i class="bi bi-check-circle-fill text-secondary me-2"></i>
-                    <span>Financial Technology (FinTech)</span>
-                  </div>
-                  <div class="subtopic-item">
-                    <i class="bi bi-check-circle-fill text-secondary me-2"></i>
-                    <span>Digital Transformation & Smart Technologies</span>
-                  </div>
-                  <div class="subtopic-item">
-                    <i class="bi bi-check-circle-fill text-secondary me-2"></i>
-                    <span>Sustainability and ESG</span>
-                  </div>
-                  <div class="subtopic-item">
-                    <i class="bi bi-check-circle-fill text-secondary me-2"></i>
-                    <span>Marketing in the Digital Age</span>
-                  </div>
-                  <div class="subtopic-item">
-                    <i class="bi bi-check-circle-fill text-secondary me-2"></i>
-                    <span>Leadership and Innovation Management</span>
-                  </div>
-                </div>
-                <div class="card-footer-custom">
-                  <span class="badge bg-secondary text-white topic-count">7 subtopics</span>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Topic -->
+          </div>
         </div>
       </div>
-    </section>
+      
+      <!-- Economic Business Topic -->
+      <div class="col-lg-4 col-md-6">
+        <div class="topic-card">
+          <div class="topic-header bg-success">
+            <h3 class="topic-title text-white">Economic Business</h3>
+          </div>
+          <div class="topic-body">
+            <ul class="topic-list">
+              <li>Management</li>
+              <li>Digital Business</li>
+            </ul>
+            <button class="btn btn-sm btn-outline-success view-detail" type="button" data-bs-toggle="collapse" data-bs-target="#businessDetails">
+              View Details
+            </button>
+            <div class="collapse mt-3" id="businessDetails">
+              <div class="subtopic-details">
+                <h5>Management</h5>
+                <ul class="detailed-list">
+                  <li>Strategic Management</li>
+                  <li>Human Resources</li>
+                  <li>Organizational Behavior</li>
+                  <li>Leadership</li>
+                  <li>Operations Management</li>
+                </ul>
+                
+                <h5>Digital Business</h5>
+                <ul class="detailed-list">
+                  <li>E-Commerce</li>
+                  <li>Digital Marketing</li>
+                  <li>Business Analytics</li>
+                  <li>FinTech</li>
+                  <li>Digital Transformation</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Pharmaceutical Science Topic -->
+      <div class="col-lg-4 col-md-12">
+        <div class="topic-card">
+          <div class="topic-header bg-danger">
+            <h3 class="topic-title text-white">Pharmaceutical Science</h3>
+          </div>
+          <div class="topic-body">
+            <ul class="topic-list">
+              <li>Development of Pharmaceutical Formulations, Biotechnology, and Nanotechnology</li>
+              <li>Herbal Innovations and Natural Product Science</li>
+              <li>Computer-Assisted Drug Design and Medicinal Chemistry</li>
+              <li>Pharmacology, Clinical Pharmacy, Drug Safety Monitoring, and Pharmaceutical Practice</li>
+              <li>Pharmaceutical Analysis, Regulatory Compliance, and Quality Assurance</li>
+            </ul>
+            <button class="btn btn-sm btn-outline-danger mt-2" type="button" data-bs-toggle="collapse" data-bs-target="#pharmaDetails">
+              View Details
+            </button>
+            <div class="collapse mt-3" id="pharmaDetails">
+              <div class="subtopic-details">
+                <h5>Development of Pharmaceutical Formulations, Biotechnology, and Nanotechnology</h5>
+                <ul class="detailed-list">
+                  <li>Novel drug delivery systems</li>
+                  <li>Biopharmaceutics</li>
+                  <li>Nanomedicine</li>
+                  <li>Pharmaceutical biotechnology</li>
+                </ul>
+                
+                <h5>Herbal Innovations and Natural Product Science</h5>
+                <ul class="detailed-list">
+                  <li>Phytochemistry</li>
+                  <li>Ethnopharmacology</li>
+                  <li>Herbal drug standardization</li>
+                  <li>Natural product development</li>
+                </ul>
+                
+                <h5>Computer-Assisted Drug Design and Medicinal Chemistry</h5>
+                <ul class="detailed-list">
+                  <li>Molecular modeling</li>
+                  <li>Structure-activity relationships</li>
+                  <li>Drug synthesis</li>
+                  <li>Computational chemistry</li>
+                </ul>
+                
+                <h5>Pharmacology, Clinical Pharmacy, Drug Safety Monitoring, and Pharmaceutical Practice</h5>
+                <ul class="detailed-list">
+                  <li>Pharmacokinetics</li>
+                  <li>Pharmacodynamics</li>
+                  <li>Clinical trials</li>
+                  <li>Pharmacovigilance</li>
+                </ul>
+                
+                <h5>Pharmaceutical Analysis, Regulatory Compliance, and Quality Assurance</h5>
+                <ul class="detailed-list">
+                  <li>Analytical methods</li>
+                  <li>Quality control</li>
+                  <li>Regulatory affairs</li>
+                  <li>Good Manufacturing Practices</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
     <!-- /Services Section -->
 
     <!-- Call To Action Section -->
@@ -869,8 +734,8 @@
     <!-- Schedule Section -->
 <section id="schedule" class="schedule section py-5 bg-light">
   <!-- Section Title -->
-  <div class="container text-center mb-5">
-    <h2 class="fw-bold mb-3">Conference Schedule</h2>
+  <div class="container text-center mb-5" data-aos="fade-up">
+    <h2 class="fw-bold mb-3">CONFERENCE SCHEDULE</h2>
     <p class="text-muted mx-auto" style="max-width: 600px;">October 25, 2025 at Jakarta Global University</p>
     <div class="simple-divider my-3"></div>
   </div>
@@ -894,7 +759,7 @@
     </div>
     
     <!-- Schedule Content -->
-    <div class="row justify-content-center">
+    <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
       <div class="col-md-8">
         <div class="tab-content" id="scheduleTabContent">
           <!-- Day 1 Schedule -->
