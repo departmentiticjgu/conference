@@ -2717,3 +2717,90 @@ section,
     flex: 1 1 100%;
   }
 }
+
+/*--------------------------------------------------------------
+# Co-Host Section
+--------------------------------------------------------------*/
+
+
+
+/* Co-Host Section Styling */
+.co-host {
+  background-color: #f8f9fa;
+  padding-bottom: 60px;
+}
+
+/* Simple Divider */
+.simple-divider {
+  height: 3px;
+  width: 60px;
+  background-color: var(--bs-primary);
+  margin: 0 auto;
+}
+
+/* Co-Host Image Styling */
+.co-host-image-container {
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.co-host-image-container:hover {
+  transform: translateY(-10px);
+}
+
+.co-host-logo {
+  max-width: 100%;
+  height: auto;
+  padding: 15px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+}
+
+.co-host-image-container:hover .co-host-logo {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.co-host-name {
+  font-weight: 600;
+  color: #333;
+  font-size: 0.95rem;
+  margin-top: 10px;
+}
+
+/* Co-Host Description */
+.co-host-description {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.co-host-description p {
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* Button Styling */
+.btn-primary {
+  padding: 8px 20px;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(var(--bs-primary-rgb), 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .co-host-logo {
+    max-width: 80%;
+  }
+}
