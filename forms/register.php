@@ -195,7 +195,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     </div>
                     
                     <div class="social-login">
-                        <button class="social-login-btn">
+                        <button class="https://www.facebook.com/jakartaglobaluniversity">
                             <i class="fab fa-facebook-f"></i>
                         </button>
                         <button class="social-login-btn">
