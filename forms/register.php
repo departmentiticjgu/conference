@@ -64,6 +64,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
     <link rel="stylesheet" href="../assets/css/regis.css">
+
+      <!-- Favicons -->
+       <link href="assets/img/ikon-jgu.png" rel="icon">
+       <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
     <!-- Include your main stylesheet and any other required assets -->
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <!-- Font Awesome for icons -->
