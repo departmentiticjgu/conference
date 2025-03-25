@@ -72,11 +72,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <div class="register-container">
         <div class="register-card">
-            <!-- Add a small logo above the header -->
-            <div class="register-logo">
-                <img src="../assets/img/jgu.png" alt="Logo" style="width: 50px; height: auto; margin-bottom: 10px;">
-            </div>
             <div class="register-header">
+                <!-- Add a small logo above the header text -->
+                <div class="register-logo">
+                    <img src="../assets/img/jgu.png" alt="Logo" style="width: 50px; height: auto; margin-bottom: 10px;">
+                </div>
                 <h2>Create an Account</h2>
             </div>
             <div class="register-body">
