@@ -74,7 +74,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="register-card">
             <!-- Add a small logo above the header -->
             <div class="register-logo">
-                <img src="../assets/images/logo-small.png" alt="Logo" style="width: 50px; height: auto; margin-bottom: 10px;">
+                <img src="../assets/img/jgu.png" alt="Logo" style="width: 50px; height: auto; margin-bottom: 10px;">
             </div>
             <div class="register-header">
                 <h2>Create an Account</h2>
