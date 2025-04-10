@@ -236,6 +236,7 @@
             </ul>
           </li>  -->
           <li><a href="#contact">Contact</a></li>
+          <a href="#" class="text-white btn btn-getstarted">Registration</a>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -525,182 +526,47 @@
     <div class="simple-divider my-3"></div>
   </div>
 
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
-    <div class="row g-4">
-      <!-- Engineering Topic -->
+  <?php
+include 'admin conference/koneksi.php';
+$conference = new Koneksi();
+$result = $conference->TampilSub();
+
+$groupedTopics = [];
+while ($row = $result->fetch_assoc()) {
+    $groupedTopics[$row['topic']][] = $row['subtopic'];
+}
+
+$colors = ['bg-primary', 'bg-warning', 'bg-danger']; // Biru, Kuning, Merah
+$index = 0;
+?>
+
+<div class="container" data-aos="fade-up" data-aos-delay="100">
+  <div class="row g-4">
+    <?php foreach ($groupedTopics as $topic => $subtopics) { 
+        $color = $colors[$index % count($colors)];
+    ?>
       <div class="col-lg-4 col-md-6">
         <div class="topic-card">
-          <div class="topic-header bg-primary">
-            <h3 class="topic-title text-white">Engineering</h3>
+          <div class="topic-header <?= $color ?>">
+            <h3 class="topic-title text-white"><?= $topic ?></h3>
           </div>
           <div class="topic-body">
             <ul class="topic-list">
-              <li>Electrical Engineering</li>
-              <li>Mechanical Engineering</li>
-              <li>Industrial Engineering</li>
-              <li>Civil Engineering</li>
-              <li>Informatic Engineering</li>
+              <?php foreach ($subtopics as $subtopic) { ?>
+                <li><?= $subtopic ?></li>
+              <?php } ?>
             </ul>
-            <button class="btn btn-sm btn-outline-primary view-details" type="button" data-bs-toggle="collapse" data-bs-target="#engineeringDetails">
+            <!-- <button class="btn btn-sm btn-outline-primary view-details" type="button">
               View Details
-            </button>
-            <div class="collapse mt-3" id="engineeringDetails">
-              <div class="subtopic-details">
-                <h5>Electrical Engineering</h5>
-                <ul class="detailed-list">
-                  <li>Power Transmission and Distribution</li>
-                  <li>High Voltage Engineering</li>
-                  <li>Renewable Energy</li>
-                  <li>Smart Grid Technology</li>
-                  <li>Power Electronics</li>
-                </ul>
-                
-                <h5>Mechanical Engineering</h5>
-                <ul class="detailed-list">
-                  <li>Mechatronics & Robotics</li>
-                  <li>Applied Mechanics</li>
-                  <li>Composite & Materials Engineering</li>
-                  <li>Thermal & Fluid Science</li>
-                  <li>Automotive Engineering</li>
-                </ul>
-                
-                <h5>Industrial Engineering</h5>
-                <ul class="detailed-list">
-                  <li>Smart and Lean Manufacturing System</li>
-                  <li>Product Design and Development</li>
-                  <li>Digitalization Supply Chain</li>
-                  <li>Green Manufacturing</li>
-                  <li>Quality Management System</li>
-                </ul>
-                
-                <h5>Civil Engineering</h5>
-                <ul class="detailed-list">
-                  <li>Structure Engineering</li>
-                  <li>Road and Bridge Engineering</li>
-                  <li>Geotech Engineering</li>
-                  <li>Water Resources Management</li>
-                  <li>Transportation Engineering</li>
-                </ul>
-                
-                <h5>Informatic Engineering</h5>
-                <ul class="detailed-list">
-                  <li>Mobile Applications</li>
-                  <li>Biomedical Informatics</li>
-                  <li>Security Systems</li>
-                  <li>Database and Data Mining</li>
-                  <li>Artificial Intelligence</li>
-                  <li>Computer Network</li>
-                </ul>
-              </div>
-            </div>
+            </button> -->
           </div>
         </div>
       </div>
-      
-      <!-- Economic Business Topic -->
-      <div class="col-lg-4 col-md-6">
-        <div class="topic-card">
-          <div class="topic-header bg-success">
-            <h3 class="topic-title text-white">Economic Business</h3>
-          </div>
-          <div class="topic-body">
-            <ul class="topic-list">
-              <li>Management</li>
-              <li>Digital Business</li>
-            </ul>
-            <button class="btn btn-sm btn-outline-success view-detail" type="button" data-bs-toggle="collapse" data-bs-target="#businessDetails">
-              View Details
-            </button>
-            <div class="collapse mt-3" id="businessDetails">
-              <div class="subtopic-details">
-                <h5>Management</h5>
-                <ul class="detailed-list">
-                  <li>Strategic Management</li>
-                  <li>Human Resources</li>
-                  <li>Organizational Behavior</li>
-                  <li>Leadership</li>
-                  <li>Operations Management</li>
-                </ul>
-                
-                <h5>Digital Business</h5>
-                <ul class="detailed-list">
-                  <li>E-Commerce</li>
-                  <li>Digital Marketing</li>
-                  <li>Business Analytics</li>
-                  <li>FinTech</li>
-                  <li>Digital Transformation</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Pharmaceutical Science Topic -->
-      <div class="col-lg-4 col-md-12">
-        <div class="topic-card">
-          <div class="topic-header bg-danger">
-            <h3 class="topic-title text-white">Pharmaceutical Science</h3>
-          </div>
-          <div class="topic-body">
-            <ul class="topic-list">
-              <li>Development of Pharmaceutical Formulations, Biotechnology, and Nanotechnology</li>
-              <li>Herbal Innovations and Natural Product Science</li>
-              <li>Computer-Assisted Drug Design and Medicinal Chemistry</li>
-              <li>Pharmacology, Clinical Pharmacy, Drug Safety Monitoring, and Pharmaceutical Practice</li>
-              <li>Pharmaceutical Analysis, Regulatory Compliance, and Quality Assurance</li>
-            </ul>
-            <button class="btn btn-sm btn-outline-danger mt-2" type="button" data-bs-toggle="collapse" data-bs-target="#pharmaDetails">
-              View Details
-            </button>
-            <div class="collapse mt-3" id="pharmaDetails">
-              <div class="subtopic-details">
-                <h5>Development of Pharmaceutical Formulations, Biotechnology, and Nanotechnology</h5>
-                <ul class="detailed-list">
-                  <li>Novel drug delivery systems</li>
-                  <li>Biopharmaceutics</li>
-                  <li>Nanomedicine</li>
-                  <li>Pharmaceutical biotechnology</li>
-                </ul>
-                
-                <h5>Herbal Innovations and Natural Product Science</h5>
-                <ul class="detailed-list">
-                  <li>Phytochemistry</li>
-                  <li>Ethnopharmacology</li>
-                  <li>Herbal drug standardization</li>
-                  <li>Natural product development</li>
-                </ul>
-                
-                <h5>Computer-Assisted Drug Design and Medicinal Chemistry</h5>
-                <ul class="detailed-list">
-                  <li>Molecular modeling</li>
-                  <li>Structure-activity relationships</li>
-                  <li>Drug synthesis</li>
-                  <li>Computational chemistry</li>
-                </ul>
-                
-                <h5>Pharmacology, Clinical Pharmacy, Drug Safety Monitoring, and Pharmaceutical Practice</h5>
-                <ul class="detailed-list">
-                  <li>Pharmacokinetics</li>
-                  <li>Pharmacodynamics</li>
-                  <li>Clinical trials</li>
-                  <li>Pharmacovigilance</li>
-                </ul>
-                
-                <h5>Pharmaceutical Analysis, Regulatory Compliance, and Quality Assurance</h5>
-                <ul class="detailed-list">
-                  <li>Analytical methods</li>
-                  <li>Quality control</li>
-                  <li>Regulatory affairs</li>
-                  <li>Good Manufacturing Practices</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <?php $index++; } ?>
   </div>
+</div>
+
+
 
 </section>
 
@@ -1265,25 +1131,27 @@
   </div>
 </section>
 
- <!-- Editorial Board Section -->
+<!-- Editorial Board Section -->
 <section id="editorial-board" class="editorial-board section py-5">
   <!-- Section Title -->
   <div class="container section-title text-center mb-5" data-aos="fade-up">
-    <!-- <span class="section-subtitle">Academic Excellence</span> -->
     <h2 class="display-5 fw-bold mb-3">Editorial Team</h2>
-    <p class="lead text-muted mx-auto" style="max-width: 700px;">Our distinguished editorial board members ensure the highest standards of academic excellence and research integrity.</p>
-  </div><!-- End Section Title -->
+    <p class="lead text-muted mx-auto" style="max-width: 700px;">
+      Our distinguished editorial board members ensure the highest standards of academic excellence and research integrity.
+    </p>
+  </div>
 
   <div class="container" data-aos="fade-up" data-aos-delay="100">
+
     <!-- Chief Editors Section -->
-    <div class="row mb-5 chief-editors section" id="chief-editors">
+    <div class="row mb-5" id="chief-editors">
       <div class="col-12">
         <div class="board-category-title" data-aos="fade-up">
           <h3 class="h4 fw-bold">Chief Editors</h3>
           <div class="board-category-line"></div>
         </div>
       </div>
-      
+
       <!-- Chief Editor Cards -->
       <div class="col-lg-4 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="200">
         <div class="editor-card chief-editor-card">
@@ -1292,16 +1160,16 @@
           </div>
           <div class="editor-card-body">
             <h4 class="editor-name">Prof. Dr. John Smith</h4>
-            <p class="editor-title">Professor of Computer Science</p>
-            <p class="editor-affiliation">Massachusetts Institute of Technology, USA</p>
+            <p class="editor-title">Chair of Digital Innovation</p>
+            <p class="editor-affiliation">University of Sydney, Australia</p>
             <div class="editor-expertise">
-              <span class="badge bg-light text-dark">Artificial Intelligence</span>
-              <span class="badge bg-light text-dark">Machine Learning</span>
+              <span class="badge bg-light text-dark">Digital Transformation</span>
+              <span class="badge bg-light text-dark">ICT Policy</span>
             </div>
           </div>
         </div>
       </div>
-      
+
       <div class="col-lg-4 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="300">
         <div class="editor-card chief-editor-card">
           <div class="editor-card-header">
@@ -1309,16 +1177,17 @@
           </div>
           <div class="editor-card-body">
             <h4 class="editor-name">Prof. Dr. Maria Rodriguez</h4>
-            <p class="editor-title">Professor of Engineering</p>
-            <p class="editor-affiliation">Stanford University, USA</p>
+            <p class="editor-title">Professor of Informatics Engineering</p>
+            <p class="editor-affiliation">University of Milan, Italy</p>
             <div class="editor-expertise">
-              <span class="badge bg-light text-dark">Mechanical Engineering</span>
-              <span class="badge bg-light text-dark">Robotics</span>
+              <span class="badge bg-light text-dark">Agile Development</span>
+              <span class="badge bg-light text-dark">DevOps</span>
             </div>
+            
           </div>
         </div>
       </div>
-      
+
       <div class="col-lg-4 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="400">
         <div class="editor-card chief-editor-card">
           <div class="editor-card-header">
@@ -1326,218 +1195,149 @@
           </div>
           <div class="editor-card-body">
             <h4 class="editor-name">Prof. Dr. Hiroshi Tanaka</h4>
-            <p class="editor-title">Professor of Business Administration</p>
-            <p class="editor-affiliation">University of Tokyo, Japan</p>
+            <p class="editor-title">Professor of Information Systems</p>
+            <p class="editor-affiliation">Cairo University, Egypt</p>
             <div class="editor-expertise">
-              <span class="badge bg-light text-dark">Business Strategy</span>
-              <span class="badge bg-light text-dark">Innovation Management</span>
+              <span class="badge bg-light text-dark">Cybersecurity</span>
+              <span class="badge bg-light text-dark">E-Government</span>
             </div>
           </div>
         </div>
       </div>
     </div>
-    
+
     <!-- Associate Editors Section -->
-    <div class="row mb-5 associate-editors section" id="associate-editors">
+    <div class="row mb-5" id="associate-editors">
       <div class="col-12">
         <div class="board-category-title" data-aos="fade-up">
           <h3 class="h4 fw-bold">Associate Editors</h3>
           <div class="board-category-line"></div>
         </div>
       </div>
-      
-      <!-- Associate Editor Cards - Row 1 -->
-      <div class="col-lg-3 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="100">
-        <div class="editor-card associate-editor-card">
-          <div class="editor-card-body">
-            <h5 class="editor-name">Dr. Sarah Johnson</h5>
-            <div class="editor-divider"></div>
-            <p class="editor-title">Associate Professor</p>
-            <p class="editor-affiliation">University of California, USA</p>
-            <div class="editor-expertise">
-              <span class="badge bg-light text-dark">Civil Engineering</span>
-            </div>
-          </div>
+
+      <!-- Associate Editor Cards -->
+      <div class="col-lg-4 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="editor-card associate-editor-card text-center p-4">
+          <h5 class="editor-name">Dr. Sarah Johnson</h5>
+          <!-- <p class="editor-affiliation mb-1">University of California, USA</p>
+          <small class="text-muted">Civil Engineering</small> -->
         </div>
       </div>
-      
-      <div class="col-lg-3 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="editor-card associate-editor-card">
-          <div class="editor-card-body">
-            <h5 class="editor-name">Dr. Ahmed Hassan</h5>
-            <div class="editor-divider"></div>
-            <p class="editor-title">Associate Professor</p>
-            <p class="editor-affiliation">Cairo University, Egypt</p>
-            <div class="editor-expertise">
-              <span class="badge bg-light text-dark">Electrical Engineering</span>
-            </div>
-          </div>
+
+      <div class="col-lg-4 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="editor-card associate-editor-card text-center p-4">
+          <h5 class="editor-name">Dr. Ahmed Hassan</h5>
+          <!-- <p class="editor-affiliation mb-1">Cairo University, Egypt</p>
+          <small class="text-muted">Electrical Engineering</small> -->
         </div>
       </div>
-      
-      <div class="col-lg-3 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="300">
-        <div class="editor-card associate-editor-card">
-          <div class="editor-card-body">
-            <h5 class="editor-name">Dr. Li Wei</h5>
-            <div class="editor-divider"></div>
-            <p class="editor-title">Associate Professor</p>
-            <p class="editor-affiliation">Tsinghua University, China</p>
-            <div class="editor-expertise">
-              <span class="badge bg-light text-dark">Industrial Engineering</span>
-            </div>
-          </div>
+
+      <div class="col-lg-4 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="editor-card associate-editor-card text-center p-4">
+          <h5 class="editor-name">Dr. Li Wei</h5>
+          <!-- <p class="editor-affiliation mb-1">Tsinghua University, China</p>
+          <small class="text-muted">Industrial Engineering</small> -->
         </div>
       </div>
-      
-      <div class="col-lg-3 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="400">
-        <div class="editor-card associate-editor-card">
-          <div class="editor-card-body">
-            <h5 class="editor-name">Dr. Anna Kowalski</h5>
-            <div class="editor-divider"></div>
-            <p class="editor-title">Associate Professor</p>
-            <p class="editor-affiliation">Warsaw University, Poland</p>
-            <div class="editor-expertise">
-              <span class="badge bg-light text-dark">Computer Science</span>
-            </div>
-          </div>
+
+      <div class="col-lg-4 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="400">
+        <div class="editor-card associate-editor-card text-center p-4">
+          <h5 class="editor-name">Dr. Priya Sharma</h5>
+          <!-- <p class="editor-affiliation mb-1">IIT Delhi, India</p>
+          <small class="text-muted">Pharmaceutical Sciences</small> -->
         </div>
       </div>
-      
-      <!-- Associate Editor Cards - Row 2 -->
-      <div class="col-lg-3 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="100">
-        <div class="editor-card associate-editor-card">
-          <div class="editor-card-body">
-            <h5 class="editor-name">Dr. Carlos Mendez</h5>
-            <div class="editor-divider"></div>
-            <p class="editor-title">Associate Professor</p>
-            <p class="editor-affiliation">University of São Paulo, Brazil</p>
-            <div class="editor-expertise">
-              <span class="badge bg-light text-dark">Mechanical Engineering</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-lg-3 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="editor-card associate-editor-card">
-          <div class="editor-card-body">
-            <h5 class="editor-name">Dr. Priya Sharma</h5>
-            <div class="editor-divider"></div>
-            <p class="editor-title">Associate Professor</p>
-            <p class="editor-affiliation">Indian Institute of Technology, India</p>
-            <div class="editor-expertise">
-              <span class="badge bg-light text-dark">Pharmaceutical Sciences</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-lg-3 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="300">
-        <div class="editor-card associate-editor-card">
-          <div class="editor-card-body">
-            <h5 class="editor-name">Dr. James Wilson</h5>
-            <div class="editor-divider"></div>
-            <p class="editor-title">Associate Professor</p>
-            <p class="editor-affiliation">University of Melbourne, Australia</p>
-            <div class="editor-expertise">
-              <span class="badge bg-light text-dark">Business Administration</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-lg-3 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="400">
-        <div class="editor-card associate-editor-card">
-          <div class="editor-card-body">
-            <h5 class="editor-name">Dr. Sofia Gonzalez</h5>
-            <div class="editor-divider"></div>
-            <p class="editor-title">Associate Professor</p>
-            <p class="editor-affiliation">Technical University of Madrid, Spain</p>
-            <div class="editor-expertise">
-              <span class="badge bg-light text-dark">Information Technology</span>
-            </div>
-          </div>
+
+      <div class="col-lg-4 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="500">
+        <div class="editor-card associate-editor-card text-center p-4">
+          <h5 class="editor-name">Dr. James Wilson</h5>
+          <!-- <p class="editor-affiliation mb-1">University of Melbourne, Australia</p>
+          <small class="text-muted">Business Administration</small> -->
         </div>
       </div>
     </div>
-    
+
     <!-- Editorial Board Members Section -->
-    <div class="row editorial section" id="editorial">
+    <div class="row mb-5" id="editorial">
       <div class="col-12">
         <div class="board-category-title" data-aos="fade-up">
-          <h3 class="h4 fw-bold">Editorial Board Members</h3>
+          <h3 class="h4 fw-bold">Editorial Board </h3>
           <div class="board-category-line"></div>
         </div>
       </div>
-      
-      <!-- Table for Editorial Board Members -->
-      <div class="col-12 mt-4" data-aos="fade-up">
-        <div class="table-responsive">
-          <table class="table table-hover board-members-table">
-            <thead>
-              <tr>
-                <th scope="col" width="30%">Name</th>
-                <th scope="col" width="30%">Affiliation</th>
-                <th scope="col" width="20%">Country</th>
-                <th scope="col" width="20%">Expertise</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Dr. Robert Chen</td>
-                <td>National Taiwan University</td>
-                <td>Taiwan</td>
-                <td><span class="badge bg-light text-dark">Civil Engineering</span></td>
-              </tr>
-              <tr>
-                <td>Dr. Elena Petrova</td>
-                <td>Moscow State University</td>
-                <td>Russia</td>
-                <td><span class="badge bg-light text-dark">Computer Science</span></td>
-              </tr>
-              <tr>
-                <td>Dr. Michael Brown</td>
-                <td>University of Toronto</td>
-                <td>Canada</td>
-                <td><span class="badge bg-light text-dark">Mechanical Engineering</span></td>
-              </tr>
-              <tr>
-                <td>Dr. Fatima Al-Zahra</td>
-                <td>King Abdullah University</td>
-                <td>Saudi Arabia</td>
-                <td><span class="badge bg-light text-dark">Electrical Engineering</span></td>
-              </tr>
-              <tr>
-                <td>Dr. Kwame Nkrumah</td>
-                <td>University of Ghana</td>
-                <td>Ghana</td>
-                <td><span class="badge bg-light text-dark">Business Administration</span></td>
-              </tr>
-              <tr>
-                <td>Dr. Isabella Romano</td>
-                <td>University of Milan</td>
-                <td>Italy</td>
-                <td><span class="badge bg-light text-dark">Pharmaceutical Sciences</span></td>
-              </tr>
-              <tr>
-                <td>Dr. Siti Nurhayati</td>
-                <td>University of Indonesia</td>
-                <td>Indonesia</td>
-                <td><span class="badge bg-light text-dark">Industrial Engineering</span></td>
-              </tr>
-              <tr>
-                <td>Dr. Hans Mueller</td>
-                <td>Technical University of Munich</td>
-                <td>Germany</td>
-                <td><span class="badge bg-light text-dark">Information Technology</span></td>
-              </tr>
-            </tbody>
-          </table>
+
+      <!-- Editorial Board Member Cards -->
+      <div class="col-lg-3 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="editor-card">
+          <div class="editor-card-header">
+            <div class="editor-role">Editorial Board</div>
+          </div>
+          <div class="editor-card-body">
+            <h4 class="editor-name">Dr. Alice Wang</h4>
+            <!-- <p class="editor-title">Associate Professor of Data Science</p>
+            <p class="editor-affiliation">Tsinghua University, China</p>
+            <div class="editor-expertise">
+              <span class="badge bg-light text-dark">Big Data</span>
+              <span class="badge bg-light text-dark">AI Ethics</span>
+            </div> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="editor-card">
+          <div class="editor-card-header">
+            <div class="editor-role">Editorial Board</div>
+          </div>
+          <div class="editor-card-body">
+            <h4 class="editor-name">Prof. Dr. Ahmed El-Sayed</h4>
+            <!-- <p class="editor-title">Professor of Information Systems</p>
+            <p class="editor-affiliation">Cairo University, Egypt</p>
+            <div class="editor-expertise">
+              <span class="badge bg-light text-dark">Cybersecurity</span>
+              <span class="badge bg-light text-dark">E-Government</span>
+            </div> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="400">
+        <div class="editor-card">
+          <div class="editor-card-header">
+            <div class="editor-role">Editorial Board</div>
+          </div>
+          <div class="editor-card-body">
+            <h4 class="editor-name">Dr. Isabella Rossi</h4>
+            <!-- <p class="editor-title">Professor of Informatics Engineering</p>
+            <p class="editor-affiliation">University of Milan, Italy</p>
+            <div class="editor-expertise">
+              <span class="badge bg-light text-dark">Agile Development</span>
+              <span class="badge bg-light text-dark">DevOps</span>
+            </div> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="500">
+        <div class="editor-card">
+          <div class="editor-card-header">
+            <div class="editor-role">Editorial Board</div>
+          </div>
+          <div class="editor-card-body">
+            <h4 class="editor-name">Prof. Dr. James O’Connor</h4>
+            <!-- <p class="editor-title">Chair of Digital Innovation</p>
+            <p class="editor-affiliation">University of Sydney, Australia</p>
+            <div class="editor-expertise">
+              <span class="badge bg-light text-dark">Digital Transformation</span>
+              <span class="badge bg-light text-dark">ICT Policy</span>
+            </div> -->
+          </div>
         </div>
       </div>
     </div>
+  </div>
 </section>
-<!-- /Editorial Board Section -->
+
 
 
     <!-- Testimonials Section -->
