@@ -407,7 +407,7 @@
                                 <?php
                                     $no = 1;
                                     require_once "koneksi.php";
-                                    foreach ($conference->TampilSub() as $row) {
+                                    foreach ($conference->TampilTitle() as $row) {
                                 ?>
                                     <tr>
                                         <td class="small"><?= $no++?></td>

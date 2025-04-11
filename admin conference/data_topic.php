@@ -400,6 +400,7 @@
                                 <thead>
                                     <tr>
                                         <th class="small">ID</th>
+                                        <th class="small">Title</th>
                                         <th class="small">Topic</th>
                                         <th class="small">Action</th>
                                     </tr>
@@ -412,7 +413,8 @@
                                 ?>
                                     <tr>
                                         <td class="small"><?= $no++?></td>
-                                        <td class="small"><?= $row['name']?></td>
+                                        <td class="small"><?= $row['main_topic']?></td>
+                                        <td class="small"><?= $row['topic']?></td>
                                         <td class="small">
                                             <a href="update_topic.php?id=<?= $row['id']?>" class="btn btn-success">Update</a>
                                             <a href="action.php?action=delete_topic&id=<?= $row['id']?>" class="btn btn-danger">Delete</a>

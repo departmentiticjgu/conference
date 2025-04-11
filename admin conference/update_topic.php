@@ -399,13 +399,21 @@
                         <!-- Kolom Kiri -->
                         <div class="col-md-6">
                             <!-- Nama Lengkap -->
-                            <div class="form-group mb-4">
-                                <label for="name" class="form-label">
-                                    <i class="bi bi-person-fill me-2"></i>Nama Topic
-                                </label>
-                                <input type="text" name="name" id="name" class="form-control" value="<?= $row['name'] ?>" required>
-                            </div>
-
+                            <?php
+                                require_once "koneksi.php";
+                                $conference = new Koneksi();
+                                $result = $conference->TampilTopic(); ?>
+                                <label class="form-label">Main Topic</label>
+                                <select name="main_topic_id" class="form-select mb-3" required>
+                                    <option value="" disabled>Select Main Topic</option>
+                                    <?php
+                                    $topics = $conference->TampilTitle(); // function baru hanya untuk ambil main_topic
+                                    while ($conf = $topics->fetch_assoc()) {
+                                        $selected = ($conf['id'] == $row['main_topic_id']) ? 'selected' : '';
+                                        ?>
+                                        <option value="<?= $conf['id'] ?>" <?= $selected ?>><?= $conf['name'] ?></option>
+                                    <?php } ?>
+                                </select>
                             <!-- Email -->
                             <!-- <div class="form-group mb-4">
                                 <label for="email" class="form-label">
@@ -428,12 +436,12 @@
                         <!-- Kolom Kanan -->
                         <div class="col-md-6">
                             <!-- Institusi -->
-                            <!-- <div class="form-group mb-4">
-                                <label for="institusi" class="form-label">
-                                    <i class="bi bi-building me-2"></i>Instansi
+                            <div class="form-group mb-4">
+                                <label for="name" class="form-label">
+                                    <i class="bi bi-person-fill me-2"></i>Nama Topic
                                 </label>
-                                <input type="text" name="instansi" id="institusi" class="form-control" value="<?= $row['instansi'] ?>" required>
-                            </div> -->
+                                <input type="text" name="name" id="name" class="form-control" value="<?= $row['name'] ?>" required>
+                            </div>
 
                             <!-- Nomor Telepon -->
                             <!-- <div class="form-group mb-4">

@@ -5,13 +5,13 @@ $action = $_GET['action'];
 switch ($action) {
     // ACTION TOPIC & SUB-TOPIC
     case 'insert_topic':
-        if($conference->CreateTopic($_POST['name'])){
+        if($conference->CreateTopic($_POST['main_topic_id'], $_POST['name'])){
             header('location:data_topic.php');
         }
     break;
 
     case 'update_topic':
-        if($conference->update_user($_POST['id'], $_POST['name'])){
+        if($conference->update_user($_POST['main_topic_id'], $_POST['id'], $_POST['name'])){
             header('location:data_topic.php');
         }
         break;

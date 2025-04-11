@@ -17,7 +17,14 @@ class Koneksi {
     // CRUD USER
     public function tampilTopic() {
         $koneksi = mysqli_connect($this->local, $this->username, $this->password, $this->database);
-        $query = "SELECT * FROM topic";
+        $query = "SELECT main_topic.id AS id_title, topic.id AS id, main_topic.name AS main_topic, topic.name AS topic FROM topic JOIN main_topic ON topic.main_topic_id = main_topic.id ORDER BY main_topic.name, topic.name";
+
+        return mysqli_query($koneksi, $query);
+    }
+
+    public function TampilTitle() {
+        $koneksi = mysqli_connect($this->local, $this->username, $this->password, $this->database);
+        $query = "SELECT * FROM main_topic";
 
         return mysqli_query($koneksi, $query);
     }
@@ -36,9 +43,9 @@ class Koneksi {
         return mysqli_query($koneksi, $query);
     }
 
-    public function CreateTopic($name) {
+    public function CreateTopic($main_topic_id, $name) {
         $koneksi = mysqli_connect($this->local, $this->username, $this->password, $this->database);
-        $query = "INSERT INTO topic (name) VALUES ('$name')";
+        $query = "INSERT INTO topic (main_topic_id, name) VALUES ('$main_topic_id', '$name')";
 
         return mysqli_query($koneksi, $query);
     }
@@ -78,9 +85,9 @@ class Koneksi {
         return mysqli_query($koneksi, $query);
     }
 
-    function update_user($id, $name){
+    function update_user($main_topic_id, $id, $name){
         $koneksi = mysqli_connect($this->local, $this->username, $this->password, $this->database);
-        $query = "UPDATE topic SET name='$name' WHERE id = '$id' ";
+        $query = "UPDATE topic SET main_topic_id = '$main_topic_id', name = '$name' WHERE id = '$id' ";
 
         return mysqli_query($koneksi, $query);
     }

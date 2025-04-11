@@ -394,12 +394,18 @@
                         <!-- Kolom Kiri -->
                         <div class="col-md-6">
                             <!-- Nama Lengkap -->
-                            <div class="form-group mb-4">
-                                <label for="name" class="form-label">
-                                    <i class="bi bi-person-fill me-2"></i>Name Topic
-                                </label>
-                                <input type="text" name="name" id="name" class="form-control" required>
-                            </div>
+                            <?php
+                                require_once "koneksi.php";
+                                $conference = new Koneksi();
+                                $result = $conference->tampilTitle();
+                                ?>
+                                <label class="form-label"><i class="bi bi-building me-2"></i>Title Topic Name </label>
+                                <select name="main_topic_id" class="form-select mb-3" required>
+                                    <option value="" disabled selected>Select a Title Topic Name</option>
+                                    <?php while($row = $result->fetch_assoc()) { ?>
+                                    <option value="<?= $row['id']?>"><?= $row['name']?></option>
+                                    <?php } ?>
+                                </select>
 
                             <!-- Email -->
                             <!-- <div class="form-group mb-4">
@@ -421,14 +427,14 @@
                         </div>
 
                         <!-- Kolom Kanan -->
-                        <!-- <div class="col-md-6"> -->
+                        <div class="col-md-6">
                             <!-- Institusi -->
-                            <!-- <div class="form-group mb-4">
-                                <label for="institusi" class="form-label">
-                                    <i class="bi bi-building me-2"></i>Instansi
+                            <div class="form-group mb-4">
+                                <label for="name" class="form-label">
+                                    <i class="bi bi-person-fill me-2"></i>Name Topic
                                 </label>
-                                <input type="text" name="instansi" id="institusi" class="form-control">
-                            </div> -->
+                                <input type="text" name="name" id="name" class="form-control" required>
+                            </div>
 
                             <!-- Nomor Telepon -->
                             <!-- <div class="form-group mb-4">
@@ -454,7 +460,7 @@
                     </div>
 
                     <!-- Tombol Submit -->
-                    <div class="d-flex justify-content-start mt-4">
+                    <div class="d-flex justify-content-end mt-4">
                         <button type="reset" class="btn btn-light-secondary me-3">
                             <i class="bi bi-arrow-counterclockwise me-1"></i> Reset
                         </button>
