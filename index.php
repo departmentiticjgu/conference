@@ -34,7 +34,7 @@
       background-color: var(--bs-primary);
       margin: 0 auto;
     }
-    
+
     /* Topic Card Styling */
     .topic-card {
       background-color: #fff;
@@ -44,40 +44,40 @@
       height: 100%;
       transition: all 0.3s ease;
     }
-    
+
     .topic-card:hover {
       transform: translateY(-5px);
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
     }
-    
+
     .topic-header {
       padding: 15px 20px;
       color: white;
     }
-    
+
     .topic-title {
       margin: 0;
       font-size: 1.3rem;
       font-weight: 600;
     }
-    
+
     .topic-body {
       padding: 20px;
     }
-    
+
     .topic-list {
       list-style-type: none;
       padding-left: 0;
       margin-bottom: 15px;
     }
-    
+
     .topic-list li {
       padding: 8px 0;
       border-bottom: 1px solid rgba(0, 0, 0, 0.05);
       position: relative;
       padding-left: 20px;
     }
-    
+
     .topic-list li:before {
       content: "•";
       position: absolute;
@@ -85,18 +85,18 @@
       color: var(--bs-primary);
       font-weight: bold;
     }
-    
+
     .topic-list li:last-child {
       border-bottom: none;
     }
-    
+
     .subtopic-details {
       background-color: #f8f9fa;
       padding: 15px;
       border-radius: 5px;
       font-size: 0.9rem;
     }
-    
+
     .subtopic-details h5 {
       font-size: 1rem;
       margin-top: 15px;
@@ -104,17 +104,17 @@
       font-weight: 600;
       color: #333;
     }
-    
+
     .subtopic-details h5:first-child {
       margin-top: 0;
     }
-    
+
     .detailed-list {
       list-style-type: none;
       padding-left: 0;
       margin-bottom: 0;
     }
-    
+
     .detailed-list li {
       padding: 4px 0;
       padding-left: 15px;
@@ -122,25 +122,25 @@
       font-size: 0.85rem;
       color: #555;
     }
-    
+
     .detailed-list li:before {
       content: "→";
       position: absolute;
       left: 0;
       color: inherit;
     }
-    
+
     /* Color customization for different topics */
     .col-lg-4:nth-child(1) .topic-list li:before,
     .col-lg-4:nth-child(1) .detailed-list li:before {
       color: var(--bs-primary);
     }
-    
+
     .col-lg-4:nth-child(2) .topic-list li:before,
     .col-lg-4:nth-child(2) .detailed-list li:before {
       color: var(--bs-success);
     }
-    
+
     .col-lg-4:nth-child(3) .topic-list li:before,
     .col-lg-4:nth-child(3) .detailed-list li:before {
       color: var(--bs-danger);
@@ -330,74 +330,74 @@
     <!-- /Clients Section -->
 
     <!-- About Section -->
-<section id="about" class="about section py-5 bg-light">
-  <!-- Section Title with decorative elements -->
-  <div class="container section-title text-center mb-5" data-aos="fade-up">
-    <div class="row justify-content-center">
-      <div class="col-lg-8">
-        <span class="badge bg-danger px-3 py-2 mb-3">JGITeC2025</span>
-        <h2 class="display-5 fw-bold mb-3">About the conference</h2>
-        <div class="divider-custom my-4">
-          <div class="divider-custom-line"></div>
-          <div class="divider-custom-icon"><i class="bi bi-stars"></i></div>
-          <div class="divider-custom-line"></div>
-        </div>
-      </div>
-    </div>
-  </div><!-- End Section Title -->
-
-  <div class="container">
-    <div class="row gy-4 align-items-center">
-      <!-- Left content with enhanced styling -->
-      <div class="col-lg-6 content about-jgu" data-aos="fade-up" data-aos-delay="100">
-        <div class="card border-0 shadow-sm p-4 h-100 bg-white">
-          <div class="card-body">
-            <h3 class="card-title mb-4 text-danger"><i class="bi bi-info-circle-fill me-2"></i>Conference Overview</h3>
-            <p class="text-dark">
-              The 1st Joint Global Innovation and Technology Conference 2025 (JGITeC2025) is an international platform dedicated to interdisciplinary collaboration among pharmaceutical sciences, business strategies, and engineering advancements.
-            </p>
-            <p class="text-dark">
-              Jakarta Global University proudly presents the 1st Joint Global Innovation and Technology Conference 2025 (JGITeC2025): Integrating pharmaceutical Science, Business, and Technology for Global Solutions. JGITeC2025 is a scientific forum designed to bring together research findings in the fields of engineering,business, and pharmaceutical Science. This conference will unite researchers, engineers, government representatives, and other stakeholders on an international scale.
-
-            </p>
+    <section id="about" class="about section py-5 bg-light">
+      <!-- Section Title with decorative elements -->
+      <div class="container section-title text-center mb-5" data-aos="fade-up">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <span class="badge bg-danger px-3 py-2 mb-3">JGITeC2025</span>
+            <h2 class="display-5 fw-bold mb-3">About the conference</h2>
+            <div class="divider-custom my-4">
+              <div class="divider-custom-line"></div>
+              <div class="divider-custom-icon"><i class="bi bi-stars"></i></div>
+              <div class="divider-custom-line"></div>
+            </div>
           </div>
         </div>
-      </div>
+      </div><!-- End Section Title -->
 
-      <!-- Right content with map and venue info -->
-      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-        <div class="card border-0 shadow-sm overflow-hidden h-100">
-          <div class="card-header bg-danger text-white p-3">
-            <h3 class="h5 mb-0"><i class="bi bi-geo-alt-fill me-2"></i>Conference Venue</h3>
-          </div>
-          <div class="card-body p-0">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.8050030730496!2d106.82540607499205!3d-6.419095993571829!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69eb97981e953d%3A0x7040f2673277d58f!2sKampus%20Jakarta%20Global%20University!5e0!3m2!1sen!2sid!4v1739171281222!5m2!1sen!2sid" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-          <div class="card-footer bg-white border-0 p-3">
-            <div class="d-flex align-items-center mb-3">
-              <i class="bi bi-building text-danger fs-4 me-3"></i>
-              <div>
-                <h5 class="h6 mb-0">Jakarta Global University</h5>
-                <p class="small text-muted mb-0">Kampus Jakarta, Indonesia</p>
+      <div class="container">
+        <div class="row gy-4 align-items-center">
+          <!-- Left content with enhanced styling -->
+          <div class="col-lg-6 content about-jgu" data-aos="fade-up" data-aos-delay="100">
+            <div class="card border-0 shadow-sm p-4 h-100 bg-white">
+              <div class="card-body">
+                <h3 class="card-title mb-4 text-danger"><i class="bi bi-info-circle-fill me-2"></i>Conference Overview</h3>
+                <p class="text-dark">
+                  The 1st Joint Global Innovation and Technology Conference 2025 (JGITeC2025) is an international platform dedicated to interdisciplinary collaboration among pharmaceutical sciences, business strategies, and engineering advancements.
+                </p>
+                <p class="text-dark">
+                  Jakarta Global University proudly presents the 1st Joint Global Innovation and Technology Conference 2025 (JGITeC2025): Integrating pharmaceutical Science, Business, and Technology for Global Solutions. JGITeC2025 is a scientific forum designed to bring together research findings in the fields of engineering,business, and pharmaceutical Science. This conference will unite researchers, engineers, government representatives, and other stakeholders on an international scale.
+
+                </p>
               </div>
             </div>
-            <div class="d-flex align-items-center mb-3">
-              <i class="bi bi-calendar-event text-danger fs-4 me-3"></i>
-              <div>
-                <h5 class="h6 mb-0">Conference Dates</h5>
-                <p class="small text-muted mb-0">October 25, 2025</p>
+          </div>
+
+          <!-- Right content with map and venue info -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="card border-0 shadow-sm overflow-hidden h-100">
+              <div class="card-header bg-danger text-white p-3">
+                <h3 class="h5 mb-0"><i class="bi bi-geo-alt-fill me-2"></i>Conference Venue</h3>
+              </div>
+              <div class="card-body p-0">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.8050030730496!2d106.82540607499205!3d-6.419095993571829!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69eb97981e953d%3A0x7040f2673277d58f!2sKampus%20Jakarta%20Global%20University!5e0!3m2!1sen!2sid!4v1739171281222!5m2!1sen!2sid" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+              <div class="card-footer bg-white border-0 p-3">
+                <div class="d-flex align-items-center mb-3">
+                  <i class="bi bi-building text-danger fs-4 me-3"></i>
+                  <div>
+                    <h5 class="h6 mb-0">Jakarta Global University</h5>
+                    <p class="small text-muted mb-0">Kampus Jakarta, Indonesia</p>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center mb-3">
+                  <i class="bi bi-calendar-event text-danger fs-4 me-3"></i>
+                  <div>
+                    <h5 class="h6 mb-0">Conference Dates</h5>
+                    <p class="small text-muted mb-0">October 25, 2025</p>
+                  </div>
+                </div>
+                <a href="#contact" class="btn btn-danger w-100 mt-2">
+                  <i class="bi bi-send me-2"></i>Contact for More Information
+                </a>
               </div>
             </div>
-            <a href="#contact" class="btn btn-danger w-100 mt-2">
-              <i class="bi bi-send me-2"></i>Contact for More Information
-            </a>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-<!-- /About Section -->
+    </section>
+    <!-- /About Section -->
 
 
 
@@ -513,110 +513,222 @@
 
       </div>
 
-    </section> --> 
+    </section> -->
     <!-- /Skills Section -->
 
     <!-- Services Section -->
-   <!-- Topics Section -->
-<section id="services" class="topics section py-5 bg-light">
-  <!-- Section Title -->
-  <div class="container text-center mb-5" data-aos="fade-up">
-    <h2 class="fw-bold mb-3">CONFERENCE TOPICS</h2>
-    <p class="text-muted mx-auto" style="max-width: 600px;">Explore our conference topics and research areas</p>
-    <div class="simple-divider my-3"></div>
-  </div>
+    <section id="services" class="topics section py-5 bg-light">
+      <!-- Section Title -->
+      <div class="container text-center mb-5" data-aos="fade-up">
+        <h2 class="fw-bold mb-3">CONFERENCE TOPICS</h2>
+        <p class="text-muted mx-auto" style="max-width: 600px;">Explore our conference topics and research areas</p>
+        <div class="simple-divider my-3"></div>
+      </div>
 
-  <?php
-include 'admin conference/koneksi.php';
-$conference = new Koneksi();
-$result = $conference->TampilSub();
+      <?php
+      include 'admin conference/koneksi.php';
+      $conference = new Koneksi();
+      $result = $conference->TampilSub();
 
-$groupedTopics = [];
-while ($row = $result->fetch_assoc()) {
-    $groupedTopics[$row['topic']][] = $row['subtopic'];
-}
+      $groupedTopics = [];
+      while ($row = $result->fetch_assoc()) {
+        $groupedTopics[$row['topic']][] = $row['subtopic'];
+      }
 
-$colors = ['bg-primary', 'bg-warning', 'bg-danger']; // Biru, Kuning, Merah
-$index = 0;
-?>
+      $colors = ['bg-primary', 'bg-warning', 'bg-danger']; // Biru, Kuning, Merah
+      $index = 0;
+      ?>
 
-<div class="container" data-aos="fade-up" data-aos-delay="100">
-  <div class="row g-4">
-    <?php foreach ($groupedTopics as $topic => $subtopics) { 
-        $color = $colors[$index % count($colors)];
-    ?>
-      <div class="col-lg-4 col-md-6">
-        <div class="topic-card">
-          <div class="topic-header <?= $color ?>">
-            <h3 class="topic-title text-white"><?= $topic ?></h3>
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row g-4">
+          <?php foreach ($groupedTopics as $topic => $subtopics) {
+            $color = $colors[$index % count($colors)];
+            $collapseId = strtolower(str_replace(' ', '', $topic)) . 'Details'; // ID unik
+          ?>
+           <div class="col-lg-4 col-md-6 d-flex">
+            <div class="topic-card w-100 d-flex flex-column">
+              <div class="topic-header <?= $color ?>">
+                <h3 class="topic-title text-white"><?= $topic ?></h3>
+              </div>
+              <div class="topic-body flex-grow-1 d-flex flex-column justify-content-between">
+                <div>
+                  <ul class="topic-list">
+                    <?php foreach ($subtopics as $subtopic) { ?>
+                      <li><?= $subtopic ?></li>
+                    <?php } ?>
+                  </ul>
+                </div>
+                <div class="mt-3">
+                  <button class="btn btn-sm btn-outline-primary view-details" type="button" data-bs-toggle="collapse" data-bs-target="#<?= $collapseId ?>">
+                    View Details
+                  </button>
+
+                  <!-- Bagian Collapse (Manual isi-nya) -->
+                  <div class="collapse mt-3" id="<?= $collapseId ?>">
+                    <div class="subtopic-details">
+                      <?php if ($topic == 'Engineering') { ?>
+                        <h5>Civil Engineering</h5>
+                        <ul class="detailed-list">
+                          <li>Structure Engineering</li>
+                          <li>Road and Bridge Engineering</li>
+                          <li>Geotech Engineering</li>
+                          <li>Water Resources Management</li>
+                          <li>Transportation Engineering</li>
+                          <li>Disaster Mitigation</li>
+                          <li>Construction Management</li>
+                          <li>Earthquake Engineering</li>
+                        </ul>
+                        <h5>Electrical Engineering</h5>
+                        <ul class="detailed-list">
+                          <li>Power Transmission and Distribution</li>
+                          <li>High Voltage Engineering</li>
+                          <li>Renewable Energy</li>
+                          <li>Smart Grid Technology</li>
+                          <li>Robotics</li>
+                          <li>Power Electronics</li>
+                          <li>Signal and Image Processing</li>
+                          <li>Embedded Systems</li>
+                          <li>VLSI</li>
+                          <li>Wireless and Mobile Communication</li>
+                        </ul>
+                        <h5>Industrial Engineering</h5>
+                        <ul class="detailed-list">
+                          <li>Smart and Lean Manufacturing System</li>
+                          <li>Product Design and Development</li>
+                          <li>Digitalization Supply Chain</li>
+                          <li>Green Manufacturing</li>
+                          <li>Quality Management System</li>
+                        </ul>
+                        <h5>Informatic Engineering</h5>
+                        <ul class="detailed-list">
+                          <li>Mobile Applications</li>
+                          <li>Biomedical Informatics</li>
+                          <li>Security Systems</li>
+                          <li>Database and Data Mining</li>
+                          <li>Artificial Intelligence</li>
+                          <li>Computer Network</li>
+                        </ul>
+                        <h5>Mechanical Engineering</h5>
+                        <ul class="detailed-list">
+                          <li>Mechatronics & Robotics</li>
+                          <li>Applied Mechanics</li>
+                          <li>Biomedical Engineering</li>
+                          <li>Composite & Materials Engineering</li>
+                          <li>Computational Mechanics</li>
+                          <li>Design Engineering</li>
+                          <li>Thermal & Fluid Science</li>
+                          <li>Automotive Engineering</li>
+                        </ul>
+                        <!-- Tambahkan yang lain jika perlu -->
+
+                      <?php } elseif ($topic == 'Economic Business') { ?>
+                        <h5>Management</h5>
+                        <ul class="detailed-list">
+                          <li>Leadership, Innovation, and Strategy</li>
+                          <!-- <li>Strategic Management</li>
+                          <li>Human Resources</li>
+                          <li>Organizational Behavior</li>
+                          <li>Leadership</li>
+                          <li>Operations Management</li> -->
+                        </ul>
+                        <h5>Digital Business</h5>
+                        <ul class="detailed-list">
+                          <li>Business and Entrepreneurship in the Tech Era</li>
+                          <li>Tech-Driven Business Strategies and Economic Sustainability</li>
+                          <li>Financial Technology (FinTech) and Digital Economy</li>
+                          <li>Digital Transformation & Smart Technologies</li>
+                          <li>Sustainability, ESG, and Green Business</li>
+                          <li>Marketing and Consumer Behaviour in Digital Age</li>
+                          <!-- <li>E-Commerce</li>
+                          <li>Digital Marketing</li>
+                          <li>Business Analytics</li>
+                          <li>FinTech</li>
+                          <li>Digital Transformation</li> -->
+                        </ul>
+
+                      <?php } elseif ($topic == 'Pharmaceutical Science') { ?>
+                        <h5>Pharmaceutical Biotechnology</h5>
+                        <ul class="detailed-list">
+                          <li>Pharmaceutical Formulation, Biotechnology, and Drug Design</li>
+                          <!-- <li>Novel drug delivery systems</li>
+                          <li>Biopharmaceutics</li>
+                          <li>Nanomedicine</li>
+                          <li>Pharmaceutical biotechnology</li> -->
+                        </ul>
+                        <h5>Herbal Innovations</h5>
+                        <ul class="detailed-list">
+                          <li>Herbal Technology, Pharmacology, and Regulatory Compliance</li>
+                          <!-- <li>Phytochemistry</li>
+                          <li>Ethnopharmacology</li>
+                          <li>Herbal drug standardization</li>
+                          <li>Natural product development</li> -->
+                        </ul>
+                      <?php } ?>
+                    </div>
+                  </div>
+                  <!-- End Collapse -->
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="topic-body">
-            <ul class="topic-list">
-              <?php foreach ($subtopics as $subtopic) { ?>
-                <li><?= $subtopic ?></li>
-              <?php } ?>
-            </ul>
-            <!-- <button class="btn btn-sm btn-outline-primary view-details" type="button">
-              View Details
-            </button> -->
+
+          <?php $index++;
+          } ?>
+
+        </div>
+      </div>
+
+
+
+    </section>
+
+    <!-- Co-Host Section -->
+    <section id="co-host" class="co-host section py-5">
+      <!-- Section Title -->
+      <div class="container text-center mb-5">
+        <h2 class="fw-bold mb-3">CO-HOST</h2>
+        <p class="text-muted mx-auto" style="max-width: 700px;">JGITeC2025 is proudly co-hosted by these prestigious institutions</p>
+        <div class="simple-divider my-3"></div>
+      </div>
+
+      <div class="container">
+        <!-- Co-Host Images Row -->
+        <div class="row justify-content-center mb-5">
+          <!-- Co-Host Image 1 -->
+          <div class="col-md-3 col-6 mb-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="co-host-image-container">
+              <img src="assets/img/co-host1.png" alt="Co-Host 1" class="img-fluid co-host-logo">
+              <div class="co-host-name">WXIT</div>
+            </div>
+          </div>
+
+          <!-- Co-Host Image 2 -->
+          <div class="col-md-3 col-6 mb-4" data-aos="zoom-in" data-aos-delay="200">
+            <div class="co-host-image-container">
+              <img src="/placeholder.svg?height=200&width=200" alt="Co-Host 2" class="img-fluid co-host-logo">
+              <div class="co-host-name">Skenov</div>
+            </div>
+          </div>
+
+          <!-- Co-Host Image 3 -->
+          <div class="col-md-3 col-6 mb-4" data-aos="zoom-in" data-aos-delay="300">
+            <div class="co-host-image-container">
+              <img src="assets/img/co-host3.png" alt="Co-Host 3" class="img-fluid co-host-logo">
+              <div class="co-host-name">GULF</div>
+            </div>
+          </div>
+
+          <!-- Co-Host Image 4 -->
+          <div class="col-md-3 col-6 mb-4" data-aos="zoom-in" data-aos-delay="400">
+            <div class="co-host-image-container">
+              <img src="/placeholder.svg?height=200&width=200" alt="Co-Host 4" class="img-fluid co-host-logo">
+              <div class="co-host-name">Lorem ipsum dolor sit amet.</div>
+            </div>
           </div>
         </div>
-      </div>
-    <?php $index++; } ?>
-  </div>
-</div>
 
-
-
-</section>
-
-<!-- Co-Host Section -->
-<section id="co-host" class="co-host section py-5">
-  <!-- Section Title -->
-  <div class="container text-center mb-5">
-    <h2 class="fw-bold mb-3">CO-HOST</h2>
-    <p class="text-muted mx-auto" style="max-width: 700px;">JGITeC2025 is proudly co-hosted by these prestigious institutions</p>
-    <div class="simple-divider my-3"></div>
-  </div>
-
-  <div class="container">
-    <!-- Co-Host Images Row -->
-    <div class="row justify-content-center mb-5">
-      <!-- Co-Host Image 1 -->
-      <div class="col-md-3 col-6 mb-4" data-aos="zoom-in" data-aos-delay="100">
-        <div class="co-host-image-container">
-          <img src="assets/img/co-host1.png" alt="Co-Host 1" class="img-fluid co-host-logo">
-          <div class="co-host-name">WXIT</div>
-        </div>
-      </div>
-
-      <!-- Co-Host Image 2 -->
-      <div class="col-md-3 col-6 mb-4" data-aos="zoom-in" data-aos-delay="200">
-        <div class="co-host-image-container">
-          <img src="/placeholder.svg?height=200&width=200" alt="Co-Host 2" class="img-fluid co-host-logo">
-          <div class="co-host-name">Skenov</div>
-        </div>
-      </div>
-
-      <!-- Co-Host Image 3 -->
-      <div class="col-md-3 col-6 mb-4" data-aos="zoom-in" data-aos-delay="300">
-        <div class="co-host-image-container">
-          <img src="assets/img/co-host3.png" alt="Co-Host 3" class="img-fluid co-host-logo">
-          <div class="co-host-name">GULF</div>
-        </div>
-      </div>
-
-      <!-- Co-Host Image 4 -->
-      <div class="col-md-3 col-6 mb-4" data-aos="zoom-in" data-aos-delay="400">
-        <div class="co-host-image-container">
-          <img src="/placeholder.svg?height=200&width=200" alt="Co-Host 4" class="img-fluid co-host-logo">
-          <div class="co-host-name">Lorem ipsum dolor sit amet.</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Co-Host Description -->
-    <!-- <div class="row">
+        <!-- Co-Host Description -->
+        <!-- <div class="row">
       <div class="col-12">
         <div class="co-host-description text-center" data-aos="fade-up">
           <p>Our conference is made possible through collaboration with these leading institutions in engineering, business, and pharmaceutical sciences. Together, we aim to foster innovation and knowledge exchange across disciplines.</p>
@@ -624,8 +736,8 @@ $index = 0;
         </div>
       </div>
     </div> -->
-  </div>
-</section>
+      </div>
+    </section>
 
 
     <!-- /Services Section -->
@@ -650,111 +762,111 @@ $index = 0;
       </div>
 
     </section> -->
-    
+
     <!-- /Call To Action Section -->
 
     <!-- Schedule Section -->
-<section id="schedule" class="schedule section py-5 bg-light">
-  <!-- Section Title -->
-  <div class="container text-center mb-5" data-aos="fade-up">
-    <h2 class="fw-bold mb-3">CONFERENCE SCHEDULE</h2>
-    <p class="text-muted mx-auto" style="max-width: 600px;">October 25, 2025 at Jakarta Global University</p>
-    <div class="simple-divider my-3"></div>
-  </div>
+    <section id="schedule" class="schedule section py-5 bg-light">
+      <!-- Section Title -->
+      <div class="container text-center mb-5" data-aos="fade-up">
+        <h2 class="fw-bold mb-3">CONFERENCE SCHEDULE</h2>
+        <p class="text-muted mx-auto" style="max-width: 600px;">October 25, 2025 at Jakarta Global University</p>
+        <div class="simple-divider my-3"></div>
+      </div>
 
-  <div class="container">
-    <!-- Schedule Tabs -->
-    <div class="row justify-content-center mb-4">
-      <div class="col-md-8">
-        <ul class="nav nav-pills mb-4 justify-content-center" id="scheduleTab" role="tablist">
-          <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="day1-tab" data-bs-toggle="pill" data-bs-target="#day1" type="button" role="tab">Day 1</button>
-          </li>
-          <!-- <li class="nav-item" role="presentation">
+      <div class="container">
+        <!-- Schedule Tabs -->
+        <div class="row justify-content-center mb-4">
+          <div class="col-md-8">
+            <ul class="nav nav-pills mb-4 justify-content-center" id="scheduleTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="day1-tab" data-bs-toggle="pill" data-bs-target="#day1" type="button" role="tab">Day 1</button>
+              </li>
+              <!-- <li class="nav-item" role="presentation">
             <button class="nav-link" id="day2-tab" data-bs-toggle="pill" data-bs-target="#day2" type="button" role="tab">Day 2</button>
           </li>
           <li class="nav-item" role="presentation">
             <button class="nav-link" id="day3-tab" data-bs-toggle="pill" data-bs-target="#day3" type="button" role="tab">Day 3</button>
           </li> -->
-        </ul>
-      </div>
-    </div>
-    
-    <!-- Schedule Content -->
-    <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
-      <div class="col-md-8">
-        <div class="tab-content" id="scheduleTabContent">
-          <!-- Day 1 Schedule -->
-          <div class="tab-pane fade show active" id="day1" role="tabpanel">
-            <h4 class="text-center mb-4">Day 1 - October 25, 2025</h4>
-            
-            <div class="schedule-list">
-              <div class="schedule-item">
-                <div class="schedule-time">08:00 - 09:00</div>
-                <div class="schedule-content">
-                  <h5>Registration & Welcome Coffee</h5>
-                  <p class="location">Main Lobby</p>
-                </div>
-              </div>
-              
-              <div class="schedule-item highlight">
-                <div class="schedule-time">09:00 - 10:00</div>
-                <div class="schedule-content">
-                  <h5>Opening Ceremony</h5>
-                  <p class="location">Grand Ballroom</p>
-                </div>
-              </div>
-              
-              <div class="schedule-item">
-                <div class="schedule-time">10:00 - 11:00</div>
-                <div class="schedule-content">
-                  <h5>Keynote: The Future of Technology Integration</h5>
-                  <p class="speaker">Prof. Dr. John Smith, MIT</p>
-                </div>
-              </div>
-              
-              <div class="schedule-item break">
-                <div class="schedule-time">11:00 - 11:30</div>
-                <div class="schedule-content">
-                  <h5>Coffee Break</h5>
-                </div>
-              </div>
-              
-              <div class="schedule-item">
-                <div class="schedule-time">11:30 - 12:30</div>
-                <div class="schedule-content">
-                  <h5>Keynote: Sustainable Engineering Practices</h5>
-                  <p class="speaker">Dr. Maria Rodriguez, Stanford University</p>
-                </div>
-              </div>
-              
-              <div class="schedule-item break">
-                <div class="schedule-time">12:30 - 14:00</div>
-                <div class="schedule-content">
-                  <h5>Lunch Break</h5>
-                </div>
-              </div>
-              
-              <div class="schedule-item">
-                <div class="schedule-time">14:00 - 15:30</div>
-                <div class="schedule-content">
-                  <h5>Parallel Sessions: Engineering Innovations</h5>
-                  <p class="location">Room A, B, C</p>
-                </div>
-              </div>
-              
-              <div class="schedule-item special">
-                <div class="schedule-time">18:00 - 20:00</div>
-                <div class="schedule-content">
-                  <h5>Welcome Reception</h5>
-                  <p class="location">Garden Terrace</p>
-                </div>
-              </div>
-            </div>
+            </ul>
           </div>
-          
-          <!-- Day 2 Schedule -->
-          <!-- <div class="tab-pane fade" id="day2" role="tabpanel">
+        </div>
+
+        <!-- Schedule Content -->
+        <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-md-8">
+            <div class="tab-content" id="scheduleTabContent">
+              <!-- Day 1 Schedule -->
+              <div class="tab-pane fade show active" id="day1" role="tabpanel">
+                <h4 class="text-center mb-4">Day 1 - October 25, 2025</h4>
+
+                <div class="schedule-list">
+                  <div class="schedule-item">
+                    <div class="schedule-time">08:00 - 09:00</div>
+                    <div class="schedule-content">
+                      <h5>Registration & Welcome Coffee</h5>
+                      <p class="location">Main Lobby</p>
+                    </div>
+                  </div>
+
+                  <div class="schedule-item highlight">
+                    <div class="schedule-time">09:00 - 10:00</div>
+                    <div class="schedule-content">
+                      <h5>Opening Ceremony</h5>
+                      <p class="location">Grand Ballroom</p>
+                    </div>
+                  </div>
+
+                  <div class="schedule-item">
+                    <div class="schedule-time">10:00 - 11:00</div>
+                    <div class="schedule-content">
+                      <h5>Keynote: The Future of Technology Integration</h5>
+                      <p class="speaker">Prof. Dr. John Smith, MIT</p>
+                    </div>
+                  </div>
+
+                  <div class="schedule-item break">
+                    <div class="schedule-time">11:00 - 11:30</div>
+                    <div class="schedule-content">
+                      <h5>Coffee Break</h5>
+                    </div>
+                  </div>
+
+                  <div class="schedule-item">
+                    <div class="schedule-time">11:30 - 12:30</div>
+                    <div class="schedule-content">
+                      <h5>Keynote: Sustainable Engineering Practices</h5>
+                      <p class="speaker">Dr. Maria Rodriguez, Stanford University</p>
+                    </div>
+                  </div>
+
+                  <div class="schedule-item break">
+                    <div class="schedule-time">12:30 - 14:00</div>
+                    <div class="schedule-content">
+                      <h5>Lunch Break</h5>
+                    </div>
+                  </div>
+
+                  <div class="schedule-item">
+                    <div class="schedule-time">14:00 - 15:30</div>
+                    <div class="schedule-content">
+                      <h5>Parallel Sessions: Engineering Innovations</h5>
+                      <p class="location">Room A, B, C</p>
+                    </div>
+                  </div>
+
+                  <div class="schedule-item special">
+                    <div class="schedule-time">18:00 - 20:00</div>
+                    <div class="schedule-content">
+                      <h5>Welcome Reception</h5>
+                      <p class="location">Garden Terrace</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Day 2 Schedule -->
+              <!-- <div class="tab-pane fade" id="day2" role="tabpanel">
             <h4 class="text-center mb-4">Day 2 - March 18, 2025</h4>
             
             <div class="schedule-list">
@@ -798,9 +910,9 @@ $index = 0;
               </div>
             </div>
           </div> -->
-          
-          <!-- Day 3 Schedule -->
-          <!-- <div class="tab-pane fade" id="day3" role="tabpanel">
+
+              <!-- Day 3 Schedule -->
+              <!-- <div class="tab-pane fade" id="day3" role="tabpanel">
             <h4 class="text-center mb-4">Day 3 - March 19, 2025</h4>
             
             <div class="schedule-list">
@@ -836,18 +948,18 @@ $index = 0;
               </div>
             </div>
           </div> -->
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    
-    <!-- Download Button -->
-    <!-- <div class="row mt-4">
+
+        <!-- Download Button -->
+        <!-- <div class="row mt-4">
       <div class="col-12 text-center">
         <a href="#" class="btn btn-danger">Download Schedule</a>
       </div>
     </div> -->
-  </div>
-</section>
+      </div>
+    </section>
 
 
 
@@ -1002,104 +1114,104 @@ $index = 0;
       </div>
 
     </section>
-    
+
     <!-- /Pricing Section -->
 
     <!-- Peer Review Process Section -->
-<section id="peer-review" class="peer-review section py-5">
-  <!-- Section Title -->
-  <div class="container section-title text-center mb-5" data-aos="fade-up">
-    <h2 class="display-5 fw-bold mb-3">Peer Review Process</h2>
-    <p class="lead text-muted mx-auto" style="max-width: 700px;">Our rigorous peer review process ensures the quality and integrity of all published papers.</p>
-    <div class="simple-divider my-4"></div>
-  </div><!-- End Section Title -->
+    <section id="peer-review" class="peer-review section py-5">
+      <!-- Section Title -->
+      <div class="container section-title text-center mb-5" data-aos="fade-up">
+        <h2 class="display-5 fw-bold mb-3">Peer Review Process</h2>
+        <p class="lead text-muted mx-auto" style="max-width: 700px;">Our rigorous peer review process ensures the quality and integrity of all published papers.</p>
+        <div class="simple-divider my-4"></div>
+      </div><!-- End Section Title -->
 
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
-    <!-- Process Steps -->
-    <div class="row justify-content-center mb-5">
-      <div class="col-lg-10">
-        <div class="process-container">
-          <!-- Step 1 -->
-          <div class="process-step" data-aos="fade-up" data-aos-delay="100">
-            <div class="process-content">
-              <h4>1. Submission</h4>
-              <p>Authors submit their manuscripts through the conference submission system. All submissions must follow the provided template and guidelines.</p>
-            </div>
-          </div>
-          
-          <!-- Step 2 -->
-          <div class="process-step" data-aos="fade-up" data-aos-delay="200">
-            <div class="process-content">
-              <h4>2. Initial Screening</h4>
-              <p>The editorial team conducts an initial screening to ensure submissions meet basic requirements and fall within the conference scope.</p>
-            </div>
-          </div>
-          
-          <!-- Step 3 -->
-          <div class="process-step" data-aos="fade-up" data-aos-delay="300">
-            <div class="process-content">
-              <h4>3. Peer Review</h4>
-              <p>Each manuscript is assigned to at least two independent reviewers with expertise in the relevant field. The review process is double-blind to ensure fairness.</p>
-            </div>
-          </div>
-          
-          <!-- Step 4 -->
-          <!-- <div class="process-step" data-aos="fade-up" data-aos-delay="400">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <!-- Process Steps -->
+        <div class="row justify-content-center mb-5">
+          <div class="col-lg-10">
+            <div class="process-container">
+              <!-- Step 1 -->
+              <div class="process-step" data-aos="fade-up" data-aos-delay="100">
+                <div class="process-content">
+                  <h4>1. Submission</h4>
+                  <p>Authors submit their manuscripts through the conference submission system. All submissions must follow the provided template and guidelines.</p>
+                </div>
+              </div>
+
+              <!-- Step 2 -->
+              <div class="process-step" data-aos="fade-up" data-aos-delay="200">
+                <div class="process-content">
+                  <h4>2. Initial Screening</h4>
+                  <p>The editorial team conducts an initial screening to ensure submissions meet basic requirements and fall within the conference scope.</p>
+                </div>
+              </div>
+
+              <!-- Step 3 -->
+              <div class="process-step" data-aos="fade-up" data-aos-delay="300">
+                <div class="process-content">
+                  <h4>3. Peer Review</h4>
+                  <p>Each manuscript is assigned to at least two independent reviewers with expertise in the relevant field. The review process is double-blind to ensure fairness.</p>
+                </div>
+              </div>
+
+              <!-- Step 4 -->
+              <!-- <div class="process-step" data-aos="fade-up" data-aos-delay="400">
             <div class="process-content">
               <h4>4. Editorial Decision</h4>
               <p>Based on reviewer recommendations, the editorial board makes a decision to accept, request revisions, or reject the manuscript.</p>
             </div>
           </div> -->
-          
-          <!-- Step 5 -->
-          <!-- <div class="process-step" data-aos="fade-up" data-aos-delay="500">
+
+              <!-- Step 5 -->
+              <!-- <div class="process-step" data-aos="fade-up" data-aos-delay="500">
             <div class="process-content">
               <h4>5. Revision</h4>
               <p>Authors of manuscripts requiring revisions are given time to address reviewer comments and resubmit their work.</p>
             </div>
           </div> -->
-          
-           <!-- Step 6 -->
-          <!-- <div class="process-step" data-aos="fade-up" data-aos-delay="600">
+
+              <!-- Step 6 -->
+              <!-- <div class="process-step" data-aos="fade-up" data-aos-delay="600">
             <div class="process-number">6</div>
             <div class="process-content">
               <h4>Final Decision & Publication</h4>
               <p>After final review, accepted papers are processed for publication in the conference proceedings.</p>
             </div>
           </div> -->
-        </div>
-      </div>
-    </div>
-    
-    <!-- Review Criteria -->
-    <div class="row justify-content-center mb-5">
-      <div class="col-lg-10">
-        <div class="criteria-card" data-aos="fade-up">
-          <h3 class="criteria-title">Review Criteria</h3>
-          <div class="row">
-            <div class="col-md-6">
-              <ul class="criteria-list">
-                <li>Originality and innovation of the research</li>
-                <li>Relevance to the conference themes</li>
-                <li>Soundness of methodology</li>
-                <li>Quality of analysis and interpretation</li>
-              </ul>
-            </div>
-            <div class="col-md-6">
-              <ul class="criteria-list">
-                <li>Clarity and organization of the manuscript</li>
-                <li>Significance of findings and contribution</li>
-                <li>Ethical considerations</li>
-                <li>Quality of references and citations</li>
-              </ul>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    
-    <!-- Timeline -->
-    <!-- <div class="row justify-content-center">
+
+        <!-- Review Criteria -->
+        <div class="row justify-content-center mb-5">
+          <div class="col-lg-10">
+            <div class="criteria-card" data-aos="fade-up">
+              <h3 class="criteria-title">Review Criteria</h3>
+              <div class="row">
+                <div class="col-md-6">
+                  <ul class="criteria-list">
+                    <li>Originality and innovation of the research</li>
+                    <li>Relevance to the conference themes</li>
+                    <li>Soundness of methodology</li>
+                    <li>Quality of analysis and interpretation</li>
+                  </ul>
+                </div>
+                <div class="col-md-6">
+                  <ul class="criteria-list">
+                    <li>Clarity and organization of the manuscript</li>
+                    <li>Significance of findings and contribution</li>
+                    <li>Ethical considerations</li>
+                    <li>Quality of references and citations</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline -->
+        <!-- <div class="row justify-content-center">
       <div class="col-lg-10">
         <div class="timeline-card" data-aos="fade-up">
           <h3 class="timeline-title">Review Timeline</h3>
@@ -1128,215 +1240,215 @@ $index = 0;
         </div>
       </div>
     </div> -->
-  </div>
-</section>
+      </div>
+    </section>
 
-<!-- Editorial Board Section -->
-<section id="editorial-board" class="editorial-board section py-5">
-  <!-- Section Title -->
-  <div class="container section-title text-center mb-5" data-aos="fade-up">
-    <h2 class="display-5 fw-bold mb-3">Editorial Team</h2>
-    <p class="lead text-muted mx-auto" style="max-width: 700px;">
-      Our distinguished editorial board members ensure the highest standards of academic excellence and research integrity.
-    </p>
-  </div>
-
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-    <!-- Chief Editors Section -->
-    <div class="row mb-5" id="chief-editors">
-      <div class="col-12">
-        <div class="board-category-title" data-aos="fade-up">
-          <h3 class="h4 fw-bold">Chief Editors</h3>
-          <div class="board-category-line"></div>
-        </div>
+    <!-- Editorial Board Section -->
+    <section id="editorial-board" class="editorial-board section py-5">
+      <!-- Section Title -->
+      <div class="container section-title text-center mb-5" data-aos="fade-up">
+        <h2 class="display-5 fw-bold mb-3">Editorial Team</h2>
+        <p class="lead text-muted mx-auto" style="max-width: 700px;">
+          Our distinguished editorial board members ensure the highest standards of academic excellence and research integrity.
+        </p>
       </div>
 
-      <!-- Chief Editor Cards -->
-      <div class="col-lg-4 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="editor-card chief-editor-card">
-          <div class="editor-card-header">
-            <div class="editor-role">Chief Editor</div>
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <!-- Chief Editors Section -->
+        <div class="row mb-5" id="chief-editors">
+          <div class="col-12">
+            <div class="board-category-title" data-aos="fade-up">
+              <h3 class="h4 fw-bold">Chief Editors</h3>
+              <div class="board-category-line"></div>
+            </div>
           </div>
-          <div class="editor-card-body">
-            <h4 class="editor-name">Prof. Dr. John Smith</h4>
-            <p class="editor-title">Chair of Digital Innovation</p>
-            <p class="editor-affiliation">University of Sydney, Australia</p>
-            <div class="editor-expertise">
-              <span class="badge bg-light text-dark">Digital Transformation</span>
-              <span class="badge bg-light text-dark">ICT Policy</span>
+
+          <!-- Chief Editor Cards -->
+          <div class="col-lg-4 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="editor-card chief-editor-card">
+              <div class="editor-card-header">
+                <div class="editor-role">Chief Editor</div>
+              </div>
+              <div class="editor-card-body">
+                <h4 class="editor-name">Prof. Dr. John Smith</h4>
+                <p class="editor-title">Chair of Digital Innovation</p>
+                <p class="editor-affiliation">University of Sydney, Australia</p>
+                <div class="editor-expertise">
+                  <span class="badge bg-light text-dark">Digital Transformation</span>
+                  <span class="badge bg-light text-dark">ICT Policy</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="editor-card chief-editor-card">
+              <div class="editor-card-header">
+                <div class="editor-role">Chief Editor</div>
+              </div>
+              <div class="editor-card-body">
+                <h4 class="editor-name">Prof. Dr. Maria Rodriguez</h4>
+                <p class="editor-title">Professor of Informatics Engineering</p>
+                <p class="editor-affiliation">University of Milan, Italy</p>
+                <div class="editor-expertise">
+                  <span class="badge bg-light text-dark">Agile Development</span>
+                  <span class="badge bg-light text-dark">DevOps</span>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="400">
+            <div class="editor-card chief-editor-card">
+              <div class="editor-card-header">
+                <div class="editor-role">Chief Editor</div>
+              </div>
+              <div class="editor-card-body">
+                <h4 class="editor-name">Prof. Dr. Hiroshi Tanaka</h4>
+                <p class="editor-title">Professor of Information Systems</p>
+                <p class="editor-affiliation">Cairo University, Egypt</p>
+                <div class="editor-expertise">
+                  <span class="badge bg-light text-dark">Cybersecurity</span>
+                  <span class="badge bg-light text-dark">E-Government</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="col-lg-4 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="300">
-        <div class="editor-card chief-editor-card">
-          <div class="editor-card-header">
-            <div class="editor-role">Chief Editor</div>
-          </div>
-          <div class="editor-card-body">
-            <h4 class="editor-name">Prof. Dr. Maria Rodriguez</h4>
-            <p class="editor-title">Professor of Informatics Engineering</p>
-            <p class="editor-affiliation">University of Milan, Italy</p>
-            <div class="editor-expertise">
-              <span class="badge bg-light text-dark">Agile Development</span>
-              <span class="badge bg-light text-dark">DevOps</span>
-            </div>
-            
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="400">
-        <div class="editor-card chief-editor-card">
-          <div class="editor-card-header">
-            <div class="editor-role">Chief Editor</div>
-          </div>
-          <div class="editor-card-body">
-            <h4 class="editor-name">Prof. Dr. Hiroshi Tanaka</h4>
-            <p class="editor-title">Professor of Information Systems</p>
-            <p class="editor-affiliation">Cairo University, Egypt</p>
-            <div class="editor-expertise">
-              <span class="badge bg-light text-dark">Cybersecurity</span>
-              <span class="badge bg-light text-dark">E-Government</span>
+        <!-- Associate Editors Section -->
+        <div class="row mb-5" id="associate-editors">
+          <div class="col-12">
+            <div class="board-category-title" data-aos="fade-up">
+              <h3 class="h4 fw-bold">Associate Editors</h3>
+              <div class="board-category-line"></div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
 
-    <!-- Associate Editors Section -->
-    <div class="row mb-5" id="associate-editors">
-      <div class="col-12">
-        <div class="board-category-title" data-aos="fade-up">
-          <h3 class="h4 fw-bold">Associate Editors</h3>
-          <div class="board-category-line"></div>
-        </div>
-      </div>
-
-      <!-- Associate Editor Cards -->
-      <div class="col-lg-4 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="100">
-        <div class="editor-card associate-editor-card text-center p-4">
-          <h5 class="editor-name">Dr. Sarah Johnson</h5>
-          <!-- <p class="editor-affiliation mb-1">University of California, USA</p>
+          <!-- Associate Editor Cards -->
+          <div class="col-lg-4 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="editor-card associate-editor-card text-center p-4">
+              <h5 class="editor-name">Dr. Sarah Johnson</h5>
+              <!-- <p class="editor-affiliation mb-1">University of California, USA</p>
           <small class="text-muted">Civil Engineering</small> -->
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="editor-card associate-editor-card text-center p-4">
-          <h5 class="editor-name">Dr. Ahmed Hassan</h5>
-          <!-- <p class="editor-affiliation mb-1">Cairo University, Egypt</p>
-          <small class="text-muted">Electrical Engineering</small> -->
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="300">
-        <div class="editor-card associate-editor-card text-center p-4">
-          <h5 class="editor-name">Dr. Li Wei</h5>
-          <!-- <p class="editor-affiliation mb-1">Tsinghua University, China</p>
-          <small class="text-muted">Industrial Engineering</small> -->
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="400">
-        <div class="editor-card associate-editor-card text-center p-4">
-          <h5 class="editor-name">Dr. Priya Sharma</h5>
-          <!-- <p class="editor-affiliation mb-1">IIT Delhi, India</p>
-          <small class="text-muted">Pharmaceutical Sciences</small> -->
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="500">
-        <div class="editor-card associate-editor-card text-center p-4">
-          <h5 class="editor-name">Dr. James Wilson</h5>
-          <!-- <p class="editor-affiliation mb-1">University of Melbourne, Australia</p>
-          <small class="text-muted">Business Administration</small> -->
-        </div>
-      </div>
-    </div>
-
-    <!-- Editorial Board Members Section -->
-    <div class="row mb-5" id="editorial">
-      <div class="col-12">
-        <div class="board-category-title" data-aos="fade-up">
-          <h3 class="h4 fw-bold">Editorial Board </h3>
-          <div class="board-category-line"></div>
-        </div>
-      </div>
-
-      <!-- Editorial Board Member Cards -->
-      <div class="col-lg-3 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="editor-card">
-          <div class="editor-card-header">
-            <div class="editor-role">Editorial Board</div>
+            </div>
           </div>
-          <div class="editor-card-body">
-            <h4 class="editor-name">Dr. Alice Wang</h4>
-            <!-- <p class="editor-title">Associate Professor of Data Science</p>
+
+          <div class="col-lg-4 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="editor-card associate-editor-card text-center p-4">
+              <h5 class="editor-name">Dr. Ahmed Hassan</h5>
+              <!-- <p class="editor-affiliation mb-1">Cairo University, Egypt</p>
+          <small class="text-muted">Electrical Engineering</small> -->
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="editor-card associate-editor-card text-center p-4">
+              <h5 class="editor-name">Dr. Li Wei</h5>
+              <!-- <p class="editor-affiliation mb-1">Tsinghua University, China</p>
+          <small class="text-muted">Industrial Engineering</small> -->
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="400">
+            <div class="editor-card associate-editor-card text-center p-4">
+              <h5 class="editor-name">Dr. Priya Sharma</h5>
+              <!-- <p class="editor-affiliation mb-1">IIT Delhi, India</p>
+          <small class="text-muted">Pharmaceutical Sciences</small> -->
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="500">
+            <div class="editor-card associate-editor-card text-center p-4">
+              <h5 class="editor-name">Dr. James Wilson</h5>
+              <!-- <p class="editor-affiliation mb-1">University of Melbourne, Australia</p>
+          <small class="text-muted">Business Administration</small> -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Editorial Board Members Section -->
+        <div class="row mb-5" id="editorial">
+          <div class="col-12">
+            <div class="board-category-title" data-aos="fade-up">
+              <h3 class="h4 fw-bold">Editorial Board </h3>
+              <div class="board-category-line"></div>
+            </div>
+          </div>
+
+          <!-- Editorial Board Member Cards -->
+          <div class="col-lg-3 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="editor-card">
+              <div class="editor-card-header">
+                <div class="editor-role">Editorial Board</div>
+              </div>
+              <div class="editor-card-body">
+                <h4 class="editor-name">Dr. Alice Wang</h4>
+                <!-- <p class="editor-title">Associate Professor of Data Science</p>
             <p class="editor-affiliation">Tsinghua University, China</p>
             <div class="editor-expertise">
               <span class="badge bg-light text-dark">Big Data</span>
               <span class="badge bg-light text-dark">AI Ethics</span>
             </div> -->
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
 
-      <div class="col-lg-3 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="300">
-        <div class="editor-card">
-          <div class="editor-card-header">
-            <div class="editor-role">Editorial Board</div>
-          </div>
-          <div class="editor-card-body">
-            <h4 class="editor-name">Prof. Dr. Ahmed El-Sayed</h4>
-            <!-- <p class="editor-title">Professor of Information Systems</p>
+          <div class="col-lg-3 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="editor-card">
+              <div class="editor-card-header">
+                <div class="editor-role">Editorial Board</div>
+              </div>
+              <div class="editor-card-body">
+                <h4 class="editor-name">Prof. Dr. Ahmed El-Sayed</h4>
+                <!-- <p class="editor-title">Professor of Information Systems</p>
             <p class="editor-affiliation">Cairo University, Egypt</p>
             <div class="editor-expertise">
               <span class="badge bg-light text-dark">Cybersecurity</span>
               <span class="badge bg-light text-dark">E-Government</span>
             </div> -->
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
 
-      <div class="col-lg-3 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="400">
-        <div class="editor-card">
-          <div class="editor-card-header">
-            <div class="editor-role">Editorial Board</div>
-          </div>
-          <div class="editor-card-body">
-            <h4 class="editor-name">Dr. Isabella Rossi</h4>
-            <!-- <p class="editor-title">Professor of Informatics Engineering</p>
+          <div class="col-lg-3 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="400">
+            <div class="editor-card">
+              <div class="editor-card-header">
+                <div class="editor-role">Editorial Board</div>
+              </div>
+              <div class="editor-card-body">
+                <h4 class="editor-name">Dr. Isabella Rossi</h4>
+                <!-- <p class="editor-title">Professor of Informatics Engineering</p>
             <p class="editor-affiliation">University of Milan, Italy</p>
             <div class="editor-expertise">
               <span class="badge bg-light text-dark">Agile Development</span>
               <span class="badge bg-light text-dark">DevOps</span>
             </div> -->
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
 
-      <div class="col-lg-3 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="500">
-        <div class="editor-card">
-          <div class="editor-card-header">
-            <div class="editor-role">Editorial Board</div>
-          </div>
-          <div class="editor-card-body">
-            <h4 class="editor-name">Prof. Dr. James O’Connor</h4>
-            <!-- <p class="editor-title">Chair of Digital Innovation</p>
+          <div class="col-lg-3 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="500">
+            <div class="editor-card">
+              <div class="editor-card-header">
+                <div class="editor-role">Editorial Board</div>
+              </div>
+              <div class="editor-card-body">
+                <h4 class="editor-name">Prof. Dr. James O’Connor</h4>
+                <!-- <p class="editor-title">Chair of Digital Innovation</p>
             <p class="editor-affiliation">University of Sydney, Australia</p>
             <div class="editor-expertise">
               <span class="badge bg-light text-dark">Digital Transformation</span>
               <span class="badge bg-light text-dark">ICT Policy</span>
             </div> -->
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
 
 
@@ -1547,13 +1659,13 @@ $index = 0;
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row g-5 align-items-stretch">
-          
+
           <!-- Contact Information Card -->
           <div class="col-lg-6">
             <div class="card contact-info-card h-100 border-0 shadow-sm">
               <div class="card-body p-4 p-xl-5">
                 <h3 class="card-title fw-bold mb-4 text-danger">Conference Information</h3>
-                
+
                 <!-- Contact Info Items -->
                 <div class="contact-info-items">
                   <!-- Address -->
@@ -1566,7 +1678,7 @@ $index = 0;
                       <p class="text-muted mb-0">Jakarta Global University Ballroom<br>Depok, Indonesia</p>
                     </div>
                   </div>
-                  
+
                   <!-- Phone -->
                   <div class="contact-info-item d-flex mb-4" data-aos="fade-up" data-aos-delay="300">
                     <div class="contact-icon bg-danger text-white">
@@ -1577,7 +1689,7 @@ $index = 0;
                       <p class="text-muted mb-0">+62 123 4567 890</p>
                     </div>
                   </div>
-                  
+
                   <!-- Email -->
                   <div class="contact-info-item d-flex mb-4" data-aos="fade-up" data-aos-delay="400">
                     <div class="contact-icon bg-danger text-white">
@@ -1588,7 +1700,7 @@ $index = 0;
                       <a href="mailto:enquiry@jgu.ac.id" class="mb-0 text-primary">enquiry@jgu.ac.id</a>
                     </div>
                   </div>
-                  
+
                   <!-- Social Media -->
                   <div class="contact-info-item d-flex mb-4" data-aos="fade-up" data-aos-delay="500">
                     <div class="contact-icon bg-danger text-white">
@@ -1613,7 +1725,7 @@ $index = 0;
                     </div>
                   </div>
                 </div>
-                
+
                 <!-- WhatsApp Contact Button -->
                 <div class="mt-4 text-center" data-aos="fade-up" data-aos-delay="600">
                   <a href="https://wa.me/6281234567890" target="_blank" class="btn btn-success btn-lg whatsapp-btn">
@@ -1624,7 +1736,7 @@ $index = 0;
               </div>
             </div>
           </div>
-          
+
           <!-- Map Card -->
           <div class="col-lg-6">
             <div class="card map-card h-100 border-0 shadow-sm">
@@ -1643,12 +1755,12 @@ $index = 0;
               </div>
             </div>
           </div>
-          
+
         </div>
       </div>
 
     </section>
-<!-- /Contact Section -->
+    <!-- /Contact Section -->
 
 
 
@@ -1758,10 +1870,10 @@ $index = 0;
     document.addEventListener('DOMContentLoaded', function() {
       // Initialize Bootstrap tabs
       var triggerTabList = [].slice.call(document.querySelectorAll('#scheduleTab button'))
-      triggerTabList.forEach(function (triggerEl) {
+      triggerTabList.forEach(function(triggerEl) {
         var tabTrigger = new bootstrap.Tab(triggerEl)
-        
-        triggerEl.addEventListener('click', function (event) {
+
+        triggerEl.addEventListener('click', function(event) {
           event.preventDefault()
           tabTrigger.show()
         })
