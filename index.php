@@ -525,7 +525,7 @@
         <div class="simple-divider my-3"></div>
       </div>
 
-              <?php
+        <?php
         include 'admin conference/koneksi.php';
         $conference = new Koneksi();
         $result = $conference->GetTopicsWithSubtopics();
@@ -598,36 +598,42 @@
         <!-- Co-Host Images Row -->
         <div class="row justify-content-center mb-5">
           <!-- Co-Host Image 1 -->
+          <?php 
+          // include 'admin conference/koneksi.php';
+          $conference = new Koneksi();
+          $result = $conference->TampilHost();
+          while($row = $result->fetch_assoc() ) {
+          ?>
           <div class="col-md-3 col-6 mb-4" data-aos="zoom-in" data-aos-delay="100">
             <div class="co-host-image-container">
-              <img src="assets/img/co-host1.png" alt="Co-Host 1" class="img-fluid co-host-logo">
-              <div class="co-host-name">WXIT</div>
+              <img src="admin conference/image/<?= $row['image']?>" alt="Co-Host 1" class="img-fluid co-host-logo">
+              <div class="co-host-name"><?= $row['name']?></div>
             </div>
           </div>
-
+          <?php } ?>
           <!-- Co-Host Image 2 -->
-          <div class="col-md-3 col-6 mb-4" data-aos="zoom-in" data-aos-delay="200">
+          <!-- <div class="col-md-3 col-6 mb-4" data-aos="zoom-in" data-aos-delay="200">
             <div class="co-host-image-container">
               <img src="/placeholder.svg?height=200&width=200" alt="Co-Host 2" class="img-fluid co-host-logo">
               <div class="co-host-name">Skenov</div>
             </div>
-          </div>
+          </div> -->
 
           <!-- Co-Host Image 3 -->
-          <div class="col-md-3 col-6 mb-4" data-aos="zoom-in" data-aos-delay="300">
+          <!-- <div class="col-md-3 col-6 mb-4" data-aos="zoom-in" data-aos-delay="300">
             <div class="co-host-image-container">
               <img src="assets/img/co-host3.png" alt="Co-Host 3" class="img-fluid co-host-logo">
               <div class="co-host-name">GULF</div>
             </div>
-          </div>
+          </div> -->
 
           <!-- Co-Host Image 4 -->
-          <div class="col-md-3 col-6 mb-4" data-aos="zoom-in" data-aos-delay="400">
+          <!-- <div class="col-md-3 col-6 mb-4" data-aos="zoom-in" data-aos-delay="400">
             <div class="co-host-image-container">
               <img src="/placeholder.svg?height=200&width=200" alt="Co-Host 4" class="img-fluid co-host-logo">
               <div class="co-host-name">Lorem ipsum dolor sit amet.</div>
             </div>
-          </div>
+          </div> -->
         </div>
 
         <!-- Co-Host Description -->
