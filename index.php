@@ -525,158 +525,61 @@
         <div class="simple-divider my-3"></div>
       </div>
 
-      <?php
-      include 'admin conference/koneksi.php';
-      $conference = new Koneksi();
-      $result = $conference->TampilSub();
+              <?php
+        include 'admin conference/koneksi.php';
+        $conference = new Koneksi();
+        $result = $conference->GetTopicsWithSubtopics();
 
-      $groupedTopics = [];
-      while ($row = $result->fetch_assoc()) {
-        $groupedTopics[$row['topic']][] = $row['subtopic'];
-      }
+        $groupedData = [];
+        while ($row = $result->fetch_assoc()) {
+            $groupedData[$row['title']]['topics'][$row['topic']][] = $row['subtopic'];
+        }
 
-      $colors = ['bg-primary', 'bg-warning', 'bg-danger']; // Biru, Kuning, Merah
-      $index = 0;
-      ?>
+        $colors = ['bg-primary', 'bg-warning', 'bg-danger'];
+        $colorIndex = 0;
+        ?>
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row g-4">
-          <?php foreach ($groupedTopics as $topic => $subtopics) {
-            $color = $colors[$index % count($colors)];
-            $collapseId = strtolower(str_replace(' ', '', $topic)) . 'Details'; // ID unik
-          ?>
-           <div class="col-lg-4 col-md-6 d-flex">
-            <div class="topic-card w-100 d-flex flex-column">
-              <div class="topic-header <?= $color ?>">
-                <h3 class="topic-title text-white"><?= $topic ?></h3>
-              </div>
-              <div class="topic-body flex-grow-1 d-flex flex-column justify-content-between">
-                <div>
-                  <ul class="topic-list">
-                    <?php foreach ($subtopics as $subtopic) { ?>
-                      <li><?= $subtopic ?></li>
-                    <?php } ?>
-                  </ul>
-                </div>
-                <div class="mt-3">
-                  <button class="btn btn-sm btn-outline-primary view-details" type="button" data-bs-toggle="collapse" data-bs-target="#<?= $collapseId ?>">
-                    View Details
-                  </button>
-
-                  <!-- Bagian Collapse (Manual isi-nya) -->
-                  <div class="collapse mt-3" id="<?= $collapseId ?>">
-                    <div class="subtopic-details">
-                      <?php if ($topic == 'Engineering') { ?>
-                        <h5>Civil Engineering</h5>
-                        <ul class="detailed-list">
-                          <li>Structure Engineering</li>
-                          <li>Road and Bridge Engineering</li>
-                          <li>Geotech Engineering</li>
-                          <li>Water Resources Management</li>
-                          <li>Transportation Engineering</li>
-                          <li>Disaster Mitigation</li>
-                          <li>Construction Management</li>
-                          <li>Earthquake Engineering</li>
-                        </ul>
-                        <h5>Electrical Engineering</h5>
-                        <ul class="detailed-list">
-                          <li>Power Transmission and Distribution</li>
-                          <li>High Voltage Engineering</li>
-                          <li>Renewable Energy</li>
-                          <li>Smart Grid Technology</li>
-                          <li>Robotics</li>
-                          <li>Power Electronics</li>
-                          <li>Signal and Image Processing</li>
-                          <li>Embedded Systems</li>
-                          <li>VLSI</li>
-                          <li>Wireless and Mobile Communication</li>
-                        </ul>
-                        <h5>Industrial Engineering</h5>
-                        <ul class="detailed-list">
-                          <li>Smart and Lean Manufacturing System</li>
-                          <li>Product Design and Development</li>
-                          <li>Digitalization Supply Chain</li>
-                          <li>Green Manufacturing</li>
-                          <li>Quality Management System</li>
-                        </ul>
-                        <h5>Informatic Engineering</h5>
-                        <ul class="detailed-list">
-                          <li>Mobile Applications</li>
-                          <li>Biomedical Informatics</li>
-                          <li>Security Systems</li>
-                          <li>Database and Data Mining</li>
-                          <li>Artificial Intelligence</li>
-                          <li>Computer Network</li>
-                        </ul>
-                        <h5>Mechanical Engineering</h5>
-                        <ul class="detailed-list">
-                          <li>Mechatronics & Robotics</li>
-                          <li>Applied Mechanics</li>
-                          <li>Biomedical Engineering</li>
-                          <li>Composite & Materials Engineering</li>
-                          <li>Computational Mechanics</li>
-                          <li>Design Engineering</li>
-                          <li>Thermal & Fluid Science</li>
-                          <li>Automotive Engineering</li>
-                        </ul>
-                        <!-- Tambahkan yang lain jika perlu -->
-
-                      <?php } elseif ($topic == 'Economic Business') { ?>
-                        <h5>Management</h5>
-                        <ul class="detailed-list">
-                          <li>Leadership, Innovation, and Strategy</li>
-                          <!-- <li>Strategic Management</li>
-                          <li>Human Resources</li>
-                          <li>Organizational Behavior</li>
-                          <li>Leadership</li>
-                          <li>Operations Management</li> -->
-                        </ul>
-                        <h5>Digital Business</h5>
-                        <ul class="detailed-list">
-                          <li>Business and Entrepreneurship in the Tech Era</li>
-                          <li>Tech-Driven Business Strategies and Economic Sustainability</li>
-                          <li>Financial Technology (FinTech) and Digital Economy</li>
-                          <li>Digital Transformation & Smart Technologies</li>
-                          <li>Sustainability, ESG, and Green Business</li>
-                          <li>Marketing and Consumer Behaviour in Digital Age</li>
-                          <!-- <li>E-Commerce</li>
-                          <li>Digital Marketing</li>
-                          <li>Business Analytics</li>
-                          <li>FinTech</li>
-                          <li>Digital Transformation</li> -->
-                        </ul>
-
-                      <?php } elseif ($topic == 'Pharmaceutical Science') { ?>
-                        <h5>Pharmaceutical Biotechnology</h5>
-                        <ul class="detailed-list">
-                          <li>Pharmaceutical Formulation, Biotechnology, and Drug Design</li>
-                          <!-- <li>Novel drug delivery systems</li>
-                          <li>Biopharmaceutics</li>
-                          <li>Nanomedicine</li>
-                          <li>Pharmaceutical biotechnology</li> -->
-                        </ul>
-                        <h5>Herbal Innovations</h5>
-                        <ul class="detailed-list">
-                          <li>Herbal Technology, Pharmacology, and Regulatory Compliance</li>
-                          <!-- <li>Phytochemistry</li>
-                          <li>Ethnopharmacology</li>
-                          <li>Herbal drug standardization</li>
-                          <li>Natural product development</li> -->
-                        </ul>
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row g-4">
+            <?php foreach ($groupedData as $title => $data) {
+              $color = $colors[$colorIndex % count($colors)];
+              $collapseId = strtolower(str_replace(' ', '', $title)) . 'Details';
+            ?>
+              <div class="col-lg-4 col-md-6 d-flex">
+                <div class="topic-card w-100 d-flex flex-column">
+                  <div class="topic-header <?= $color ?>">
+                    <h3 class="topic-title text-white"><?= $title ?></h3>
+                  </div>
+                  <div class="topic-body flex-grow-1 d-flex flex-column justify-content-between">
+                    <ul class="topic-list">
+                      <?php foreach ($data['topics'] as $topic => $subtopics) { ?>
+                        <li><?= $topic ?></li>
                       <?php } ?>
+                    </ul>
+                    <div class="mt-3">
+                      <button class="btn btn-sm btn-outline-primary view-details" type="button" data-bs-toggle="collapse" data-bs-target="#<?= $collapseId ?>">
+                        View Subtopic
+                      </button>
+
+                      <div class="collapse mt-3" id="<?= $collapseId ?>">
+                        <div class="subtopic-details">
+                          <?php foreach ($data['topics'] as $topic => $subtopics) { ?>
+                            <h6><?= $topic ?></h6>
+                            <ul class="detailed-list">
+                              <?php foreach ($subtopics as $sub) { ?>
+                                <li><?= $sub ?></li>
+                              <?php } ?>
+                            </ul>
+                          <?php } ?>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                  <!-- End Collapse -->
                 </div>
               </div>
-            </div>
+            <?php $colorIndex++; } ?>
           </div>
-
-          <?php $index++;
-          } ?>
-
         </div>
-      </div>
 
 
 

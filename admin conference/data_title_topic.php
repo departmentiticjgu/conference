@@ -380,7 +380,7 @@
             </header>
 
             <div class="page-heading">
-                <h3>Topic Data</h3>
+                <h3>Title Topic Data</h3>
             </div>
 
     <div class="page-content">
@@ -388,13 +388,12 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">Data Topic</h4>
+                        <h4 class="card-title">Data Title Topic</h4>
                     </div>
                     <div class="card-body">
-                        <!-- Tabel Topic -->
-                         <a href="data_title_topic.php" class="btn btn-info">View Title Topic</a>
-                         <a href="insert_topic.php" class="btn btn-primary">Insert Topic</a>
-                         <a href="data_sub.php" class="btn btn-secondary">View Sub-Topic</a>
+                        <!-- Tabel Title Topic -->
+                         <!-- <a href="insert_topic.php" class="btn btn-primary">Insert Title Topic</a> -->
+                         <a href="data_topic.php" class="btn btn-secondary">View Topic</a>
                         <div class="table-responsive">
                             <table class="table table-striped" id="table1">
                                 <thead>
@@ -408,14 +407,14 @@
                                 <?php
                                     $no = 1;
                                     require_once "koneksi.php";
-                                    foreach ($conference->tampilTopic() as $row) {
+                                    foreach ($conference->TampilSub() as $row) {
                                 ?>
                                     <tr>
                                         <td class="small"><?= $no++?></td>
                                         <td class="small"><?= $row['name']?></td>
                                         <td class="small">
-                                            <a href="update_topic.php?id=<?= $row['id']?>" class="btn btn-success">Update</a>
-                                            <a href="action.php?action=delete_topic&id=<?= $row['id']?>" class="btn btn-danger">Delete</a>
+                                            <a href="update_title_topic.php?id=<?= $row['id']?>" class="btn btn-success">Update</a>
+                                            <a href="action.php?action=delete_title_topic&id=<?= $row['id']?>" class="btn btn-danger">Delete</a>
                                         </td>
                                     </tr>
                                    <?php } ?>

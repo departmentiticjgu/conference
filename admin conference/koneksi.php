@@ -22,6 +22,13 @@ class Koneksi {
         return mysqli_query($koneksi, $query);
     }
 
+    public function GetTopicsWithSubtopics() {
+        $koneksi = mysqli_connect($this->local, $this->username, $this->password, $this->database);
+        $query = " SELECT t.name AS title, tp.name AS topic, st.name AS subtopic FROM main_topic t JOIN topic tp ON tp.main_topic_id = t.id JOIN subtopic st ON st.topic_id = tp.id ORDER BY t.name, tp.name, st.name";
+        return mysqli_query($koneksi, $query);
+    }
+    
+    
     public function tampilSub() {
         $koneksi = mysqli_connect($this->local, $this->username, $this->password, $this->database);
         $query = "SELECT subtopic.id AS id_subtopic, topic.name AS topic, subtopic.name AS subtopic FROM subtopic JOIN topic ON subtopic.topic_id = topic.id ORDER BY topic.name, subtopic.name";
