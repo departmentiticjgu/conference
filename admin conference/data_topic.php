@@ -392,7 +392,7 @@
                     </div>
                     <div class="card-body">
                         <!-- Tabel Topic -->
-                         <a href="data_title_topic.php" class="btn btn-info">View Title Topic</a>
+                         <a href="data_title_topic.php" class="btn btn-dark">View Title Topic</a>
                          <a href="insert_topic.php" class="btn btn-primary">Insert Topic</a>
                          <a href="data_sub.php" class="btn btn-secondary">View Sub-Topic</a>
                         <div class="table-responsive">

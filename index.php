@@ -1173,6 +1173,11 @@
             </div>
           </div>
 
+          <?php
+          $conference = new Koneksi();
+          $result = $conference->TampilChief();
+          while($row = $result->fetch_assoc()) {
+          ?>
           <!-- Chief Editor Cards -->
           <div class="col-lg-4 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="200">
             <div class="editor-card chief-editor-card">
@@ -1180,18 +1185,19 @@
                 <div class="editor-role">Chief Editor</div>
               </div>
               <div class="editor-card-body">
-                <h4 class="editor-name">Prof. Dr. John Smith</h4>
-                <p class="editor-title">Chair of Digital Innovation</p>
-                <p class="editor-affiliation">University of Sydney, Australia</p>
-                <div class="editor-expertise">
+                <h4 class="editor-name"><?= $row['name']?></h4>
+                <p class="editor-title"><?= $row['title']?></p>
+                <p class="editor-affiliation"><?= $row['university']?></p>
+                <!-- <div class="editor-expertise">
                   <span class="badge bg-light text-dark">Digital Transformation</span>
                   <span class="badge bg-light text-dark">ICT Policy</span>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
+          <?php } ?>
 
-          <div class="col-lg-4 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="300">
+          <!-- <div class="col-lg-4 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="300">
             <div class="editor-card chief-editor-card">
               <div class="editor-card-header">
                 <div class="editor-role">Chief Editor</div>
@@ -1225,7 +1231,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
 
         <!-- Associate Editors Section -->
         <div class="row mb-5" id="associate-editors">
@@ -1235,48 +1241,57 @@
               <div class="board-category-line"></div>
             </div>
           </div>
+          
 
+              <?php
+            $conference = new Koneksi();
+            $result = $conference->TampilAssociate();
+            while($row = $result->fetch_assoc()) {
+            ?>
           <!-- Associate Editor Cards -->
           <div class="col-lg-4 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="100">
             <div class="editor-card associate-editor-card text-center p-4">
-              <h5 class="editor-name">Dr. Sarah Johnson</h5>
+              <h5 class="editor-name"><?= $row['name']?></h5>
               <!-- <p class="editor-affiliation mb-1">University of California, USA</p>
           <small class="text-muted">Civil Engineering</small> -->
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="200">
+          <!-- <div class="col-lg-4 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="200">
             <div class="editor-card associate-editor-card text-center p-4">
               <h5 class="editor-name">Dr. Ahmed Hassan</h5>
-              <!-- <p class="editor-affiliation mb-1">Cairo University, Egypt</p>
-          <small class="text-muted">Electrical Engineering</small> -->
+              <p class="editor-affiliation mb-1">Cairo University, Egypt</p>
+          <small class="text-muted">Electrical Engineering</small>
             </div>
-          </div>
+          </div> -->
 
-          <div class="col-lg-4 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="300">
+          <!-- <div class="col-lg-4 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="300">
             <div class="editor-card associate-editor-card text-center p-4">
               <h5 class="editor-name">Dr. Li Wei</h5>
-              <!-- <p class="editor-affiliation mb-1">Tsinghua University, China</p>
-          <small class="text-muted">Industrial Engineering</small> -->
+              <p class="editor-affiliation mb-1">Tsinghua University, China</p>
+          <small class="text-muted">Industrial Engineering</small>
             </div>
-          </div>
+          </div> -->
 
-          <div class="col-lg-4 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="400">
+          <!-- <div class="col-lg-4 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="400">
             <div class="editor-card associate-editor-card text-center p-4">
               <h5 class="editor-name">Dr. Priya Sharma</h5>
-              <!-- <p class="editor-affiliation mb-1">IIT Delhi, India</p>
-          <small class="text-muted">Pharmaceutical Sciences</small> -->
+              <p class="editor-affiliation mb-1">IIT Delhi, India</p>
+          <small class="text-muted">Pharmaceutical Sciences</small>
             </div>
-          </div>
+          </div> -->
 
-          <div class="col-lg-4 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="500">
+          <!-- <div class="col-lg-4 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="500">
             <div class="editor-card associate-editor-card text-center p-4">
               <h5 class="editor-name">Dr. James Wilson</h5>
-              <!-- <p class="editor-affiliation mb-1">University of Melbourne, Australia</p>
-          <small class="text-muted">Business Administration</small> -->
+              <p class="editor-affiliation mb-1">University of Melbourne, Australia</p>
+          <small class="text-muted">Business Administration</small>
             </div>
-          </div>
+          </div> -->
+          <?php } ?>
         </div>
+
+
 
         <!-- Editorial Board Members Section -->
         <div class="row mb-5" id="editorial">
@@ -1287,6 +1302,11 @@
             </div>
           </div>
 
+          <?php
+          $conference = new Koneksi();
+          $result = $conference->TampilBoard();
+          while($row = $result->fetch_assoc()) {
+          ?>
           <!-- Editorial Board Member Cards -->
           <div class="col-lg-3 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="200">
             <div class="editor-card">
@@ -1294,7 +1314,7 @@
                 <div class="editor-role">Editorial Board</div>
               </div>
               <div class="editor-card-body">
-                <h4 class="editor-name">Dr. Alice Wang</h4>
+                <h4 class="editor-name"><?= $row['name']?></h4>
                 <!-- <p class="editor-title">Associate Professor of Data Science</p>
             <p class="editor-affiliation">Tsinghua University, China</p>
             <div class="editor-expertise">
@@ -1304,57 +1324,57 @@
               </div>
             </div>
           </div>
-
-          <div class="col-lg-3 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="300">
+            <?php } ?>
+          <!-- <div class="col-lg-3 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="300">
             <div class="editor-card">
               <div class="editor-card-header">
                 <div class="editor-role">Editorial Board</div>
               </div>
               <div class="editor-card-body">
                 <h4 class="editor-name">Prof. Dr. Ahmed El-Sayed</h4>
-                <!-- <p class="editor-title">Professor of Information Systems</p>
+                <p class="editor-title">Professor of Information Systems</p>
             <p class="editor-affiliation">Cairo University, Egypt</p>
             <div class="editor-expertise">
               <span class="badge bg-light text-dark">Cybersecurity</span>
               <span class="badge bg-light text-dark">E-Government</span>
-            </div> -->
+            </div>
               </div>
             </div>
-          </div>
+          </div> -->
 
-          <div class="col-lg-3 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="400">
+          <!-- <div class="col-lg-3 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="400">
             <div class="editor-card">
               <div class="editor-card-header">
                 <div class="editor-role">Editorial Board</div>
               </div>
               <div class="editor-card-body">
                 <h4 class="editor-name">Dr. Isabella Rossi</h4>
-                <!-- <p class="editor-title">Professor of Informatics Engineering</p>
+                <p class="editor-title">Professor of Informatics Engineering</p>
             <p class="editor-affiliation">University of Milan, Italy</p>
             <div class="editor-expertise">
               <span class="badge bg-light text-dark">Agile Development</span>
               <span class="badge bg-light text-dark">DevOps</span>
-            </div> -->
+            </div>
               </div>
             </div>
-          </div>
+          </div> -->
 
-          <div class="col-lg-3 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="500">
+          <!-- <div class="col-lg-3 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="500">
             <div class="editor-card">
               <div class="editor-card-header">
                 <div class="editor-role">Editorial Board</div>
               </div>
               <div class="editor-card-body">
                 <h4 class="editor-name">Prof. Dr. James O’Connor</h4>
-                <!-- <p class="editor-title">Chair of Digital Innovation</p>
+                <p class="editor-title">Chair of Digital Innovation</p>
             <p class="editor-affiliation">University of Sydney, Australia</p>
             <div class="editor-expertise">
               <span class="badge bg-light text-dark">Digital Transformation</span>
               <span class="badge bg-light text-dark">ICT Policy</span>
-            </div> -->
+            </div>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
