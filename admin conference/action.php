@@ -137,5 +137,63 @@ switch ($action) {
             header("location: data_chief.php");
         }
         break;
+
+    // ACTION ADMIN
+    case 'insert_admin':
+        $imageName = $_FILES['image']['name'];
+        $imageTemp = $_FILES['image']['tmp_name'];
+        $uploadDir = 'image/';
+    
+        move_uploaded_file($imageTemp, $uploadDir . $imageName);
+    
+        $hashedPassword = password_hash($_POST['password'], PASSWORD_DEFAULT);
+    
+        if ($conference->CreateAdmin(
+            $_POST['username'],
+            $_POST['full_name'],
+            $_POST['no_hp'],
+            $_POST['email'],
+            $hashedPassword,
+            $imageName
+        )) {
+            header('location:data_admin.php');
+        }
+        break;
+    
+
+    case 'update_admin':
+        $imageName = $_FILES['image']['name'];
+        $imageTemp = $_FILES['image']['tmp_name'];
+        $uploadDir = 'image/';
+        
+        if (!empty($imageName)) {
+            move_uploaded_file($imageTemp, $uploadDir . $imageName);
+        } else {
+            $imageName = null;
+        }
+        
+        // Jika password tidak kosong, hash ulang, jika tidak, abaikan
+        $password = !empty($_POST['password']) ? password_hash($_POST['password'], PASSWORD_DEFAULT) : null;
+        
+        if ($conference->UpdateAdmin(
+            $_POST['id'],
+            $_POST['username'],
+            $_POST['full_name'],
+            $_POST['no_hp'],
+            $_POST['email'],
+            $password,
+            $imageName
+        )) {
+            header('location:data_admin.php');
+        }
+        break;
+        
+    
+    case 'delete_admin':
+        if($conference->DeleteAdmin($_GET['id'])) {
+            header("location: data_admin.php");
+        }
+        break;
+
 }
 ?>

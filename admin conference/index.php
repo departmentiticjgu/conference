@@ -1,3 +1,27 @@
+<?php
+session_start();
+include 'koneksi.php';
+
+$koneksi = new Koneksi();
+$conn = mysqli_connect($koneksi->local, $koneksi->username, $koneksi->password, $koneksi->database);
+
+// Cek apakah admin sudah login
+if (isset($_SESSION['admin'])) {
+    $username = $_SESSION['admin'];
+    $query = "SELECT * FROM admin WHERE username = '$username'";
+    $result = mysqli_query($conn, $query);
+    $admin = mysqli_fetch_assoc($result);
+} else {
+    // Kalau belum login, redirect ke login
+    echo "<script>
+            alert('Maaf anda belum login, silahkan login terlebih dahulu');
+            window.location='login.php';
+          </script>";
+    exit();
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -880,20 +904,23 @@
                             <div class="card-body py-4 px-5">
                                 <div class="d-flex align-items-center">
                                     <div class="avatar avatar-xl">
-                                        <img src="assets/images/faces/1.jpg" alt="Admin Profile">
+                                    <img src="image/<?php echo $admin['image']; ?>" alt="Admin Profile" style="object-fit: cover; width: 70px; height: 70px; border-radius: 50%;">
                                     </div>
                                     <div class="ms-3 name">
-                                        <h5 class="font-bold">Conference Admin</h5>
+                                        <h5 class="font-bold">
+                                            <?php echo isset($_SESSION['admin']) ? $_SESSION['admin'] : 'Conference Admin'; ?>
+                                        </h5>
                                         <h6 class="text-muted mb-0">Administrator</h6>
                                     </div>
                                 </div>
                                 <hr>
                                 <div class="d-flex justify-content-between mt-3">
-                                    <button class="btn btn-sm btn-outline-primary">Profile</button>
-                                    <button class="btn btn-sm btn-outline-danger">Logout</button>
+                                    <!-- <button class="btn btn-sm btn-outline-primary">Profile</button> -->
+                                    <a href="logout.php" class="btn btn-sm btn-outline-danger" style="margin-left:110px;">Logout</a>
                                 </div>
                             </div>
                         </div>
+
                         
                         <!-- Quick Stats -->
                         <div class="card">

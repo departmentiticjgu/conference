@@ -1,14 +1,3 @@
-<?php
-session_start();
-if (!isset($_SESSION['admin'])) {
-    echo "<script>
-            alert('Maaf anda belum login, silahkan login terlebih dahulu');
-            window.location='login.php';
-          </script>";
-    exit();
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -63,10 +52,10 @@ if (!isset($_SESSION['admin'])) {
                             </a>
                         </li> -->
 
-                        <li class="sidebar-item">
-                            <a href="data_topic.php" class='sidebar-link'>
+                        <li class="sidebar-item active">
+                            <a href="data_admin.php" class='sidebar-link'>
                                 <i class="bi bi-stack"></i>
-                                <span>Topic & Sub-Topic Data</span>
+                                <span>Admin Data</span>
                             </a>
                             <!-- <ul class="submenu ">
                                 <li class="submenu-item ">
@@ -114,37 +103,37 @@ if (!isset($_SESSION['admin'])) {
                             </ul> -->
                         </li>
 
-                        <li class="sidebar-item">
+                        <!-- <li class="sidebar-item">
                             <a href="data_host.php" class='sidebar-link'>
                                 <i class="bi bi-collection-fill"></i>
                                 <span>Co-Host Data</span>
                             </a>
-                        </li>
+                        </li> -->
 
-                        <li class="sidebar-item">
+                        <!-- <li class="sidebar-item">
                             <a href="data_board.php" class='sidebar-link'>
                                 <i class="bi bi-grid-1x2-fill"></i>
                                 <span>Editorial Board Data</span>
                             </a>
-                        </li>
+                        </li> -->
 
-                        <li class="sidebar-item active">
+                        <!-- <li class="sidebar-item active">
                             <a href="data_associate.php" class='sidebar-link'>
                                 <i class="bi bi-stack"></i>
                                 <span>Associate Editors Data</span>
                             </a>
-                        </li>
+                        </li> -->
 
-                        <li class="sidebar-item">
+                        <!-- <li class="sidebar-item">
                             <a href="data_chief.php" class='sidebar-link'>
                                 <i class="bi bi-collection-fill"></i>
                                 <span>Chief Editors Data</span>
                             </a>
-                        </li>
+                        </li> -->
 
-                        <li class="sidebar-title">CRUD Table</li>
+                        <!-- <li class="sidebar-title">CRUD Table</li> -->
 
-                        <li class="sidebar-item  has-sub">
+                        <!-- <li class="sidebar-item  has-sub">
                             <a href="#" class='sidebar-link'>
                                 <i class="bi bi-hexagon-fill"></i>
                                 <span>Topic</span>
@@ -156,7 +145,7 @@ if (!isset($_SESSION['admin'])) {
                                 <li class="submenu-item ">
                                     <a href="update_topic.php">Update Data</a>
                                 </li>
-                                <!-- <li class="submenu-item ">
+                                <li class="submenu-item ">
                                     <a href="form-element-select.html">Dele</a>
                                 </li>
                                 <li class="submenu-item ">
@@ -167,9 +156,9 @@ if (!isset($_SESSION['admin'])) {
                                 </li>
                                 <li class="submenu-item ">
                                     <a href="form-element-textarea.html">Textarea</a>
-                                </li> -->
+                                </li>
                             </ul>
-                        </li>
+                        </li> -->
 
                         <!-- <li class="sidebar-item  ">
                             <a href="form-layout.html" class='sidebar-link'>
@@ -178,7 +167,7 @@ if (!isset($_SESSION['admin'])) {
                             </a>
                         </li> -->
 
-                        <li class="sidebar-item  has-sub">
+                        <!-- <li class="sidebar-item  has-sub">
                             <a href="#" class='sidebar-link'>
                                 <i class="bi bi-pen-fill"></i>
                                 <span>Co-Host</span>
@@ -190,16 +179,16 @@ if (!isset($_SESSION['admin'])) {
                                 <li class="submenu-item ">
                                     <a href="update_host.php">Update Data</a>
                                 </li>
-                                <!-- <li class="submenu-item ">
+                                <li class="submenu-item ">
                                     <a href="form-editor-summernote.html">Summernote</a>
                                 </li>
                                 <li class="submenu-item ">
                                     <a href="form-editor-tinymce.html">TinyMCE</a>
-                                </li> -->
+                                </li>
                             </ul>
-                        </li>
+                        </li> -->
 
-                        <li class="sidebar-item  has-sub">
+                        <!-- <li class="sidebar-item  has-sub">
                             <a href="#" class='sidebar-link'>
                                 <i class="bi bi-pentagon-fill"></i>
                                 <span>Editorial Board</span>
@@ -211,13 +200,13 @@ if (!isset($_SESSION['admin'])) {
                                 <li class="submenu-item ">
                                     <a href="update_board.php">Update Data</a>
                                 </li>
-                                <!-- <li class="submenu-item ">
+                                <li class="submenu-item ">
                                     <a href="ui-widgets-todolist.html">To-do List</a>
-                                </li> -->
+                                </li>
                             </ul>
-                        </li>
+                        </li> -->
 
-                        <li class="sidebar-item  has-sub">
+                        <!-- <li class="sidebar-item  has-sub">
                             <a href="#" class='sidebar-link'>
                                 <i class="bi bi-egg-fill"></i>
                                 <span>Associate Editors</span>
@@ -229,13 +218,13 @@ if (!isset($_SESSION['admin'])) {
                                 <li class="submenu-item ">
                                     <a href="update_associate.php">Update Data</a>
                                 </li>
-                                <!-- <li class="submenu-item ">
+                                <li class="submenu-item ">
                                     <a href="ui-icons-dripicons.html">Dripicons</a>
-                                </li> -->
+                                </li>
                             </ul>
-                        </li>
+                        </li> -->
 
-                        <li class="sidebar-item  has-sub">
+                        <!-- <li class="sidebar-item  has-sub">
                             <a href="" class='sidebar-link'>
                                 <i class="bi bi-bar-chart-fill"></i>
                                 <span>Chief Editors</span>
@@ -248,7 +237,7 @@ if (!isset($_SESSION['admin'])) {
                                     <a href="update_chief.php">Update Data</a>
                                 </li>
                             </ul>
-                        </li>
+                        </li> -->
 
                         <!-- <li class="sidebar-item">
                             <a href="table.html" class='sidebar-link'>
@@ -391,7 +380,7 @@ if (!isset($_SESSION['admin'])) {
             </header>
 
             <div class="page-heading">
-                <h3>Associate Editors Data</h3>
+                <h3>Admin Data</h3>
             </div>
 
     <div class="page-content">
@@ -399,32 +388,41 @@ if (!isset($_SESSION['admin'])) {
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">Data Associate Editors</h4>
+                        <h4 class="card-title">Data Admin</h4>
                     </div>
                     <div class="card-body">
                         <!-- Tabel User -->
-                         <a href="insert_associate.php" class="btn btn-primary">Insert Associate Editors</a>
+                         <a href="insert_admin.php" class="btn btn-primary">Insert Admin</a>
                         <div class="table-responsive">
                             <table class="table table-striped" id="table1">
                                 <thead>
                                     <tr>
                                         <th class="small">ID</th>
-                                        <th class="small">Name</th>
-                                        <th class="small">Action</th>
+                                        <th class="small">Username</th>
+                                        <th class="small">Full Name</th>
+                                        <th class="small">No Handphone</th>
+                                        <th class="small">Email</th>
+                                        <!-- <th class="small">Password</th> -->
+                                        <th class="small">Image</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                 <?php
                                     $no = 1;
                                     require_once "koneksi.php";
-                                    foreach ($conference->TampilAssociate() as $row) {
+                                    foreach ($conference->TampilAdmin() as $row) {
                                 ?>
                                     <tr>
                                         <td class="small"><?= $no++?></td>
-                                        <td class="small"><?= $row['name']?></td>
+                                        <td class="small"><?= $row['username']?></td>
+                                        <td class="small"><?= $row['full_name']?></td>
+                                        <td class="small"><?= $row['no_hp']?></td>
+                                        <td class="small"><?= $row['email']?></td>
+                                        <!-- <td class="small"><?= $row['password']?></td> -->
+                                        <td><img src="image/<?= $row['image']?>" width="50px" height="50px"></td>
                                         <td class="small">
-                                            <a href="update_associate.php?id=<?= $row['id']?>" class="btn btn-success">Update</a>
-                                            <a href="action.php?action=delete_associate&id=<?= $row['id']?>" class="btn btn-danger">Delete</a>
+                                            <a href="update_admin.php?id=<?= $row['id']?>" class="btn btn-success">Update</a>
+                                            <a href="action.php?action=delete_admin&id=<?= $row['id']?>" class="btn btn-danger">Delete</a>
                                         </td>
                                     </tr>
                                    <?php } ?>

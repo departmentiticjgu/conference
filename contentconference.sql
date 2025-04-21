@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 11, 2025 at 07:31 AM
--- Server version: 8.0.30
--- PHP Version: 8.3.16
+-- Waktu pembuatan: 21 Apr 2025 pada 06.13
+-- Versi server: 8.0.30
+-- Versi PHP: 8.3.16
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,32 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `associate_editors`
+-- Struktur dari tabel `admin`
+--
+
+CREATE TABLE `admin` (
+  `id` int NOT NULL,
+  `username` varchar(50) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `full_name` varchar(100) DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  `no_hp` varchar(20) DEFAULT NULL,
+  `image` varchar(225) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data untuk tabel `admin`
+--
+
+INSERT INTO `admin` (`id`, `username`, `password`, `full_name`, `email`, `no_hp`, `image`, `created_at`) VALUES
+(1, 'admin', '$2y$10$PaX.V2bbwU1bwCeTT5l.U.w7g4VzSiC9FuJFm3WMLCCVrQDjSrP.W', 'admin', 'admin@gmail.com', '08123456789', 'antony4.jpg', '2025-04-21 03:48:38'),
+(2, 'hriardnsyh', '$2y$10$2wZKkGyEcYaU7FQVbQjWzOtXJdnxQSLpqc3RjqPV4vQ1UyDuCQIk.', 'Hari Ardiansyah Harahap', 'hari@gmail.com', '087814721245', 'admin.jpeg', '2025-04-21 04:15:47');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `associate_editors`
 --
 
 CREATE TABLE `associate_editors` (
@@ -33,18 +58,20 @@ CREATE TABLE `associate_editors` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Dumping data for table `associate_editors`
+-- Dumping data untuk tabel `associate_editors`
 --
 
 INSERT INTO `associate_editors` (`id`, `name`) VALUES
-(1, 'Admin'),
-(2, 'User'),
-(3, 'Operator');
+(1, 'Dr. Sarah Johnson'),
+(2, 'Dr. Ahmed Hassan'),
+(3, 'Dr. Li Wei'),
+(5, 'Dr. Priya Sharma'),
+(6, 'Dr. James Wilson');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `chief_editors`
+-- Struktur dari tabel `chief_editors`
 --
 
 CREATE TABLE `chief_editors` (
@@ -55,7 +82,7 @@ CREATE TABLE `chief_editors` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Dumping data for table `chief_editors`
+-- Dumping data untuk tabel `chief_editors`
 --
 
 INSERT INTO `chief_editors` (`id`, `name`, `title`, `university`) VALUES
@@ -66,7 +93,7 @@ INSERT INTO `chief_editors` (`id`, `name`, `title`, `university`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `co_host`
+-- Struktur dari tabel `co_host`
 --
 
 CREATE TABLE `co_host` (
@@ -76,7 +103,7 @@ CREATE TABLE `co_host` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Dumping data for table `co_host`
+-- Dumping data untuk tabel `co_host`
 --
 
 INSERT INTO `co_host` (`id`, `image`, `name`) VALUES
@@ -88,7 +115,7 @@ INSERT INTO `co_host` (`id`, `image`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `editorial_board`
+-- Struktur dari tabel `editorial_board`
 --
 
 CREATE TABLE `editorial_board` (
@@ -97,18 +124,19 @@ CREATE TABLE `editorial_board` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Dumping data for table `editorial_board`
+-- Dumping data untuk tabel `editorial_board`
 --
 
 INSERT INTO `editorial_board` (`id`, `name`) VALUES
-(2, 'Admin'),
-(3, 'User'),
-(4, 'Operator');
+(2, 'Dr. Olivia Johnson '),
+(3, 'Prof. Dr. Ahmed El-Sayed'),
+(4, 'Dr. Isabella Rossi'),
+(5, 'Prof. Dr. James O’Connor');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `main_topic`
+-- Struktur dari tabel `main_topic`
 --
 
 CREATE TABLE `main_topic` (
@@ -117,18 +145,19 @@ CREATE TABLE `main_topic` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Dumping data for table `main_topic`
+-- Dumping data untuk tabel `main_topic`
 --
 
 INSERT INTO `main_topic` (`id`, `name`) VALUES
 (1, 'Economic Business'),
 (2, 'Engineering'),
-(3, 'Pharmaceutical Science');
+(3, 'Pharmaceutical Science'),
+(4, 'Admin');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `subtopic`
+-- Struktur dari tabel `subtopic`
 --
 
 CREATE TABLE `subtopic` (
@@ -138,7 +167,7 @@ CREATE TABLE `subtopic` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Dumping data for table `subtopic`
+-- Dumping data untuk tabel `subtopic`
 --
 
 INSERT INTO `subtopic` (`id`, `topic_id`, `name`) VALUES
@@ -192,7 +221,7 @@ INSERT INTO `subtopic` (`id`, `topic_id`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `topic`
+-- Struktur dari tabel `topic`
 --
 
 CREATE TABLE `topic` (
@@ -202,7 +231,7 @@ CREATE TABLE `topic` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Dumping data for table `topic`
+-- Dumping data untuk tabel `topic`
 --
 
 INSERT INTO `topic` (`id`, `main_topic_id`, `name`) VALUES
@@ -221,107 +250,120 @@ INSERT INTO `topic` (`id`, `main_topic_id`, `name`) VALUES
 --
 
 --
--- Indexes for table `associate_editors`
+-- Indeks untuk tabel `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `username` (`username`);
+
+--
+-- Indeks untuk tabel `associate_editors`
 --
 ALTER TABLE `associate_editors`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `chief_editors`
+-- Indeks untuk tabel `chief_editors`
 --
 ALTER TABLE `chief_editors`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `co_host`
+-- Indeks untuk tabel `co_host`
 --
 ALTER TABLE `co_host`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `editorial_board`
+-- Indeks untuk tabel `editorial_board`
 --
 ALTER TABLE `editorial_board`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `main_topic`
+-- Indeks untuk tabel `main_topic`
 --
 ALTER TABLE `main_topic`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `subtopic`
+-- Indeks untuk tabel `subtopic`
 --
 ALTER TABLE `subtopic`
   ADD PRIMARY KEY (`id`),
   ADD KEY `topic_id` (`topic_id`);
 
 --
--- Indexes for table `topic`
+-- Indeks untuk tabel `topic`
 --
 ALTER TABLE `topic`
   ADD PRIMARY KEY (`id`),
   ADD KEY `main_topic_id` (`main_topic_id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `associate_editors`
+-- AUTO_INCREMENT untuk tabel `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT untuk tabel `associate_editors`
 --
 ALTER TABLE `associate_editors`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT for table `chief_editors`
+-- AUTO_INCREMENT untuk tabel `chief_editors`
 --
 ALTER TABLE `chief_editors`
   MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT for table `co_host`
+-- AUTO_INCREMENT untuk tabel `co_host`
 --
 ALTER TABLE `co_host`
   MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT for table `editorial_board`
+-- AUTO_INCREMENT untuk tabel `editorial_board`
 --
 ALTER TABLE `editorial_board`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT untuk tabel `main_topic`
+--
+ALTER TABLE `main_topic`
   MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT for table `main_topic`
---
-ALTER TABLE `main_topic`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- AUTO_INCREMENT for table `subtopic`
+-- AUTO_INCREMENT untuk tabel `subtopic`
 --
 ALTER TABLE `subtopic`
   MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=129;
 
 --
--- AUTO_INCREMENT for table `topic`
+-- AUTO_INCREMENT untuk tabel `topic`
 --
 ALTER TABLE `topic`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
--- Constraints for dumped tables
+-- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
 --
 
 --
--- Constraints for table `subtopic`
+-- Ketidakleluasaan untuk tabel `subtopic`
 --
 ALTER TABLE `subtopic`
   ADD CONSTRAINT `subtopic_ibfk_1` FOREIGN KEY (`topic_id`) REFERENCES `topic` (`id`);
 
 --
--- Constraints for table `topic`
+-- Ketidakleluasaan untuk tabel `topic`
 --
 ALTER TABLE `topic`
   ADD CONSTRAINT `topic_ibfk_1` FOREIGN KEY (`main_topic_id`) REFERENCES `main_topic` (`id`);

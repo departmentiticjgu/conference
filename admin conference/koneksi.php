@@ -261,6 +261,56 @@ class Koneksi {
         return mysqli_query($koneksi, $query);
     }
 
+    // CRUD ADMIN
+    function TampilAdmin() {
+        $koneksi = mysqli_connect($this->local, $this->username, $this->password, $this->database);
+        $query = "SELECT * FROM admin";
+
+        return mysqli_query($koneksi, $query);
+    }
+
+    public function CreateAdmin($username, $full_name, $no_hp, $email, $password, $image) {
+        $koneksi = mysqli_connect($this->local, $this->username, $this->password, $this->database);
+        $query = "INSERT INTO admin (username, full_name, no_hp, email, password, image) VALUES ('$username', '$full_name', '$no_hp', '$email', '$password', '$image')";
+
+        return mysqli_query($koneksi, $query);
+    }
+
+    function GetIdAdmin($id){
+        $koneksi = mysqli_connect($this->local, $this->username, $this->password, $this->database);
+        $query = "SELECT * FROM admin WHERE id = '$id'";
+
+        return mysqli_query($koneksi, $query);
+    }
+
+    public function UpdateAdmin($id, $username, $full_name, $no_hp, $email, $password = null, $image = null) {
+        $koneksi = mysqli_connect($this->local, $this->username, $this->password, $this->database);
+        
+        $query = "UPDATE admin SET username = '$username', full_name = '$full_name', no_hp = '$no_hp', email = '$email'";
+    
+        // Tambahkan password hanya jika tidak kosong
+        if (!empty($password)) {
+            $query .= ", password = '$password'";
+        }
+    
+        // Tambahkan image hanya jika tidak kosong
+        if (!empty($image)) {
+            $query .= ", image = '$image'";
+        }
+    
+        $query .= " WHERE id = '$id'";
+        
+        return mysqli_query($koneksi, $query);
+    }
+    
+
+    function DeleteAdmin($id){
+        $koneksi = mysqli_connect($this->local, $this->username, $this->password, $this->database);
+        $query = "DELETE FROM admin WHERE id = '$id'";
+
+        return mysqli_query($koneksi, $query);
+    }
+
 
 }
 
