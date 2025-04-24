@@ -1,3 +1,14 @@
+<?php
+session_start();
+if (!isset($_SESSION['admin'])) {
+    echo "<script>
+            alert('Maaf anda belum login, silahkan login terlebih dahulu');
+            window.location='login.php';
+          </script>";
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

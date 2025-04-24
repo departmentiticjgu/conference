@@ -2,7 +2,9 @@
 session_start();
 session_destroy(); // Hapus semua session
 
-// Redirect ke halaman login
-header("Location: login.php");
+echo "<script>
+            alert('Logout Berhasil');
+            window.location='login.php';
+          </script>";
 exit();
 ?>
