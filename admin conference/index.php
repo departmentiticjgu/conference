@@ -40,6 +40,81 @@ if (isset($_SESSION['admin'])) {
     <link rel="stylesheet" href="assets/vendors/bootstrap-icons/bootstrap-icons.css">
     <link rel="stylesheet" href="assets/css/app.css">
     <!-- <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/x-icon"> -->
+   <style>
+        .stats-icon {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            color: white;
+            font-size: 1.5rem;
+        }
+        .stats-icon.purple { background-color: #9694ff; }
+        .stats-icon.blue { background-color: #57caeb; }
+        .stats-icon.green { background-color: #5ddab4; }
+        .stats-icon.orange { background-color: #ff9f43; }
+        .avatar-md img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .card {
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .card-header {
+            background-color: transparent;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+            padding: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .card-body {
+            padding: 1.5rem;
+        }
+        .table th {
+            color: #6c757d;
+            font-weight: 600;
+        }
+        .badge {
+            padding: 0.5em 0.8em;
+            font-weight: 500;
+        }
+        .admin-bar {
+            background-color: #f8f9fa;
+            border-bottom: 1px solid #dee2e6;
+            padding: 10px 0;
+            margin-bottom: 20px;
+        }
+        .nav-tabs .nav-link {
+            border: none;
+            color: #6c757d;
+            padding: 0.5rem 1rem;
+            margin-right: 1rem;
+            font-weight: 500;
+        }
+        .nav-tabs .nav-link.active {
+            color: #435ebe;
+            border-bottom: 2px solid #435ebe;
+            background: transparent;
+        }
+        .nav-tabs {
+            border-bottom: 1px solid #dee2e6;
+            margin-bottom: 20px;
+        }
+        .quick-actions .card {
+            transition: all 0.3s ease;
+        }
+        .quick-actions .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </head>
 
 <body>
@@ -670,348 +745,156 @@ if (isset($_SESSION['admin'])) {
                 </section>
             </div> -->
 
-            <div class="page-content">
-                <section class="row">
-                    <div class="col-12 col-lg-9">
-                        <!-- Conference Overview Cards -->
-                        <div class="row">
-    <div class="col-6 col-lg-3 col-md-6">
-        <div class="card">
-            <div class="card-body px-3 py-4-5">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="stats-icon purple">
-                            <i class="bi bi-people-fill"></i> <!-- Changed to people icon -->
-                        </div>
+            <div class="admin-bar">
+        <div class="container-fluid">
+            <div class="d-flex justify-content-between align-items-center">
+                <h4 class="mb-0">Conference Dashboard</h4>
+                <div class="d-flex align-items-center">
+                    <div class="avatar-md me-3">
+                        <img src="image/<?php echo $admin['image']; ?>" alt="Admin Profile">
                     </div>
-                    <div class="col-md-8">
-                        <h6 class="text-muted font-semibold">Total Attendees</h6>
-                        <h6 class="font-extrabold mb-0">1,248</h6>
+                    <div>
+                        <h6 class="mb-0">
+                            <?php echo isset($_SESSION['admin']) ? $_SESSION['admin'] : 'Conference Admin'; ?>
+                        </h6>
+                        <small class="text-muted">Administrator</small>
+                    </div>
+                    <div class="ms-3">
+                        <a href="logout.php" class="btn btn-sm btn-outline-danger">Logout</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-                <div class="col-6 col-lg-3 col-md-6">
-                    <div class="card">
-                        <div class="card-body px-3 py-4-5">
-                            <div class="row">
+
+    <div class="container-fluid">
+        <div class="page-content py-2">
+            <!-- Quick Action Cards -->
+            <div class="row quick-actions mb-4">
+                <div class="col-md-3">
+                    <div class="card h-100">
+                        <div class="card-body px-4 py-4">
+                            <div class="row align-items-center">
+                                <div class="col-md-4">
+                                    <div class="stats-icon purple">
+                                        <i class="bi bi-people-fill"></i>
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <h6 class="text-muted font-semibold">Total Attendees</h6>
+                                    <h6 class="font-extrabold mb-0">1,248 ±</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card h-100">
+                        <div class="card-body px-4 py-4">
+                            <div class="row align-items-center">
                                 <div class="col-md-4">
                                     <div class="stats-icon blue">
-                                        <i class="bi bi-calendar-event-fill"></i> <!-- Changed to calendar event icon -->
+                                        <i class="bi bi-calendar-event-fill"></i>
                                     </div>
                                 </div>
                                 <div class="col-md-8">
                                     <h6 class="text-muted font-semibold">Active Conferences</h6>
-                                    <h6 class="font-extrabold mb-0">5</h6>
+                                    <h6 class="font-extrabold mb-0">1</h6>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-6 col-lg-3 col-md-6">
-                    <div class="card">
-                        <div class="card-body px-3 py-4-5">
-                            <div class="row">
+                <div class="col-md-3">
+                    <div class="card h-100">
+                        <div class="card-body px-4 py-4">
+                            <div class="row align-items-center">
                                 <div class="col-md-4">
                                     <div class="stats-icon green">
-                                        <i class="bi bi-cash-stack"></i> <!-- Changed to cash stack icon -->
+                                        <i class="bi bi-building"></i>
                                     </div>
                                 </div>
                                 <div class="col-md-8">
-                                    <h6 class="text-muted font-semibold">Total Revenue</h6>
-                                    <h6 class="font-extrabold mb-0">$15,850</h6> <!-- Fixed the number format -->
+                                    <h6 class="text-muted font-semibold">Event Venues</h6>
+                                    <h6 class="font-extrabold mb-0">1</h6>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-6 col-lg-3 col-md-6">
+                <div class="col-md-3">
+                    <a href="data_admin.php" class="text-decoration-none">
+                        <div class="card h-100">
+                            <div class="card-body px-4 py-4">
+                                <div class="row align-items-center">
+                                    <div class="col-md-4">
+                                        <div class="stats-icon orange">
+                                            <i class="bi bi-person-badge"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <h6 class="text-muted font-semibold">Admin Data</h6>
+                                        <h6 class="font-extrabold mb-0">Manage <i class="bi bi-arrow-right"></i></h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Upcoming Conferences -->
+            <div class="row">
+                <div class="col-12">
                     <div class="card">
-                        <div class="card-body px-3 py-4-5">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="stats-icon red">
-                                        <i class="bi bi-chat-square-text-fill"></i> <!-- Changed to feedback icon -->
-                                    </div>
-                                </div>
-                                <div class="col-md-8">
-                                    <h6 class="text-muted font-semibold">Pending Feedback</h6>
-                                    <h6 class="font-extrabold mb-0">50</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>                    
-                        <!-- Upcoming Conferences -->
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h4>Upcoming Conferences</h4>
-                                        <div class="dropdown">
-                                            <button class="btn btn-sm btn-light dropdown-toggle" type="button" id="conferenceFilter" data-bs-toggle="dropdown" aria-expanded="false">
-                                                This Month
-                                            </button>
-                                            <ul class="dropdown-menu" aria-labelledby="conferenceFilter">
-                                                <li><a class="dropdown-item" href="#">Today</a></li>
-                                                <li><a class="dropdown-item" href="#">This Week</a></li>
-                                                <li><a class="dropdown-item" href="#">This Month</a></li>
-                                                <li><a class="dropdown-item" href="#">All</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="table-responsive">
-                                            <table class="table table-hover">
-                                                <thead>
-                                                    <tr>
-                                                        <th>Conference</th>
-                                                        <th>Date</th>
-                                                        <th>Location</th>
-                                                        <th>Attendees</th>
-                                                        <th>Status</th>
-                                                        <th>Action</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>Tech Summit 2023</td>
-                                                        <td>Nov 15-17, 2023</td>
-                                                        <td>San Francisco</td>
-                                                        <td>420</td>
-                                                        <td><span class="badge bg-success">Active</span></td>
-                                                        <td>
-                                                            <button class="btn btn-sm btn-outline-primary">Manage</button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Digital Marketing Conference</td>
-                                                        <td>Dec 5-6, 2023</td>
-                                                        <td>New York</td>
-                                                        <td>315</td>
-                                                        <td><span class="badge bg-success">Active</span></td>
-                                                        <td>
-                                                            <button class="btn btn-sm btn-outline-primary">Manage</button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>AI & Machine Learning Expo</td>
-                                                        <td>Jan 10-12, 2024</td>
-                                                        <td>Chicago</td>
-                                                        <td>278</td>
-                                                        <td><span class="badge bg-warning">Upcoming</span></td>
-                                                        <td>
-                                                            <button class="btn btn-sm btn-outline-primary">Manage</button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>1st Joint Global Innovation and Technology Conference 2025 (JGITeC2025)</td>
-                                                        <td>Oct 25-26, 2025</td>
-                                                        <td>Campus JGU</td>
-                                                        <td>200</td>
-                                                        <td><span class="badge bg-warning">Upcoming</span></td>
-                                                        <td>
-                                                            <button class="btn btn-sm btn-outline-primary">Manage</button>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Registration Trends and Recent Activity -->
-                        <div class="row">
-                            <div class="col-12 col-lg-6">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h4>Registration Trends</h4>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="d-flex justify-content-center align-items-center" style="height: 200px;">
-                                            <div class="text-center">
-                                                <h5 class="text-muted">Registration Chart Placeholder</h5>
-                                                <p>This would display registration trends over time</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-lg-6">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h4>Recent Activity</h4>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="activity-list">
-                                            <div class="activity-item d-flex">
-                                                <div class="flex-shrink-0">
-                                                    <div class="avatar avatar-xs">
-                                                        <span class="avatar-title rounded-circle bg-primary">
-                                                            <i class="bi bi-person-plus-fill"></i>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                                <div class="flex-grow-1 ms-3">
-                                                    <h6 class="mb-0">New registration</h6>
-                                                    <p class="small text-muted mb-0">John Smith registered for Tech Summit 2023</p>
-                                                    <small class="text-muted">10 minutes ago</small>
-                                                </div>
-                                            </div>
-                                            <div class="activity-item d-flex mt-3">
-                                                <div class="flex-shrink-0">
-                                                    <div class="avatar avatar-xs">
-                                                        <span class="avatar-title rounded-circle bg-success">
-                                                            <i class="bi bi-check-circle-fill"></i>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                                <div class="flex-grow-1 ms-3">
-                                                    <h6 class="mb-0">Payment received</h6>
-                                                    <p class="small text-muted mb-0">Payment of $299 from Sarah Johnson</p>
-                                                    <small class="text-muted">35 minutes ago</small>
-                                                </div>
-                                            </div>
-                                            <div class="activity-item d-flex mt-3">
-                                                <div class="flex-shrink-0">
-                                                    <div class="avatar avatar-xs">
-                                                        <span class="avatar-title rounded-circle bg-info">
-                                                            <i class="bi bi-chat-square-text-fill"></i>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                                <div class="flex-grow-1 ms-3">
-                                                    <h6 class="mb-0">New feedback</h6>
-                                                    <p class="small text-muted mb-0">Michael Brown submitted feedback for Digital Marketing Conference</p>
-                                                    <small class="text-muted">1 hour ago</small>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Right Sidebar -->
-                    <div class="col-12 col-lg-3">
-                        <!-- Admin Profile -->
-                        <div class="card">
-                            <div class="card-body py-4 px-5">
-                                <div class="d-flex align-items-center">
-                                    <div class="avatar avatar-xl">
-                                    <img src="image/<?php echo $admin['image']; ?>" alt="Admin Profile" style="object-fit: cover; width: 70px; height: 70px; border-radius: 50%;">
-                                    </div>
-                                    <div class="ms-3 name">
-                                        <h5 class="font-bold">
-                                            <?php echo isset($_SESSION['admin']) ? $_SESSION['admin'] : 'Conference Admin'; ?>
-                                        </h5>
-                                        <h6 class="text-muted mb-0">Administrator</h6>
-                                    </div>
-                                </div>
-                                <hr>
-                                <div class="d-flex justify-content-between mt-3">
-                                    <!-- <button class="btn btn-sm btn-outline-primary">Profile</button> -->
-                                    <a href="logout.php" class="btn btn-sm btn-outline-danger" style="margin-left:110px;">Logout</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        
-                        <!-- Quick Stats -->
-                        <div class="card">
-                            <div class="card-header">
-                                <h4>Quick Stats</h4>
-                            </div>
-                            <div class="card-body">
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                                        Today's Registrations
-                                        <span class="badge bg-primary rounded-pill">24</span>
-                                    </li>
-                                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                                        Pending Approvals
-                                        <span class="badge bg-warning rounded-pill">12</span>
-                                    </li>
-                                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                                        Unread Messages
-                                        <span class="badge bg-info rounded-pill">8</span>
-                                    </li>
-                                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                                        Speakers Confirmed
-                                        <span class="badge bg-success rounded-pill">18</span>
-                                    </li>
+                        <div class="card-header">
+                            <h4 class="mb-0">Upcoming Conferences</h4>
+                            <div class="dropdown">
+                                <button class="btn btn-sm btn-light dropdown-toggle" type="button" id="conferenceFilter" data-bs-toggle="dropdown" aria-expanded="false">
+                                    This Month
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="conferenceFilter">
+                                    <li><a class="dropdown-item" href="#">Today</a></li>
+                                    <li><a class="dropdown-item" href="#">This Week</a></li>
+                                    <li><a class="dropdown-item" href="#">This Month</a></li>
+                                    <li><a class="dropdown-item" href="#">All</a></li>
                                 </ul>
                             </div>
                         </div>
-                        
-                        <!-- Feedback Summary -->
-                        <div class="card">
-                            <div class="card-header">
-                                <h4>Feedback Summary</h4>
-                            </div>
-                            <div class="card-body">
-                                <div class="d-flex justify-content-center align-items-center" style="height: 150px;">
-                                    <div class="text-center">
-                                        <h5 class="text-muted">Feedback Chart Placeholder</h5>
-                                        <p>This would display feedback ratings</p>
-                                    </div>
-                                </div>
-                                <div class="mt-3">
-                                    <div class="d-flex align-items-center mb-2">
-                                        <div class="flex-shrink-0">
-                                            <span class="badge bg-success me-2">4.8</span>
-                                        </div>
-                                        <div class="flex-grow-1">
-                                            <div class="progress" style="height: 8px;">
-                                                <div class="progress-bar bg-success" role="progressbar" style="width: 85%"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex align-items-center mb-2">
-                                        <div class="flex-shrink-0">
-                                            <span class="badge bg-primary me-2">4.0</span>
-                                        </div>
-                                        <div class="flex-grow-1">
-                                            <div class="progress" style="height: 8px;">
-                                                <div class="progress-bar bg-primary" role="progressbar" style="width: 70%"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex align-items-center">
-                                        <div class="flex-shrink-0">
-                                            <span class="badge bg-warning me-2">3.2</span>
-                                        </div>
-                                        <div class="flex-grow-1">
-                                            <div class="progress" style="height: 8px;">
-                                                <div class="progress-bar bg-warning" role="progressbar" style="width: 55%"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Conference</th>
+                                            <th>Date</th>
+                                            <th>Location</th>
+                                            <th>Attendees</th>
+                                            <th>Status</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1st Joint Global Innovation and Technology Conference 2025 (JGITeC2025)</td>
+                                            <td>Oct 25-26, 2025</td>
+                                            <td>Campus JGU</td>
+                                            <td>200 ±</td>
+                                            <td><span class="badge bg-warning">Upcoming</span></td>
+                                            <td>
+                                                <button class="btn btn-sm btn-outline-primary">Manage</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
-                </section>
-            </div>
-
-            <!-- <footer>
-                <div class="footer clearfix mb-0 text-muted">
-                    <div class="float-start">
-                        <p>2021 &copy; Mazer</p>
-                    </div>
-                    <div class="float-end">
-                        <p>Crafted with <span class="text-danger"><i class="bi bi-heart"></i></span> by <a
-                                href="http://ahmadsaugi.com">A. Saugi</a></p>
-                    </div>
                 </div>
-            </footer> -->
+            </div>
         </div>
     </div>
+
     <script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
 

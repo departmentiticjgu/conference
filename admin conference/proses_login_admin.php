@@ -27,8 +27,8 @@ if ($data) {
         header("Location: index.php");
         exit();
     } else {
-        echo "<script>alert('Password salah!'); window.location.href='login.php';</script>";
+        echo "<script>alert('Password atau Username salah!'); window.location.href='login.php';</script>";
     }
 } else {
-    echo "<script>alert('Akun tidak ditemukan!'); window.location.href='login_admin.php';</script>";
+    echo "<script>alert('Akun tidak ditemukan!'); window.location.href='login.php';</script>";
 }

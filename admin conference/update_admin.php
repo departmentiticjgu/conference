@@ -447,7 +447,7 @@
                                 <label for="password" class="form-label">
                                     <i class="bi bi-lock-fill me-2"></i>Password
                                 </label>
-                                <input type="password" name="password" id="password" class="form-control" value="<?= $row['password'] ?>">
+                                <input type="password" name="password" id="password" class="form-control">
                             </div>
 
                             <!-- Image -->
