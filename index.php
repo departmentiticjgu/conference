@@ -138,7 +138,7 @@
 
     .col-lg-4:nth-child(2) .topic-list li:before,
     .col-lg-4:nth-child(2) .detailed-list li:before {
-      color: var(--bs-success);
+      color: var(--bs-warning);
     }
 
     .col-lg-4:nth-child(3) .topic-list li:before,
