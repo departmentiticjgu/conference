@@ -85,7 +85,7 @@ class Koneksi {
         return mysqli_query($koneksi, $query);
     }
 
-    function update_user($main_topic_id, $id, $name){
+    function UpdateTopic($main_topic_id, $id, $name){
         $koneksi = mysqli_connect($this->local, $this->username, $this->password, $this->database);
         $query = "UPDATE topic SET main_topic_id = '$main_topic_id', name = '$name' WHERE id = '$id' ";
 

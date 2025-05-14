@@ -413,7 +413,7 @@ if (!isset($_SESSION['admin'])) {
                                         <th class="small">Full Name</th>
                                         <th class="small">No Handphone</th>
                                         <th class="small">Email</th>
-                                        <!-- <th class="small">Password</th> -->
+                                        <th class="small">Password</th>
                                         <th class="small">Image</th>
                                     </tr>
                                 </thead>
@@ -429,7 +429,7 @@ if (!isset($_SESSION['admin'])) {
                                         <td class="small"><?= $row['full_name']?></td>
                                         <td class="small"><?= $row['no_hp']?></td>
                                         <td class="small"><?= $row['email']?></td>
-                                        <!-- <td class="small"><?= $row['password']?></td> -->
+                                        <td class="small"><?= $row['password']?></td>
                                         <td><img src="image/<?= $row['image']?>" width="50px" height="50px"></td>
                                         <td class="small">
                                             <a href="update_admin.php?id=<?= $row['id']?>" class="btn btn-success">Update</a>

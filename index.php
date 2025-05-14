@@ -236,7 +236,7 @@
             </ul>
           </li>  -->
           <li><a href="#contact">Contact</a></li>
-          <a href="#" class="text-white btn btn-getstarted">Registration</a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLScu_P8sgARBq5Apvboqu9yqBMFHLTYgI_jSWtdVrMeVyNSD5w/viewform?usp=header" class="text-white btn btn-getstarted" target="_blank">Registration</a>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>

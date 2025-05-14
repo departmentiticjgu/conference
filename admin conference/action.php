@@ -11,7 +11,7 @@ switch ($action) {
     break;
 
     case 'update_topic':
-        if($conference->update_user($_POST['main_topic_id'], $_POST['id'], $_POST['name'])){
+        if($conference->UpdateTopic($_POST['main_topic_id'], $_POST['id'], $_POST['name'])){
             header('location:data_topic.php');
         }
         break;
